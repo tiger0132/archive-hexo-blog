@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题意 传送门：">
+<meta name="description" content="题意 传送门：[暂缺]">
 <meta name="keywords" content="DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【DP】1118-D">
 <meta property="og:url" content="http://tiger0132.tk/【DP】1118-D/index.html">
 <meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="题意 传送门：">
+<meta property="og:description" content="题意 传送门：[暂缺]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-03T05:17:38.351Z">
+<meta property="og:updated_time" content="2018-01-08T10:35:00.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【DP】1118-D">
-<meta name="twitter:description" content="题意 传送门：">
+<meta name="twitter:description" content="题意 传送门：[暂缺]">
 
 
 
@@ -363,20 +363,11 @@
 
       
         <h3 id="题意">题意</h3>
-<p>传送门：</p>
+<p>传送门：<strong>[暂缺]</strong></p>
 <a id="more"></a>
 <h3 id="思路">思路</h3>
-<p>这是一道<strong>披着背包外衣的入门难度DFS</strong>。</p>
-<p>直接dfs带<span class="math inline">\(4\)</span>个参数<span class="math inline">\(dep, cnt, val, rem\)</span>分别代表深度(1~n) 已选物品数 已选物品价值 剩余容量，搜到<span class="math inline">\(dep&gt;n\)</span>判断<span class="math inline">\(rem&lt;t||cnt&lt;m\)</span>是否满足即可更新答案。</p>
-<p>否则搜索下面两个即可，不用剪枝。</p>
-<p><code>dfs(dep+1,cnt+1,val+v[dep],rem-c[dep]);</code></p>
-<p><code>dfs(dep+1,cnt,val,rem);</code></p>
-<p>时间复杂度<span class="math inline">\(O(2^n)\)</span>。</p>
 <h3 id="代码">代码</h3>
-<p><strong>不要在意这些细节，本人卡常癌晚期请谅解</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> spc putchar(<span class="meta-string">' '</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> nln putchar(<span class="meta-string">'\n'</span>)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">(<span class="keyword">register</span> T&amp; val)</span> </span>&#123;</span><br><span class="line">	<span class="comment">/* 一千万个数400ms超高速读入黑科技略 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">put</span><span class="params">(<span class="keyword">register</span> <span class="keyword">const</span> T&amp; val)</span> </span>&#123; </span><br><span class="line">	<span class="comment">/* 普通高速输出黑科技略 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Solution Begins Here</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, d, t, g, c[<span class="number">32</span>], v[<span class="number">32</span>], ans;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不要在意这些细节</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">register</span> <span class="keyword">int</span> dep, <span class="keyword">register</span> <span class="keyword">int</span> cnt, <span class="keyword">register</span> <span class="keyword">int</span> val, <span class="keyword">register</span> <span class="keyword">int</span> rem)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (dep &gt; n) &#123;</span><br><span class="line">		<span class="keyword">if</span> (rem &lt; t || cnt &lt; m) <span class="keyword">return</span>;</span><br><span class="line">		ans = max(ans, val + rem * g);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		dfs(dep + <span class="number">1</span>, cnt + <span class="number">1</span>, val + v[dep], rem - c[dep]);</span><br><span class="line">		dfs(dep + <span class="number">1</span>, cnt, val, rem);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	get(n); get(m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		get(c[i]); get(v[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	get(d); get(t); get(g);</span><br><span class="line">	dfs(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, d);</span><br><span class="line">	put(ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="拓展">拓展</h3>
-<p>对于数据较小的题目，有时DP难写，可以考虑使用暴搜，有时甚至不需要剪枝。</p>
 
       
     </div>
@@ -425,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【DP】1007-B/" rel="next" title="【DP】1007-B">
-                <i class="fa fa-chevron-left"></i> 【DP】1007-B
+              <a href="/.well-known/acme-challange/SN8OvFrfM3nWr4-lhbtxyemY-9Te8VX_s1Ho5wz3XAk/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -435,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/【转】RP导论/" rel="prev" title="【转】RP导论">
-                【转】RP导论 <i class="fa fa-chevron-right"></i>
+              <a href="/【DP】1007-B/" rel="prev" title="【DP】1007-B">
+                【DP】1007-B <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -518,7 +509,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
