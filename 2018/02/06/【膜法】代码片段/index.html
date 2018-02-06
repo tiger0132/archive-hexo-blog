@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer" />
+  <meta name="keywords" content="膜法," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Think twice, code once.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tiger0132的小站">
-<meta property="og:url" content="http://tiger0132.tk/page/3/index.html">
+<meta name="description" content="链式前向星 123456789struct node &amp;#123;	int to, next;&amp;#125; e[400001];int head[400005];int cnt;void insert(int u, int v) &amp;#123;    cnt++; e[cnt].to = v; e[cnt].next = head[u]; head[u] = cnt;    cnt++; e[cn">
+<meta name="keywords" content="膜法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【膜法】代码片段">
+<meta property="og:url" content="http://tiger0132.tk/2018/02/06/【膜法】代码片段/index.html">
 <meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Think twice, code once.">
+<meta property="og:description" content="链式前向星 123456789struct node &amp;#123;	int to, next;&amp;#125; e[400001];int head[400005];int cnt;void insert(int u, int v) &amp;#123;    cnt++; e[cnt].to = v; e[cnt].next = head[u]; head[u] = cnt;    cnt++; e[cn">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-06T16:06:13.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tiger0132的小站">
-<meta name="twitter:description" content="Think twice, code once.">
+<meta name="twitter:title" content="【膜法】代码片段">
+<meta name="twitter:description" content="链式前向星 123456789struct node &amp;#123;	int to, next;&amp;#125; e[400001];int head[400005];int cnt;void insert(int u, int v) &amp;#123;    cnt++; e[cnt].to = v; e[cnt].next = head[u]; head[u] = cnt;    cnt++; e[cn">
 
 
 
@@ -118,14 +120,14 @@
 
 
 
-  <link rel="canonical" href="http://tiger0132.tk/page/3/"/>
+  <link rel="canonical" href="http://tiger0132.tk/2018/02/06/【膜法】代码片段/"/>
 
 
 
 
 <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css">
 
-  <title>Tiger0132的小站</title>
+  <title>【膜法】代码片段 | Tiger0132的小站</title>
   
 
 
@@ -144,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,9 +259,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -273,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/10/07/【DP】1118-D/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2018/02/06/【膜法】代码片段/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -290,9 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/07/【DP】1118-D/" itemprop="url">【DP】1118-D</a></h1>
+          <h1 class="post-title" itemprop="name headline">【膜法】代码片段</h1>
         
 
         <div class="post-meta">
@@ -304,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-07T21:23:39+08:00">
-                2017-10-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-06T23:57:28+08:00">
+                2018-02-06
               </time>
             
 
@@ -327,8 +326,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DP/" itemprop="url" rel="index">
-                    <span itemprop="name">DP</span>
+                  <a href="/categories/膜法/" itemprop="url" rel="index">
+                    <span itemprop="name">膜法</span>
                   </a>
                 </span>
 
@@ -364,17 +363,17 @@
       
 
       
-        
-          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
-<p>传送门：<strong>[暂缺]</strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/07/【DP】1118-D/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="链式前向星"><a class="markdownIt-Anchor" href="#链式前向星"></a> 链式前向星</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> to, next;</span><br><span class="line">&#125; e[<span class="number">400001</span>];</span><br><span class="line"><span class="keyword">int</span> head[<span class="number">400005</span>];</span><br><span class="line"><span class="keyword">int</span> cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">    cnt++; e[cnt].to = v; e[cnt].next = head[u]; head[u] = cnt;</span><br><span class="line">    cnt++; e[cnt].to = u; e[cnt].next = head[v]; head[v] = cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输入单个字符"><a class="markdownIt-Anchor" href="#输入单个字符"></a> 输入单个字符</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> x[<span class="number">2</span>], y[<span class="number">2</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%1c%1c"</span>, x, y);</span><br></pre></td></tr></table></figure>
+<h3 id="scanf输入string"><a class="markdownIt-Anchor" href="#scanf输入string"></a> scanf输入string</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s;</span><br><span class="line">s.reserve(<span class="number">1024</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;s[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<h3 id="输出pair"><a class="markdownIt-Anchor" href="#输出pair"></a> 输出pair</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pii(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d"</span>, pii); <span class="comment">// struct同理</span></span><br></pre></td></tr></table></figure>
+<h3 id="并查集"><a class="markdownIt-Anchor" href="#并查集"></a> 并查集</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> size[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">int</span> par[<span class="number">100005</span>]; <span class="comment">// 并不要初始化</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> par[x] ? par[x] = find(par[x]) : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> ((x = find(x)) == (y = find(y))) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span> (size[x] &lt;= size[y]) par[x] = y;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (size[x] == size[y]) size[y]++;</span><br><span class="line">	<span class="keyword">else</span> par[y] = x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">void merge(int x, int y) &#123;</span></span><br><span class="line"><span class="comment">	if ((x = find(x)) == (y = find(y))) return;</span></span><br><span class="line"><span class="comment">	par[x] = y;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -386,296 +385,61 @@
     
 
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/10/07/【DP】1007-B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/07/【DP】1007-B/" itemprop="url">【DP】1007-B</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-07T21:23:39+08:00">
-                2017-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DP/" itemprop="url" rel="index">
-                    <span itemprop="name">DP</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
-<p>这是一个<strong>伪·三倍经验题</strong>。</p>
-<p>传送门：<a href="https://www.luogu.org/problem/show?pid=T13508" target="_blank" rel="noopener">1007-B</a></p>
-<p>Alternative Question:</p>
-<ul>
-<li>
-<p><a href="https://www.luogu.org/problemnew/show/1004" target="_blank" rel="noopener">P1004 NOIp2000TG-4方格取数</a>。</p>
-</li>
-<li>
-<p><a href="https://www.luogu.org/problemnew/show/1006" target="_blank" rel="noopener">P1006 NOIp2008TG-3传纸条</a></p>
-</li>
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tiger0132
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://tiger0132.tk/2018/02/06/【膜法】代码片段/" title="【膜法】代码片段">http://tiger0132.tk/2018/02/06/【膜法】代码片段/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" rel="external nofollow" target="_blank">CC BY-NC-ND 3.0</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-<p>给定一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">×</span><span class="mord mathit">m</span></span></span></span>矩阵，从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(1,1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span>走到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(n,m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">n</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mclose">)</span></span></span></span>走两次，只能向右或向下，希望除始末两点以外其他点不相交，问路径最大权值和。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/07/【DP】1007-B/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/膜法/" rel="tag"># 膜法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/06/【贪心】Codeforces 886C Petya and Catacombs/" rel="next" title="【贪心】Codeforces 886C - Petya and Catacombs">
+                <i class="fa fa-chevron-left"></i> 【贪心】Codeforces 886C - Petya and Catacombs
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/1949/10/01/.well-known/acme-challange/SN8OvFrfM3nWr4-lhbtxyemY-9Te8VX_s1Ho5wz3XAk/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/1949/10/01/.well-known/acme-challange/SN8OvFrfM3nWr4-lhbtxyemY-9Te8VX_s1Ho5wz3XAk/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="1949-10-01T00:00:00+08:00">
-                1949-10-01
-              </time>
+              <a href="/9999/12/31/DISCLAIMER/" rel="prev" title="【置顶】DISCLAIMER">
+                【置顶】DISCLAIMER <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <a id="more"></a>
-<p>SN8OvFrfM3nWr4-lhbtxyemY-9Te8VX_s1Ho5wz3XAk.WLkG6GU4dDfNVnhiQ3tDj-llxertpm4na0H9pQBq62M</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -685,135 +449,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/1949/10/01/.well-known/acme-challange/-yzfgYhMsZoBE3HHQ2mwQc7HtoJk1_AfS5t-DAcSmjI/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/1949/10/01/.well-known/acme-challange/-yzfgYhMsZoBE3HHQ2mwQc7HtoJk1_AfS5t-DAcSmjI/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="1949-10-01T00:00:00+08:00">
-                1949-10-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <a id="more"></a>
-<p>-yzfgYhMsZoBE3HHQ2mwQc7HtoJk1_AfS5t-DAcSmjI.WLkG6GU4dDfNVnhiQ3tDj-llxertpm4na0H9pQBq62M</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
 
 
           </div>
@@ -821,6 +461,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -841,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -916,6 +569,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#链式前向星"><span class="nav-number">1.</span> <span class="nav-text"> 链式前向星</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入单个字符"><span class="nav-number">2.</span> <span class="nav-text"> 输入单个字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scanf输入string"><span class="nav-number">3.</span> <span class="nav-text"> scanf输入string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出pair"><span class="nav-number">4.</span> <span class="nav-text"> 输出pair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并查集"><span class="nav-number">5.</span> <span class="nav-text"> 并查集</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1070,6 +739,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
