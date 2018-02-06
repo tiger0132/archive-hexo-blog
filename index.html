@@ -123,6 +123,7 @@
 
 
 
+<link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css">
 
   <title>Tiger0132的小站</title>
   
@@ -272,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/DISCLAIMER/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/9999/12/31/DISCLAIMER/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -291,7 +292,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/DISCLAIMER/" itemprop="url">【置顶】DISCLAIMER</a></h1>
+                <a class="post-title-link" href="/9999/12/31/DISCLAIMER/" itemprop="url">【置顶】DISCLAIMER</a></h1>
         
 
         <div class="post-meta">
@@ -404,7 +405,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【DFS】伪背包1007-C/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2018/02/06/【数学】Codeforces 872C - Maximum splitting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -423,7 +424,155 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【DFS】伪背包1007-C/" itemprop="url">【DFS】伪背包1007-C</a></h1>
+                <a class="post-title-link" href="/2018/02/06/【数学】Codeforces 872C - Maximum splitting/" itemprop="url">【数学】Codeforces 872C - Maximum splitting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-06T20:53:25+08:00">
+                2018-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+<p>传送门：<a href="http://codeforces.com/contest/872/problem/C" target="_blank" rel="noopener">Codeforces 872C</a></p>
+<p>给你<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>个数，问你这些数最多可以写成多少个合数的和。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup><mo separator="true">,</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">n \le 10^5, 1 \le x \le 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mrel">≤</span><span class="mord mathit">x</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">9</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/06/【数学】Codeforces 872C - Maximum splitting/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2018/01/08/【DFS】伪背包1007-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tiger0132">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/08/【DFS】伪背包1007-C/" itemprop="url">【DFS】伪背包1007-C</a></h1>
         
 
         <div class="post-meta">
@@ -496,12 +645,12 @@
 
       
         
-          <h3 id="题意">题意</h3>
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <p>传送门：<a href="https://www.luogu.org/problem/show?pid=T13509" target="_blank" rel="noopener">1007-C</a></p>
-<p>给定一个容量为<span class="math inline">\(T\)</span>的背包，<span class="math inline">\(n\)</span>个物品，第<span class="math inline">\(i\)</span>个物品重量<span class="math inline">\(c[i]\)</span>价值<span class="math inline">\(v[i]\)</span>，最少要装<span class="math inline">\(m\)</span>个物品，最少要留<span class="math inline">\(t\)</span>的剩余空间，最大化价值与剩余空间<span class="math inline">\(\times g\)</span>的值。<span class="math inline">\(n \le 10\)</span>。</p>
+<p>给定一个容量为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span>的背包，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>个物品，第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>个物品重量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">c[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>价值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">v[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>，最少要装<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>个物品，最少要留<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span>的剩余空间，最大化价值与剩余空间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\times g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord">×</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span>的值。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">n \le 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span>。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【DFS】伪背包1007-C/#more" rel="contents">
+            <a class="btn" href="/2018/01/08/【DFS】伪背包1007-C/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -552,7 +701,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【位运算】Codeforces 897C Short Program/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2018/01/01/【位运算】Codeforces 897C - Short Program/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -571,7 +720,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【位运算】Codeforces 897C Short Program/" itemprop="url">【位运算】Codeforces 897C Short Program</a></h1>
+                <a class="post-title-link" href="/2018/01/01/【位运算】Codeforces 897C - Short Program/" itemprop="url">【位运算】Codeforces 897C - Short Program</a></h1>
         
 
         <div class="post-meta">
@@ -644,12 +793,12 @@
 
       
         
-          <h3 id="题意">题意</h3>
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <p>传送门：<a href="http://codeforces.com/contest/879/problem/C" target="_blank" rel="noopener">Codeforces 897C</a></p>
-<p>给一串位运算操作(包含| &amp; ^，每个操作数均落在<span class="math inline">\(。\)</span>中)，将其简化到5次运算以内并输出。</p>
+<p>给一串位运算操作(包含| &amp; ^，每个操作数均落在。中)，将其简化到5次运算以内并输出。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【位运算】Codeforces 897C Short Program/#more" rel="contents">
+            <a class="btn" href="/2018/01/01/【位运算】Codeforces 897C - Short Program/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -700,7 +849,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【差分】1216-D/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/20/【差分】1216-D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -719,7 +868,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【差分】1216-D/" itemprop="url">【差分】1216-D</a></h1>
+                <a class="post-title-link" href="/2017/12/20/【差分】1216-D/" itemprop="url">【差分】1216-D</a></h1>
         
 
         <div class="post-meta">
@@ -795,7 +944,7 @@
           强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【差分】1216-D/#more" rel="contents">
+            <a class="btn" href="/2017/12/20/【差分】1216-D/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -846,7 +995,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【差分】差分/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/20/【差分】差分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -865,7 +1014,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【差分】差分/" itemprop="url">【差分】差分</a></h1>
+                <a class="post-title-link" href="/2017/12/20/【差分】差分/" itemprop="url">【差分】差分</a></h1>
         
 
         <div class="post-meta">
@@ -941,7 +1090,7 @@
           强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【差分】差分/#more" rel="contents">
+            <a class="btn" href="/2017/12/20/【差分】差分/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -992,7 +1141,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【杂题】1210-B/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/14/【杂题】1210-B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -1011,7 +1160,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【杂题】1210-B/" itemprop="url">【杂题】1210-B</a></h1>
+                <a class="post-title-link" href="/2017/12/14/【杂题】1210-B/" itemprop="url">【杂题】1210-B</a></h1>
         
 
         <div class="post-meta">
@@ -1084,12 +1233,12 @@
 
       
         
-          <h3 id="题意">题意</h3>
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <p>传送门：<a href="http://218.77.114.12:1980/v3/contest_show.php?cid=304#problem/B" target="_blank" rel="noopener">B题</a></p>
 <p>给一个01矩阵，允许若干次操作，每次一次翻转一行或一列，问最多可以翻出多少个0？</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【杂题】1210-B/#more" rel="contents">
+            <a class="btn" href="/2017/12/14/【杂题】1210-B/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1140,7 +1289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【LIS】LIS/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/14/【LIS】LIS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -1159,7 +1308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【LIS】LIS/" itemprop="url">【LIS】LIS</a></h1>
+                <a class="post-title-link" href="/2017/12/14/【LIS】LIS/" itemprop="url">【LIS】LIS</a></h1>
         
 
         <div class="post-meta">
@@ -1246,7 +1395,7 @@
           强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【LIS】LIS/#more" rel="contents">
+            <a class="btn" href="/2017/12/14/【LIS】LIS/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1297,7 +1446,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【模拟】1210-A/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/14/【模拟】1210-A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -1316,7 +1465,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【模拟】1210-A/" itemprop="url">【模拟】1210-A</a></h1>
+                <a class="post-title-link" href="/2017/12/14/【模拟】1210-A/" itemprop="url">【模拟】1210-A</a></h1>
         
 
         <div class="post-meta">
@@ -1389,11 +1538,11 @@
 
       
         
-          <h3 id="题意">题意</h3>
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <p>传送门：<a href="http://218.77.114.12:1980/v3/contest_show.php?cid=304#problem/0" target="_blank" rel="noopener">A题</a></p>
-<p>两个人打跑得快，现在规定扑克牌点数为区间<span class="math inline">\([1, 2n]\)</span>之间的整数，每种牌只有一张。</p>
+<p>两个人打跑得快，现在规定扑克牌点数为区间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mi>n</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[1, 2n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mord mathit">n</span><span class="mclose">]</span></span></span></span>之间的整数，每种牌只有一张。</p>
 <p>且打牌要符合以下特殊规定:</p>
-<ol type="1">
+<ol>
 <li>首先1出，在没有特殊情况时，12轮流出</li>
 <li>如果桌面上没牌，则必须出手上最小的</li>
 <li>如果桌面上有牌，则必须出手上比桌面上牌大的最小的牌，也就是lower_bound</li>
@@ -1403,7 +1552,7 @@
 <p>规定每个人的分数是对方剩余牌的数量，求最后的得分。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【模拟】1210-A/#more" rel="contents">
+            <a class="btn" href="/2017/12/14/【模拟】1210-A/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1454,7 +1603,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【DP-LIS】洛谷P1704 寻找最优美做题曲线/">
+    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/2017/12/09/【DP-LIS】洛谷P1704 寻找最优美做题曲线/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -1473,7 +1622,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【DP-LIS】洛谷P1704 寻找最优美做题曲线/" itemprop="url">【DP-LIS】洛谷P1704 寻找最优美做题曲线</a></h1>
+                <a class="post-title-link" href="/2017/12/09/【DP-LIS】洛谷P1704 寻找最优美做题曲线/" itemprop="url">【DP-LIS】洛谷P1704 寻找最优美做题曲线</a></h1>
         
 
         <div class="post-meta">
@@ -1557,159 +1706,13 @@
 
       
         
-          <h3 id="题意">题意</h3>
+          <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <p>传送门：<a href="https://www.luogu.org/problemnew/show/1704" target="_blank" rel="noopener">洛谷 P1704</a></p>
 <p>现在给出每一天刷题的题数，并且有几天必须刷题，问最多可以刷多少天的题并且满足严格递增。</p>
 <p>说白了就是，给一个序列，告诉你有一些下标上的数<strong>必须</strong>包含在LIS中，求满足条件的LIS，就是被禁锢的LIS。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/【DP-LIS】洛谷P1704 寻找最优美做题曲线/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tiger0132.tk/【底层】深拷贝之殇/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/【底层】深拷贝之殇/" itemprop="url">【底层】深拷贝之殇</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T22:11:22+08:00">
-                2017-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/底层/" itemprop="url" rel="index">
-                    <span itemprop="name">底层</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/【底层】深拷贝之殇/#more" rel="contents">
+            <a class="btn" href="/2017/12/09/【DP-LIS】洛谷P1704 寻找最优美做题曲线/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1801,7 +1804,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1812,7 +1815,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1823,7 +1826,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2067,28 +2070,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  
-
 
   
 
