@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="题意 这么经典的题目还要题意… 传送门：洛谷 P1379(让我想到了1379号监听员😆)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-06T12:55:38.864Z">
+<meta property="og:updated_time" content="2018-02-16T02:56:05.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【BFS】八数码问题">
 <meta name="twitter:description" content="题意 这么经典的题目还要题意… 传送门：洛谷 P1379(让我想到了1379号监听员😆)">
@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -397,14 +397,14 @@
       
 
       
-        <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+        <h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
 <p>这么经典的题目还要题意…</p>
 <p>传送门：<a href="https://www.luogu.org/problemnew/show/P1379" target="_blank" rel="noopener">洛谷 P1379</a>(让我想到了1379号监听员😆)</p>
 <a id="more"></a>
-<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
+<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
 <p>不会写康托展开，遂用数字存储，然后使用bitset存储visited数组。</p>
 <p>输入后对输入的局面BFS。</p>
-<h4 id="交换整数中的数字"><a class="markdownIt-Anchor" href="#交换整数中的数字"></a> 交换整数中的数字</h4>
+<h2 id="交换整数中的数字"><a class="markdownIt-Anchor" href="#交换整数中的数字"></a> 交换整数中的数字</h2>
 <p>首先，数字中的下标对应以下表格：</p>
 <p>0 1 2</p>
 <p>3 4 5</p>
@@ -417,13 +417,13 @@
 <p>123456789，若要将3和7交换，</p>
 <p>首先记忆3，接下来减<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">7 \times 10^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">7</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，然后加<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3 \times 10^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，</p>
 <p>再减<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">3 \times 10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">6</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，最后加<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">7 \times 10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">7</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">6</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
-<h4 id="输出路径"><a class="markdownIt-Anchor" href="#输出路径"></a> 输出路径？</h4>
+<h2 id="输出路径"><a class="markdownIt-Anchor" href="#输出路径"></a> 输出路径？</h2>
 <p>集训的题目要输出路径，那就加个map存前驱，然后递归打出来。</p>
-<h3 id="talk-is-cheap-give-me-the-code"><a class="markdownIt-Anchor" href="#talk-is-cheap-give-me-the-code"></a> Talk is cheap! Give me the code!</h3>
+<h1 id="talk-is-cheap-give-me-the-code"><a class="markdownIt-Anchor" href="#talk-is-cheap-give-me-the-code"></a> Talk is cheap! Give me the code!</h1>
 <p>代码在这里：</p>
 <p>可以AC洛谷P1379</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> t(x) ((((x)&lt;&lt;2)+(x))&lt;&lt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> l(x, i) ((x)/p10[i]%10)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> w(x, i) (*(x+i))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 预处理10^n</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p10[] = &#123;<span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">1000</span>, <span class="number">10000</span>, <span class="number">100000</span>, <span class="number">1000000</span>, <span class="number">10000000</span>, <span class="number">100000000</span>, <span class="number">1000000000</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> dir[<span class="number">4</span>] = &#123;<span class="number">3</span>, <span class="number">-3</span>, <span class="number">1</span>, <span class="number">-1</span>&#125;; <span class="comment">// 方向矢量</span></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; dep; <span class="comment">// 深度</span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; bfs; <span class="comment">// 广搜队列</span></span><br><span class="line"><span class="keyword">int</span> n; <span class="comment">// 数字</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//	#ifndef __TIGER0132__</span></span><br><span class="line"><span class="comment">//	freopen("9gong.in", "r", stdin);</span></span><br><span class="line"><span class="comment">//	freopen("9gong.out", "w", stdout);</span></span><br><span class="line"><span class="comment">//	#endif</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	bfs.push(n);</span><br><span class="line">	dep[n] = <span class="number">0</span>; <span class="comment">// 初始深度</span></span><br><span class="line">	<span class="keyword">while</span> (!bfs.empty()) &#123;</span><br><span class="line">		<span class="keyword">int</span> pos = bfs.front(); bfs.pop();</span><br><span class="line">		<span class="keyword">int</span> cdep = dep[pos] + <span class="number">1</span>; <span class="comment">// 现在搜到的数字的深度</span></span><br><span class="line">		<span class="keyword">int</span> _0; <span class="comment">// 数字中0的位置</span></span><br><span class="line"><span class="comment">//		printf("%d\n", pos);</span></span><br><span class="line">		<span class="keyword">if</span> (pos == <span class="number">123804765</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>, dep[pos]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (_0 = <span class="number">0</span>; _0 &lt; <span class="number">9</span>; _0++) &#123; <span class="comment">// 搜索0的位置</span></span><br><span class="line">			<span class="keyword">if</span> (!l(pos, _0)) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> p0 = _0; <span class="comment">// 第一个要交换的数的下标</span></span><br><span class="line">			<span class="keyword">int</span> p1 = _0+w(dir, i); <span class="comment">// 第二个要交换的数的下标</span></span><br><span class="line">			<span class="keyword">int</span> p2 = pos, p3; <span class="comment">// p2是pos的拷贝, p3临时变量</span></span><br><span class="line"> 			<span class="comment">// 判断交换是否合法</span></span><br><span class="line">			<span class="keyword">if</span> (p0 &lt; <span class="number">0</span> || p1 &lt; <span class="number">0</span> || p0 &gt; <span class="number">8</span> || p1 &gt; <span class="number">8</span> || p0*p1 == <span class="number">6</span> || p0*p1 == <span class="number">30</span>) <span class="keyword">continue</span>;</span><br><span class="line">			p3 = l(p2, p0); <span class="comment">// t = a;</span></span><br><span class="line">			p2 += (l(p2,p1) - l(p2,p0))*p10[p0]; <span class="comment">// a = b;</span></span><br><span class="line">			p2 += (p3 - l(p2,p0))*p10[p1]; <span class="comment">// b = t;</span></span><br><span class="line">			<span class="keyword">if</span> (dep.count(p2)) <span class="keyword">continue</span>; <span class="comment">// 判断是否搜过</span></span><br><span class="line">			bfs.push(p2); <span class="comment">// 入队</span></span><br><span class="line">			dep[p2] = cdep; <span class="comment">// 更新深度</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">"Oh no! Where's my solution?"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="教训"><a class="markdownIt-Anchor" href="#教训"></a> 教训</h3>
+<h1 id="教训"><a class="markdownIt-Anchor" href="#教训"></a> 教训</h1>
 <p>⚠️<strong>不要无脑register，不然TLE自己负责！</strong></p>
 
       
@@ -449,7 +449,7 @@
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" rel="external nofollow" target="_blank">CC BY-NC-ND 3.0</a> 许可协议。转载请注明出处！
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 
@@ -566,7 +566,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -612,6 +612,12 @@
 
           
           
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
 
           
           
@@ -631,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#交换整数中的数字"><span class="nav-number">2.1.</span> <span class="nav-text"> 交换整数中的数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出路径"><span class="nav-number">2.2.</span> <span class="nav-text"> 输出路径？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#talk-is-cheap-give-me-the-code"><span class="nav-number">3.</span> <span class="nav-text"> Talk is cheap! Give me the code!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#教训"><span class="nav-number">4.</span> <span class="nav-text"> 教训</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#交换整数中的数字"><span class="nav-number">2.1.</span> <span class="nav-text"> 交换整数中的数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出路径"><span class="nav-number">2.2.</span> <span class="nav-text"> 输出路径？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#talk-is-cheap-give-me-the-code"><span class="nav-number">3.</span> <span class="nav-text"> Talk is cheap! Give me the code!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#教训"><span class="nav-number">4.</span> <span class="nav-text"> 教训</span></a></li></ol></div>
             
 
           </div>
@@ -639,6 +645,11 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
       
 
     </div>
@@ -686,11 +697,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="题意 这是一个伪·三倍经验题。 传送门：1007-B Alternative Question:   P1004 NOIp2000TG-4方格取数。   P1006 NOIp2008TG-3传纸条   给定一个n×mn \times mn×m矩阵，从(1,1)(1,1)(1,1)走到(n,m)(n,m)(n,m)走两次，只能向右或向下，希望除始末两点以外其他点不相交，问路径最大权值和。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-02T14:45:45.610Z">
+<meta property="og:updated_time" content="2018-02-16T02:57:02.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【DP】1007-B">
 <meta name="twitter:description" content="题意 这是一个伪·三倍经验题。 传送门：1007-B Alternative Question:   P1004 NOIp2000TG-4方格取数。   P1006 NOIp2008TG-3传纸条   给定一个n×mn \times mn×m矩阵，从(1,1)(1,1)(1,1)走到(n,m)(n,m)(n,m)走两次，只能向右或向下，希望除始末两点以外其他点不相交，问路径最大权值和。">
@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -397,7 +397,7 @@
       
 
       
-        <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+        <h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
 <p>这是一个<strong>伪·三倍经验题</strong>。</p>
 <p>传送门：<a href="https://www.luogu.org/problem/show?pid=T13508" target="_blank" rel="noopener">1007-B</a></p>
 <p>Alternative Question:</p>
@@ -411,14 +411,14 @@
 </ul>
 <p>给定一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">×</span><span class="mord mathit">m</span></span></span></span>矩阵，从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(1,1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span>走到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(n,m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">n</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mclose">)</span></span></span></span>走两次，只能向右或向下，希望除始末两点以外其他点不相交，问路径最大权值和。</p>
 <a id="more"></a>
-<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
+<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
 <p>四维dp，<code>dp[x][y][z][w]</code>为当第一个人在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>第二个人在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>z</mi><mo separator="true">,</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(z,w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span>时最大权值和。可推出方程：</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo><mo>=</mo><mi>max</mi><mo>(</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>[</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">dp[i][j][k][l] = \max(dp[i-1][j][k-1][l], dp[i-1][j][k][l-1], dp[i][j-1][k-1][l], dp[i][j-1][k][l-1])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mrel">=</span><span class="mop">max</span><span class="mopen">(</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span></p>
 <p>​                         <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>+</mo><mi>a</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>+</mo><mi>a</mi><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo><mo>×</mo><mo>[</mo><mi>i</mi><mo>≠</mo><mi>k</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>j</mi><mo>≠</mo><mi>l</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">+a[i][j] + a[k][l] \times [i \ne k || j \ne l]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord">+</span><span class="mord mathit">a</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mbin">+</span><span class="mord mathit">a</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mbin">×</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathrm">∣</span><span class="mord mathrm">∣</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span></span></span></span></p>
 <p>注意当<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>=</mo><mi>k</mi><mo separator="true">,</mo><mi>j</mi><mo>=</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">i = k, j = l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.01968em;">l</span></span></span></span>时，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><mi>a</mi><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">a[i][j]=a[k][l]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathit">a</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span></span></span></span>。所以必须减去一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>l</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">a[k][l]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">]</span></span></span></span>。</p>
-<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h3>
+<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码为 P1004方格取数</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">15</span>][<span class="number">15</span>][<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">15</span>][<span class="number">15</span>];</span><br><span class="line"><span class="keyword">int</span> x, y, z;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z);</span><br><span class="line">	<span class="keyword">while</span> (x || y || z) &#123;</span><br><span class="line">		a[x][y] = z;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z);</span><br><span class="line">	&#125;</span><br><span class="line">	dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] = a[<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= n; k++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">1</span>; l &lt;= n; l++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (i == <span class="number">1</span> &amp;&amp; j == <span class="number">1</span> &amp;&amp; k == <span class="number">1</span> &amp;&amp; l == <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">					dp[i][j][k][l] = max(max(dp[i<span class="number">-1</span>][j][k<span class="number">-1</span>][l], dp[i<span class="number">-1</span>][j][k][l<span class="number">-1</span>]),</span><br><span class="line">										 max(dp[i][j<span class="number">-1</span>][k<span class="number">-1</span>][l], dp[i][j<span class="number">-1</span>][k][l<span class="number">-1</span>])) +</span><br><span class="line">									 a[i][j] + a[k][l] * (i != k || j != l);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, dp[n][n][n][n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="拓展"><a class="markdownIt-Anchor" href="#拓展"></a> 拓展</h3>
+<h1 id="拓展"><a class="markdownIt-Anchor" href="#拓展"></a> 拓展</h1>
 <p>这是一个&quot;<strong>双线程DP</strong>&quot;。几个人同时走的问题可以考虑增加维度来解决。</p>
 
       
@@ -444,7 +444,7 @@
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" rel="external nofollow" target="_blank">CC BY-NC-ND 3.0</a> 许可协议。转载请注明出处！
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 
@@ -478,8 +478,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/07/【DP】1118-D/" rel="prev" title="【DP】1118-D">
-                【DP】1118-D <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/11/【转】RP导论/" rel="prev" title="【转】RP导论">
+                【转】RP导论 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -607,6 +607,12 @@
 
           
           
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
 
           
           
@@ -626,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text"> 拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text"> 拓展</span></a></li></ol></div>
             
 
           </div>
@@ -634,6 +640,11 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
       
 
     </div>
@@ -681,11 +692,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
