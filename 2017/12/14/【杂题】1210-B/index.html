@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="题意 传送门：B题 给一个01矩阵，允许若干次操作，每次一次翻转一行或一列，问最多可以翻出多少个0？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-16T03:01:05.174Z">
+<meta property="og:updated_time" content="2018-02-23T05:36:13.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【杂题】1210-B">
 <meta name="twitter:description" content="题意 传送门：B题 给一个01矩阵，允许若干次操作，每次一次翻转一行或一列，问最多可以翻出多少个0？">
@@ -238,6 +238,16 @@
               <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
             
             SS
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-note">
+          <a href="/note/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            笔记
           </a>
         </li>
       
@@ -402,7 +412,7 @@
 <p>给一个01矩阵，允许若干次操作，每次一次翻转一行或一列，问最多可以翻出多少个0？</p>
 <a id="more"></a>
 <p>数据范围：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>≤</mo><mn>1</mn><mn>0</mn><mo separator="true">,</mo><mi>c</mi><mo>≤</mo><mn>1</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">r \le 10, c \le 10000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span>。</p>
-<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
+<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
 <p>考虑行固定，只翻列的情况。</p>
 <p>因为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>只有10，所以可以直接二进制枚举，时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>2</mn><mi>r</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(2^r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span>。</p>
 <p>再考虑列。如果一行中0多于1则反转，否则不翻转。可以用两个变量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">c1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mord mathrm">1</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">c2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mord mathrm">2</span></span></span></span>分别对翻转和不翻转计数(或者<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mn>2</mn><mo>=</mo><mi>r</mi><mo>−</mo><mi>c</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">c2=r-c1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mord mathrm">2</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">−</span><span class="mord mathit">c</span><span class="mord mathrm">1</span></span></span></span>)，然后<code>ret += max(c1, c2);</code>或<code>ret += max(c1, r-c1);</code>。时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>r</mi><mi>c</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(rc)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">c</span><span class="mclose">)</span></span></span></span>。</p>
@@ -550,7 +560,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -561,7 +571,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -572,7 +582,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -621,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li></ol></div>
             
 
           </div>

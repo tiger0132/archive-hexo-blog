@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="题意 传送门：1007-C 给定一个容量为TTT的背包，nnn个物品，第iii个物品重量c[i]c[i]c[i]价值v[i]v[i]v[i]，最少要装mmm个物品，最少要留ttt的剩余空间，最大化价值与剩余空间×g\times g×g的值。n≤10n \le 10n≤10。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-16T02:56:22.288Z">
+<meta property="og:updated_time" content="2018-02-23T05:35:39.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【DFS】伪背包1007-C">
 <meta name="twitter:description" content="题意 传送门：1007-C 给定一个容量为TTT的背包，nnn个物品，第iii个物品重量c[i]c[i]c[i]价值v[i]v[i]v[i]，最少要装mmm个物品，最少要留ttt的剩余空间，最大化价值与剩余空间×g\times g×g的值。n≤10n \le 10n≤10。">
@@ -238,6 +238,16 @@
               <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
             
             SS
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-note">
+          <a href="/note/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            笔记
           </a>
         </li>
       
@@ -401,7 +411,7 @@
 <p>传送门：<a href="https://www.luogu.org/problem/show?pid=T13509" target="_blank" rel="noopener">1007-C</a></p>
 <p>给定一个容量为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span>的背包，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>个物品，第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>个物品重量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">c[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>价值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">v[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>，最少要装<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>个物品，最少要留<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span>的剩余空间，最大化价值与剩余空间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\times g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord">×</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span>的值。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">n \le 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span>。</p>
 <a id="more"></a>
-<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
+<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
 <p>这是一道<strong>披着背包外衣的入门难度DFS</strong>。</p>
 <p>直接dfs带<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">4</span></span></span></span>个参数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>e</mi><mi>p</mi><mo separator="true">,</mo><mi>c</mi><mi>n</mi><mi>t</mi><mo separator="true">,</mo><mi>v</mi><mi>a</mi><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mi>e</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">dep, cnt, val, rem</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit">p</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mord mathit">n</span><span class="mord mathit">t</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">m</span></span></span></span>分别代表深度(1~n) 已选物品数 已选物品价值 剩余容量，搜到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>e</mi><mi>p</mi><mo>&gt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">dep&gt;n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit">p</span><span class="mrel">&gt;</span><span class="mord mathit">n</span></span></span></span>判断<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>e</mi><mi>m</mi><mo>&lt;</mo><mi>t</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>c</mi><mi>n</mi><mi>t</mi><mo>&lt;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">rem&lt;t||cnt&lt;m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">m</span><span class="mrel">&lt;</span><span class="mord mathit">t</span><span class="mord mathrm">∣</span><span class="mord mathrm">∣</span><span class="mord mathit">c</span><span class="mord mathit">n</span><span class="mord mathit">t</span><span class="mrel">&lt;</span><span class="mord mathit">m</span></span></span></span>是否满足即可更新答案。</p>
 <p>否则搜索下面两个即可，不用剪枝。</p>
@@ -461,7 +471,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/01/【位运算】Codeforces 897C - Short Program/" rel="next" title="【位运算】Codeforces 897C - Short Program">
+              <a href="/2018/01/01/【位运算】Codeforces-897C-Short-Program/" rel="next" title="【位运算】Codeforces 897C - Short Program">
                 <i class="fa fa-chevron-left"></i> 【位运算】Codeforces 897C - Short Program
               </a>
             
@@ -471,7 +481,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/06/【数学】Codeforces 872C - Maximum splitting/" rel="prev" title="【数学】Codeforces 872C - Maximum splitting">
+              <a href="/2018/02/06/【数学】Codeforces-872C-Maximumsplitting/" rel="prev" title="【数学】Codeforces 872C - Maximum splitting">
                 【数学】Codeforces 872C - Maximum splitting <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -554,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -565,7 +575,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -576,7 +586,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -625,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text"> 拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text"> 拓展</span></a></li></ol></div>
             
 
           </div>
