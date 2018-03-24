@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题意 传送门：1216-D 有一个nnn个数的序列，一开始所有的数都是000，每次可以将一个区间[l,r][l,r][l,r] (l≤r)内的数+1+1+1，求到达最终状态的最少操作次数。 n \le 10^5，m \le 10^5​，m​为操作次数。">
+<meta name="description" content="题意 传送门：1216-D 有一个n​个数的序列，一开始所有的数都是0​，每次可以将一个区间[l,r]​ (l≤r)​内的数+1​，求到达最终状态的最少操作次数。 n≤105,m≤105n \le 10^5,m \le 10^5n≤10​5​​,m≤10​5​​，mmm为操作次数。">
 <meta name="keywords" content="差分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【差分】1216-D">
 <meta property="og:url" content="http://oi.tiger0132.tk/2017/12/20/【差分】1216-D/index.html">
 <meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="题意 传送门：1216-D 有一个nnn个数的序列，一开始所有的数都是000，每次可以将一个区间[l,r][l,r][l,r] (l≤r)内的数+1+1+1，求到达最终状态的最少操作次数。 n \le 10^5，m \le 10^5​，m​为操作次数。">
+<meta property="og:description" content="题意 传送门：1216-D 有一个n​个数的序列，一开始所有的数都是0​，每次可以将一个区间[l,r]​ (l≤r)​内的数+1​，求到达最终状态的最少操作次数。 n≤105,m≤105n \le 10^5,m \le 10^5n≤10​5​​,m≤10​5​​，mmm为操作次数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-23T05:36:03.132Z">
+<meta property="og:updated_time" content="2018-03-13T14:44:59.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【差分】1216-D">
-<meta name="twitter:description" content="题意 传送门：1216-D 有一个nnn个数的序列，一开始所有的数都是000，每次可以将一个区间[l,r][l,r][l,r] (l≤r)内的数+1+1+1，求到达最终状态的最少操作次数。 n \le 10^5，m \le 10^5​，m​为操作次数。">
+<meta name="twitter:description" content="题意 传送门：1216-D 有一个n​个数的序列，一开始所有的数都是0​，每次可以将一个区间[l,r]​ (l≤r)​内的数+1​，求到达最终状态的最少操作次数。 n≤105,m≤105n \le 10^5,m \le 10^5n≤10​5​​,m≤10​5​​，mmm为操作次数。">
 
 
 
@@ -381,8 +381,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/差分/" itemprop="url" rel="index">
-                    <span itemprop="name">差分</span>
+                  <a href="/categories/报告/" itemprop="url" rel="index">
+                    <span itemprop="name">报告</span>
                   </a>
                 </span>
 
@@ -420,8 +420,8 @@
       
         <h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
 <p>传送门：<a href="http://218.77.114.12:1980/v3/contest_show.php?cid=305#problem/D" target="_blank" rel="noopener">1216-D</a></p>
-<p>有一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>个数的序列，一开始所有的数都是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>，每次可以将一个区间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> (l≤r)内的数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">+</span><span class="mord mathrm">1</span></span></span></span>，求到达最终状态的最少操作次数。</p>
-<p>n \le 10^5，m \le 10^5​，m​为操作次数。</p>
+<p>有一个n​个数的序列，一开始所有的数都是0​，每次可以将一个区间[l,r]​ (l≤r)​内的数+1​，求到达最终状态的最少操作次数。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup><mo separator="true">,</mo><mi>m</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">n \le 10^5,m \le 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>为操作次数。</p>
 <a id="more"></a>
 <h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
 <p><strong>正难则反</strong>：考虑已知每次操作，求序列。可使用前缀和。</p>
@@ -597,7 +597,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -608,7 +608,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -619,7 +619,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
