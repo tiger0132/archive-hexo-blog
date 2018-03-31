@@ -3,6 +3,68 @@
 
 
     
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/01/08/%E3%80%90DFS%E3%80%91%E4%BC%AA%E8%83%8C%E5%8C%851007-C/</loc>
+    <lastmod>2018-03-31T14:51:38.962Z</lastmod>
+    <data>
+        <display>
+        <title>【DFS】伪背包1007-C</title>
+        <pubTime>2018-01-08T10:06:09.910Z</pubTime>
+        
+        <tag>DFS</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/26/%E3%80%90Codeforces%E3%80%91Codeforces-Round-472-Div-2-2/</loc>
+    <lastmod>2018-03-30T14:07:40.341Z</lastmod>
+    <data>
+        <display>
+        <title>【Codeforces】Codeforces Round #464 (Div. 2) (+2)</title>
+        <pubTime>2018-03-26T11:25:24.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/29/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2018-03-30T14:06:58.234Z</lastmod>
+    <data>
+        <display>
+        <title>【树状数组】树状数组</title>
+        <pubTime>2018-03-29T12:55:23.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/24/%E3%80%90Manacher%E3%80%91Manacher/</loc>
     <lastmod>2018-03-24T04:42:11.167Z</lastmod>
@@ -679,26 +741,6 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/01/08/%E3%80%90DFS%E3%80%91%E4%BC%AA%E8%83%8C%E5%8C%851007-C/</loc>
-    <lastmod>2018-03-13T14:43:46.019Z</lastmod>
-    <data>
-        <display>
-        <title>【DFS】伪背包1007-C</title>
-        <pubTime>2018-01-08T10:06:09.910Z</pubTime>
-        
-        <tag>DFS</tag>
-         
-         
-           
-             
-              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2017/12/09/%E3%80%90DP-LIS%E3%80%91%E6%B4%9B%E8%B0%B7P1704-%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E7%BE%8E%E5%81%9A%E9%A2%98%E6%9B%B2%E7%BA%BF/</loc>
     <lastmod>2018-03-13T14:43:42.336Z</lastmod>
     <data>
@@ -750,7 +792,6 @@
     </url>
 
     
-    
   <url>
     <loc>http://oi.tiger0132.tk/2017/10/11/%E3%80%90%E8%BD%AC%E3%80%91RP%E5%AF%BC%E8%AE%BA/</loc>
     <lastmod>2017-12-09T10:52:28.491Z</lastmod>
@@ -770,7 +811,6 @@
     </data>
     </url>
 
-    
     
     
     
