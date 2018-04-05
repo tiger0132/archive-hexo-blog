@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/04/06/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91Codeforces-961E-Tufurama/</loc>
+    <lastmod>2018-04-05T18:43:23.877Z</lastmod>
+    <data>
+        <display>
+        <title>【树状数组】Codeforces 961E - Tufurama</title>
+        <pubTime>2018-04-05T18:17:52.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/04/05/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91BZOJ1452-Count/</loc>
+    <lastmod>2018-04-05T18:43:12.411Z</lastmod>
+    <data>
+        <display>
+        <title>【树状数组】BZOJ1452 - Count</title>
+        <pubTime>2018-04-05T10:17:24.000Z</pubTime>
+        
+        <tag>BZOJ</tag>
+         
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/%E3%80%90%E6%95%B0%E5%AD%A6%E3%80%91Codeforces-961D-Pair-Of-Lines/</loc>
     <lastmod>2018-04-05T16:45:00.196Z</lastmod>
     <data>
@@ -33,9 +77,9 @@
         <title>【DP】1007-B</title>
         <pubTime>2017-10-07T13:23:39.000Z</pubTime>
         
-        <tag>DP</tag>
-         
         <tag>Y</tag>
+         
+        <tag>DP</tag>
          
          
            
@@ -99,13 +143,13 @@
         <title>【Codeforces】Codeforces Round #464 (Div. 2) (+2)</title>
         <pubTime>2018-03-31T16:09:39.000Z</pubTime>
         
-        <tag>Codeforces</tag>
-         
         <tag>模拟</tag>
          
-        <tag>枚举/暴力</tag>
-         
         <tag>two-pointer</tag>
+         
+        <tag>Codeforces</tag>
+         
+        <tag>枚举/暴力</tag>
          
         <tag>前缀</tag>
          
@@ -127,13 +171,13 @@
         <title>【Codeforces】Codeforces Round #464 (Div. 2) (+1)</title>
         <pubTime>2018-02-17T14:35:23.000Z</pubTime>
         
-        <tag>Codeforces</tag>
-         
         <tag>模拟</tag>
          
         <tag>two-pointer</tag>
          
         <tag>并查集</tag>
+         
+        <tag>Codeforces</tag>
          
          
            
@@ -256,28 +300,6 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/04/05/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91BZOJ1452-Count/</loc>
-    <lastmod>2018-04-05T16:29:46.428Z</lastmod>
-    <data>
-        <display>
-        <title>【树状数组】BZOJ1452 - Count</title>
-        <pubTime>2018-04-05T10:17:24.000Z</pubTime>
-        
-        <tag>BZOJ</tag>
-         
-        <tag>树状数组</tag>
-         
-         
-           
-             
-              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2018/02/16/%E3%80%90%E8%8E%AB%E9%98%9F%E7%AE%97%E6%B3%95%E3%80%91BZOJ1878-HH%E7%9A%84%E9%A1%B9%E9%93%BE/</loc>
     <lastmod>2018-04-05T16:29:24.618Z</lastmod>
     <data>
@@ -329,9 +351,9 @@
         <title>【单调队列】洛谷 P1886 - 滑动窗口</title>
         <pubTime>2018-03-03T13:57:22.000Z</pubTime>
         
-        <tag>单调队列</tag>
-         
         <tag>洛谷</tag>
+         
+        <tag>单调队列</tag>
          
          
            
@@ -373,9 +395,9 @@
         <title>【差分】1216-D</title>
         <pubTime>2017-12-20T14:44:10.000Z</pubTime>
         
-        <tag>差分</tag>
-         
         <tag>Y</tag>
+         
+        <tag>差分</tag>
          
          
            
