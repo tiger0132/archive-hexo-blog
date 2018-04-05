@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="DP," />
+  <meta name="keywords" content="DP,洛谷," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="题意 传送门：洛谷 P1704 - 寻找最优美做题曲线 现在给出每一天刷题的题数，并且有几天必须刷题，问最多可以刷多少天的题并且满足严格递增。 说白了就是，给一个序列，告诉你有一些下标上的数必须包含在LIS中，求满足条件的LIS，就是被禁锢的LIS。">
-<meta name="keywords" content="DP">
+<meta name="keywords" content="DP,洛谷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【DP-LIS】洛谷 P1704 - 寻找最优美做题曲线">
 <meta property="og:url" content="http://oi.tiger0132.tk/2017/12/09/【DP-LIS】洛谷P1704-寻找最优美做题曲线/index.html">
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="题意 传送门：洛谷 P1704 - 寻找最优美做题曲线 现在给出每一天刷题的题数，并且有几天必须刷题，问最多可以刷多少天的题并且满足严格递增。 说白了就是，给一个序列，告诉你有一些下标上的数必须包含在LIS中，求满足条件的LIS，就是被禁锢的LIS。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-13T14:43:42.336Z">
+<meta property="og:updated_time" content="2018-04-05T16:32:28.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【DP-LIS】洛谷 P1704 - 寻找最优美做题曲线">
 <meta name="twitter:description" content="题意 传送门：洛谷 P1704 - 寻找最优美做题曲线 现在给出每一天刷题的题数，并且有几天必须刷题，问最多可以刷多少天的题并且满足严格递增。 说白了就是，给一个序列，告诉你有一些下标上的数必须包含在LIS中，求满足条件的LIS，就是被禁锢的LIS。">
@@ -125,7 +125,7 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
@@ -285,7 +285,7 @@
 </nav>
 
 
-
+<!-- ber -->
  </div>
     </header>
 
@@ -421,7 +421,7 @@
 <p>代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">proc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">// int new_n = 0; c[0] = t[0]</span></span><br><span class="line">	<span class="comment">// t中的内容处理后被存入c中</span></span><br><span class="line">	<span class="keyword">int</span> nx = <span class="number">0</span>; *c = *t;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (i &gt; <span class="number">1</span>) c[++nx] = t[p[i<span class="number">-1</span>]];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = p[i<span class="number">-1</span>]+<span class="number">1</span>; j &lt; p[i]; j++) &#123; <span class="comment">// 两个必须刷题的日子的中间</span></span><br><span class="line">			<span class="keyword">if</span> (t[p[i<span class="number">-1</span>]] &lt; t[j] &amp;&amp; t[j] &lt; t[p[i]]) &#123;</span><br><span class="line">				c[++nx] = t[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	c[++nx] = t[p[m]];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = p[m]+<span class="number">1</span>; i &lt;= n; i++) &#123; <span class="comment">// 最后一个必须刷题的日子之后</span></span><br><span class="line">		<span class="keyword">if</span> (t[p[m]] &lt; t[i]) &#123;</span><br><span class="line">			c[++nx] = t[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	c[++nx] = t[p[m]];</span><br><span class="line">	n = nx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="lis"><a class="markdownIt-Anchor" href="#lis"></a> LIS</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>的LIS算法参见<a href="">这里</a>，代码如下：</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>的LIS算法参见<a href="">这里</a>，代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">	<span class="keyword">int</span> pos = lower_bound(lis+<span class="number">1</span>, lis+ans+<span class="number">1</span>, c[i]) - lis;</span><br><span class="line">	lis[pos] = c[i];</span><br><span class="line">	ans = max(ans, pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span><br></pre></td></tr></table></figure>
 <h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> p[<span class="number">500005</span>], t[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> lis[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> n, m, x; </span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">proc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> nx = <span class="number">0</span>; *c = *t;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (i &gt; <span class="number">1</span>) c[++nx] = t[p[i<span class="number">-1</span>]];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = p[i<span class="number">-1</span>]+<span class="number">1</span>; j &lt; p[i]; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (t[p[i<span class="number">-1</span>]] &lt; t[j] &amp;&amp; t[j] &lt; t[p[i]]) &#123;</span><br><span class="line">				c[++nx] = t[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	c[++nx] = t[p[m]];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = p[m]+<span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (t[p[m]] &lt; t[i]) &#123;</span><br><span class="line">			c[++nx] = t[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	c[++nx] = t[p[m]];</span><br><span class="line">	n = nx;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, p+i);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(p+<span class="number">1</span>, p+m+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, t+i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (t[p[i]] &lt;= t[p[i<span class="number">-1</span>]]) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">"impossible"</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	proc();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> pos = lower_bound(lis+<span class="number">1</span>, lis+ans+<span class="number">1</span>, c[i]) - lis;</span><br><span class="line">		lis[pos] = c[i];</span><br><span class="line">		ans = max(ans, pos);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -469,6 +469,8 @@
         <div class="post-tags">
           
             <a href="/tags/DP/" rel="tag"># DP</a>
+          
+            <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
           
         </div>
       
@@ -574,7 +576,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -585,7 +587,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -596,7 +598,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
