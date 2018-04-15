@@ -4,6 +4,232 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/04/15/%E3%80%90%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%91BZOJ1997-Planar/</loc>
+    <lastmod>2018-04-15T07:58:02.268Z</lastmod>
+    <data>
+        <display>
+        <title>【并查集】BZOJ1997 - Planar</title>
+        <pubTime>2018-04-15T07:39:44.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+        <tag>BZOJ</tag>
+         
+        <tag>HNOI</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/06/%E3%80%90Tarjan-%E5%89%B2%E7%82%B9%E3%80%91%E5%89%B2%E7%82%B9/</loc>
+    <lastmod>2018-04-07T01:34:49.390Z</lastmod>
+    <data>
+        <display>
+        <title>【Tarjan-割点】割点</title>
+        <pubTime>2018-03-06T12:55:28.000Z</pubTime>
+        
+        <tag>割点</tag>
+         
+        <tag>模板</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/19/%E3%80%90Tarjan-%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E3%80%91%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/</loc>
+    <lastmod>2018-04-07T01:34:39.648Z</lastmod>
+    <data>
+        <display>
+        <title>【Tarjan-强连通分量】强连通分量</title>
+        <pubTime>2018-03-19T05:11:33.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>强连通分量</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/24/%E3%80%90Manacher%E3%80%91Manacher/</loc>
+    <lastmod>2018-04-07T01:34:31.010Z</lastmod>
+    <data>
+        <display>
+        <title>【Manacher】Manacher</title>
+        <pubTime>2018-03-24T04:38:05.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>Manacher</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/29/%E3%80%90%E7%BA%BF%E6%AE%B5%E6%A0%91%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
+    <lastmod>2018-04-07T01:34:15.141Z</lastmod>
+    <data>
+        <display>
+        <title>【线段树】线段树</title>
+        <pubTime>2017-10-29T14:39:47.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/04/%E3%80%90%E7%BD%91%E7%BB%9C%E6%B5%81%E3%80%91%E7%BD%91%E7%BB%9C%E6%B5%81/</loc>
+    <lastmod>2018-04-07T01:34:04.845Z</lastmod>
+    <data>
+        <display>
+        <title>【网络流】网络流</title>
+        <pubTime>2018-03-04T05:07:48.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>网络流</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/04/05/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2018-04-07T01:33:52.994Z</lastmod>
+    <data>
+        <display>
+        <title>【树状数组】树状数组 (+4)</title>
+        <pubTime>2018-04-05T10:39:15.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/02/16/%E3%80%90%E8%8E%AB%E9%98%9F%E7%AE%97%E6%B3%95%E3%80%91BZOJ1878-HH%E7%9A%84%E9%A1%B9%E9%93%BE/</loc>
+    <lastmod>2018-04-07T01:33:45.170Z</lastmod>
+    <data>
+        <display>
+        <title>【莫队算法】BZOJ1878 - HH的项链</title>
+        <pubTime>2018-02-16T02:49:51.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>BZOJ</tag>
+         
+        <tag>莫队算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/08/%E3%80%90%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E3%80%91%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/</loc>
+    <lastmod>2018-04-07T01:33:40.538Z</lastmod>
+    <data>
+        <display>
+        <title>【高斯消元】高斯消元</title>
+        <pubTime>2018-03-08T14:29:05.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>高斯消元</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/03/%E3%80%90%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E3%80%91%E6%B4%9B%E8%B0%B7P1886-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
+    <lastmod>2018-04-07T01:33:07.465Z</lastmod>
+    <data>
+        <display>
+        <title>【单调队列】洛谷 P1886 - 滑动窗口</title>
+        <pubTime>2018-03-03T13:57:22.000Z</pubTime>
+        
+        <tag>洛谷</tag>
+         
+        <tag>模板</tag>
+         
+        <tag>单调队列</tag>
+         
+         
+           
+             
+              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91Codeforces-961E-Tufurama/</loc>
     <lastmod>2018-04-05T18:43:23.877Z</lastmod>
     <data>
@@ -300,28 +526,6 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/02/16/%E3%80%90%E8%8E%AB%E9%98%9F%E7%AE%97%E6%B3%95%E3%80%91BZOJ1878-HH%E7%9A%84%E9%A1%B9%E9%93%BE/</loc>
-    <lastmod>2018-04-05T16:29:24.618Z</lastmod>
-    <data>
-        <display>
-        <title>【莫队算法】BZOJ1878 - HH的项链</title>
-        <pubTime>2018-02-16T02:49:51.000Z</pubTime>
-        
-        <tag>BZOJ</tag>
-         
-        <tag>莫队算法</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2017/12/14/%E3%80%90%E6%A8%A1%E6%8B%9F%E3%80%911210-A/</loc>
     <lastmod>2018-04-05T16:29:14.540Z</lastmod>
     <data>
@@ -332,28 +536,6 @@
         <tag>Y</tag>
          
         <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/03/%E3%80%90%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E3%80%91%E6%B4%9B%E8%B0%B7P1886-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
-    <lastmod>2018-04-05T16:28:50.464Z</lastmod>
-    <data>
-        <display>
-        <title>【单调队列】洛谷 P1886 - 滑动窗口</title>
-        <pubTime>2018-03-03T13:57:22.000Z</pubTime>
-        
-        <tag>洛谷</tag>
-         
-        <tag>单调队列</tag>
          
          
            
@@ -573,127 +755,7 @@
     </url>
 
     
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/04/05/%E3%80%90%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%91%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2018-04-05T13:23:07.607Z</lastmod>
-    <data>
-        <display>
-        <title>【树状数组】树状数组 (+4)</title>
-        <pubTime>2018-04-05T10:39:15.000Z</pubTime>
-        
-        <tag>树状数组</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/08/%E3%80%90%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E3%80%91%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/</loc>
-    <lastmod>2018-04-05T10:41:46.528Z</lastmod>
-    <data>
-        <display>
-        <title>【高斯消元】高斯消元</title>
-        <pubTime>2018-03-08T14:29:05.000Z</pubTime>
-        
-        <tag>高斯消元</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/24/%E3%80%90Manacher%E3%80%91Manacher/</loc>
-    <lastmod>2018-03-24T04:42:11.167Z</lastmod>
-    <data>
-        <display>
-        <title>【Manacher】Manacher</title>
-        <pubTime>2018-03-24T04:38:05.000Z</pubTime>
-        
-        <tag>Manacher</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/19/%E3%80%90Tarjan-%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E3%80%91%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/</loc>
-    <lastmod>2018-03-19T05:19:05.525Z</lastmod>
-    <data>
-        <display>
-        <title>【Tarjan-强连通分量】强连通分量</title>
-        <pubTime>2018-03-19T05:11:33.000Z</pubTime>
-        
-        <tag>强连通分量</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/04/%E3%80%90%E7%BD%91%E7%BB%9C%E6%B5%81%E3%80%91%E7%BD%91%E7%BB%9C%E6%B5%81/</loc>
-    <lastmod>2018-03-19T05:15:15.983Z</lastmod>
-    <data>
-        <display>
-        <title>【网络流】网络流</title>
-        <pubTime>2018-03-04T05:07:48.000Z</pubTime>
-        
-        <tag>网络流</tag>
-         
-         
-           
-             
-              <breadCrumb title="报告" url="http://oi.tiger0132.tk/categories/%E6%8A%A5%E5%91%8A/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/03/06/%E3%80%90Tarjan-%E5%89%B2%E7%82%B9%E3%80%91%E5%89%B2%E7%82%B9/</loc>
-    <lastmod>2018-03-18T13:52:50.171Z</lastmod>
-    <data>
-        <display>
-        <title>【Tarjan-割点】割点</title>
-        <pubTime>2018-03-06T12:55:28.000Z</pubTime>
-        
-        <tag>割点</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://oi.tiger0132.tk/9999/12/31/DISCLAIMER/</loc>
@@ -705,26 +767,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2017/10/29/%E3%80%90%E7%BA%BF%E6%AE%B5%E6%A0%91%E3%80%91%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
-    <lastmod>2018-03-13T15:53:36.028Z</lastmod>
-    <data>
-        <display>
-        <title>【线段树】线段树</title>
-        <pubTime>2017-10-29T14:39:47.000Z</pubTime>
-        
-        <tag>线段树</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
         </display>
     </data>
     </url>
