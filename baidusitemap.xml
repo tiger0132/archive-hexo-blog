@@ -4,6 +4,230 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/02/12/day6-morning-notes/</loc>
+    <lastmod>2018-05-12T15:27:28.038Z</lastmod>
+    <data>
+        <display>
+        <title>「笔记」day6上午 - 分治</title>
+        <pubTime>2018-02-12T15:33:33.000Z</pubTime>
+        
+        <tag>分治</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://oi.tiger0132.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
+    <lastmod>2018-05-12T15:27:01.454Z</lastmod>
+    <data>
+        <display>
+        <title>「算法」线段树</title>
+        <pubTime>2017-10-29T14:39:47.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/01/01/codeforces-897c/</loc>
+    <lastmod>2018-05-12T15:26:30.446Z</lastmod>
+    <data>
+        <display>
+        <title>「Codeforces 897C」Short Program - 位运算</title>
+        <pubTime>2018-01-01T01:39:27.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>位运算</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/05/05/network-flow-notes/</loc>
+    <lastmod>2018-05-12T15:24:12.380Z</lastmod>
+    <data>
+        <display>
+        <title>「算法」网络流</title>
+        <pubTime>2018-05-05T15:31:36.000Z</pubTime>
+        
+        <tag>网络流</tag>
+         
+        <tag>图论</tag>
+         
+        <tag>模板</tag>
+         
+        <tag>最大流</tag>
+         
+        <tag>费用流</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1711/</loc>
+    <lastmod>2018-05-12T15:23:24.948Z</lastmod>
+    <data>
+        <display>
+        <title>「BZOJ1711」吃饭 - 网络流</title>
+        <pubTime>2018-03-04T08:33:13.000Z</pubTime>
+        
+        <tag>网络流</tag>
+         
+        <tag>BZOJ</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1001/</loc>
+    <lastmod>2018-05-12T15:22:16.876Z</lastmod>
+    <data>
+        <display>
+        <title>「BeiJing2006」狼抓兔子 - 网络流</title>
+        <pubTime>2018-03-04T05:17:36.000Z</pubTime>
+        
+        <tag>网络流</tag>
+         
+        <tag>BZOJ</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/02/10/day4-notes/</loc>
+    <lastmod>2018-05-12T15:20:02.113Z</lastmod>
+    <data>
+        <display>
+        <title>「笔记」day4 - 图论</title>
+        <pubTime>2018-02-10T15:33:33.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://oi.tiger0132.tk/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-886c/</loc>
+    <lastmod>2018-05-12T15:18:37.537Z</lastmod>
+    <data>
+        <display>
+        <title>Codeforces 886C - Petya and Catacombs - 贪心</title>
+        <pubTime>2018-02-06T15:13:55.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961d/</loc>
+    <lastmod>2018-05-12T15:17:58.089Z</lastmod>
+    <data>
+        <display>
+        <title>「Codeforces 961D」Pair Of Lines - 数学 + 几何</title>
+        <pubTime>2018-04-05T16:26:54.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>数学</tag>
+         
+        <tag>几何</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-872c/</loc>
+    <lastmod>2018-05-12T15:16:46.623Z</lastmod>
+    <data>
+        <display>
+        <title>「Codeforces 872C」Maximum splitting - 数学</title>
+        <pubTime>2018-02-06T12:53:25.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961e/</loc>
     <lastmod>2018-05-12T15:12:30.657Z</lastmod>
     <data>
@@ -151,9 +375,9 @@
         
         <tag>Y</tag>
          
-        <tag>图论</tag>
-         
         <tag>网络流</tag>
+         
+        <tag>图论</tag>
          
         <tag>最大流</tag>
          
@@ -202,34 +426,6 @@
            
              
               <breadCrumb title="题目汇总" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/05/05/network-flow-notes/</loc>
-    <lastmod>2018-05-05T15:47:09.350Z</lastmod>
-    <data>
-        <display>
-        <title>「算法」网络流</title>
-        <pubTime>2018-05-05T15:31:36.000Z</pubTime>
-        
-        <tag>图论</tag>
-         
-        <tag>模板</tag>
-         
-        <tag>网络流</tag>
-         
-        <tag>最大流</tag>
-         
-        <tag>费用流</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -360,11 +556,11 @@
         <title>「BZOJ1214」团伙 - 并查集</title>
         <pubTime>2018-02-22T14:28:25.000Z</pubTime>
         
+        <tag>BZOJ</tag>
+         
         <tag>图论</tag>
          
         <tag>并查集</tag>
-         
-        <tag>BZOJ</tag>
          
          
            
@@ -406,11 +602,11 @@
         <title>「BZOJ1997」Planar - 并查集</title>
         <pubTime>2018-04-15T07:39:44.000Z</pubTime>
         
+        <tag>BZOJ</tag>
+         
         <tag>图论</tag>
          
         <tag>并查集</tag>
-         
-        <tag>BZOJ</tag>
          
         <tag>HNOI</tag>
          
@@ -432,13 +628,13 @@
         <title>「赛后总结」Codeforces Round #464 (Div. 2) (+1)</title>
         <pubTime>2018-02-17T14:35:23.000Z</pubTime>
         
+        <tag>模拟</tag>
+         
         <tag>图论</tag>
          
         <tag>并查集</tag>
          
         <tag>Codeforces</tag>
-         
-        <tag>模拟</tag>
          
         <tag>two-pointer</tag>
          
@@ -706,9 +902,9 @@
         
         <tag>枚举/暴力</tag>
          
-        <tag>Codeforces</tag>
-         
         <tag>模拟</tag>
+         
+        <tag>Codeforces</tag>
          
         <tag>two-pointer</tag>
          
