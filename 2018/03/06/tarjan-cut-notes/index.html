@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="简介 如果在一张无向图上删除它和它的所有边使图的连通性改变，那么这个点就这张无向图的割点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/%E3%80%90Tarjan-%E5%89%B2%E7%82%B9%E3%80%91%E5%89%B2%E7%82%B9/sample-graph.png">
-<meta property="og:updated_time" content="2018-04-23T05:07:50.467Z">
+<meta property="og:image" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/sample-graph.png">
+<meta property="og:updated_time" content="2018-05-29T14:45:51.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「算法」Tarjan割点">
 <meta name="twitter:description" content="简介 如果在一张无向图上删除它和它的所有边使图的连通性改变，那么这个点就这张无向图的割点。">
-<meta name="twitter:image" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/%E3%80%90Tarjan-%E5%89%B2%E7%82%B9%E3%80%91%E5%89%B2%E7%82%B9/sample-graph.png">
+<meta name="twitter:image" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/sample-graph.png">
 
 
 
@@ -453,7 +453,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong>强烈建议看割点之前先右转看看<a href="/../../../../2018/03/04/%E3%80%90Tarjan-%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E3%80%91%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F">强连通分量</a></strong></p>
 <p>和<code>强连通分量</code>不同，<code>割点</code>只会在无向图中出现。因为<code>DFS树</code>的特性，这棵树上只会有两种边：树边和反向边。</p>
 <p>如下面这张图：</p>
-<p><img src="/2018/03/06/tarjan-cut-notes/%E3%80%90Tarjan-%E5%89%B2%E7%82%B9%E3%80%91%E5%89%B2%E7%82%B9/sample-graph.png" alt="图挂了(T_T)"></p>
+<p><img src="/2018/03/06/tarjan-cut-notes/sample-graph.png" alt="图挂了(T_T)"></p>
 <p>从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>点对它进行<code>DFS</code>，可以得到以下的<code>DFS树</code>(这个例子貌似有点极端)：</p>
 <p>还是一样，定义<code>dfn[i]</code>和<code>low[i]</code>。</p>
 <p><code>dfn[i]</code>代表第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>个点的<code>DFS序</code>，<code>low[i]</code>代表第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>个点<strong>及其子树</strong>上的某个点通过<strong>一条横叉边或返祖边</strong>能到达的<code>DFS序</code><strong>最小</strong>的点的<code>DFS</code>序。</p>
@@ -620,7 +620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -642,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="模拟,枚举/暴力,Codeforces,two-pointer,前缀," />
+  <meta name="keywords" content="枚举/暴力,模拟,Codeforces,two-pointer,前缀," />
 
 
 
@@ -80,19 +80,19 @@
 
 
 <meta name="description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做😢。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
-<meta name="keywords" content="模拟,枚举&#x2F;暴力,Codeforces,two-pointer,前缀">
+<meta name="keywords" content="枚举&#x2F;暴力,模拟,Codeforces,two-pointer,前缀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
 <meta property="og:url" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/index.html">
 <meta property="og:site_name" content="Tiger0132的小站">
 <meta property="og:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做😢。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/%E3%80%90Codeforces%E3%80%91CodeforcEs-Round-472-Div-2-2/B.png">
-<meta property="og:updated_time" content="2018-04-23T04:45:59.409Z">
+<meta property="og:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/B.png">
+<meta property="og:updated_time" content="2018-05-29T14:45:38.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
 <meta name="twitter:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做😢。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
-<meta name="twitter:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/%E3%80%90Codeforces%E3%80%91CodeforcEs-Round-472-Div-2-2/B.png">
+<meta name="twitter:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/B.png">
 
 
 
@@ -469,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>现在问你，给你一个黑白局面，问你能不能从白棋盘用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">n</span></span></span></span>次得到它，并且<strong>满足所有操作中的行和列全部不重复</strong>。</p>
 <h2 id="解法-2"><a class="markdownIt-Anchor" href="#解法-2"></a> 解法</h2>
 <p>如图，</p>
-<p><img src="/2018/04/01/codeforces-round-472/%E3%80%90Codeforces%E3%80%91CodeforcEs-Round-472-Div-2-2/B.png" alt="图挂了(T_T)"></p>
+<p><img src="/2018/04/01/codeforces-round-472/B.png" alt="图挂了(T_T)"></p>
 <p>显然如果紫色点有任意三个被选了，那么另外一个肯定会也是黑的。<br>
 对于所有两两的行和列，如果这样的紫色点有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>个、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span></span></span></span>个或者<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">4</span></span></span></span>个，那么一定是<code>Yes</code>，否则是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">No</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">o</span></span></span></span>。</p>
 <h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
@@ -538,9 +538,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
         <div class="post-tags">
           
-            <a href="/tags/模拟/" rel="tag"># 模拟</a>
-          
             <a href="/tags/枚举-暴力/" rel="tag"># 枚举/暴力</a>
+          
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
           
             <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           
@@ -652,7 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -674,7 +674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
