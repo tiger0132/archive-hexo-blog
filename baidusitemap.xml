@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/05/30/luogu-1262/</loc>
+    <lastmod>2018-05-30T05:12:36.956Z</lastmod>
+    <data>
+        <display>
+        <title>「洛谷 P1262」间谍网络 - 强连通分量</title>
+        <pubTime>2018-05-30T04:57:26.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>洛谷</tag>
+         
+        <tag>Tarjan</tag>
+         
+        <tag>强连通分量</tag>
+         
+        <tag>缩点</tag>
+         
+        <tag>DAG</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/9999/12/31/DISCLAIMER/</loc>
     <lastmod>2018-05-29T15:44:16.146Z</lastmod>
     <data>
@@ -130,9 +160,9 @@
         <title>「赛后总结」Codeforces Round #472 (Div. 2) (+2)</title>
         <pubTime>2018-03-31T16:09:39.000Z</pubTime>
         
-        <tag>枚举/暴力</tag>
-         
         <tag>模拟</tag>
+         
+        <tag>枚举/暴力</tag>
          
         <tag>Codeforces</tag>
          
@@ -640,9 +670,9 @@
          
         <tag>Floyd</tag>
          
-        <tag>矩阵快速幂</tag>
-         
         <tag>POJ</tag>
+         
+        <tag>矩阵快速幂</tag>
          
          
            
@@ -666,9 +696,9 @@
          
         <tag>Floyd</tag>
          
-        <tag>POJ</tag>
-         
         <tag>最小环</tag>
+         
+        <tag>POJ</tag>
          
          
            
