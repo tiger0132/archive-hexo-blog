@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oi.tiger0132.tk/secret/index.html</loc>
+    
+    <lastmod>2018-05-31T15:00:05.392Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://oi.tiger0132.tk/2018/05/30/luogu-1262/</loc>
     
     <lastmod>2018-05-30T05:17:25.433Z</lastmod>
@@ -278,13 +285,6 @@
     <loc>http://oi.tiger0132.tk/2017/11/24/eight-digits-puzzle/</loc>
     
     <lastmod>2018-04-23T04:46:14.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://oi.tiger0132.tk/secret/index.html</loc>
-    
-    <lastmod>2018-03-31T15:00:58.983Z</lastmod>
     
   </url>
   
