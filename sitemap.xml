@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oi.tiger0132.tk/2018/06/07/aho-corasick-automaton-notes/</loc>
+    
+    <lastmod>2018-06-07T05:52:35.175Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/06/01/kmp-notes/</loc>
+    
+    <lastmod>2018-06-06T11:23:34.102Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/magic/index.html</loc>
+    
+    <lastmod>2018-06-01T07:39:05.595Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://oi.tiger0132.tk/secret/index.html</loc>
     
-    <lastmod>2018-05-31T15:00:05.392Z</lastmod>
+    <lastmod>2018-06-01T04:56:15.007Z</lastmod>
     
   </url>
   
