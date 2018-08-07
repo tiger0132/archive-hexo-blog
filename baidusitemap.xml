@@ -4,8 +4,157 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/07/19/splay-notes/</loc>
+    <lastmod>2018-08-07T12:40:42.035Z</lastmod>
+    <data>
+        <display>
+        <title>「数据结构」Splay</title>
+        <pubTime>2018-07-19T10:46:26.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>数据结构</tag>
+         
+        <tag>平衡树</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://oi.tiger0132.tk/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/9999/12/31/ANNOUNCEMENT/</loc>
+    <lastmod>2018-08-07T09:27:47.366Z</lastmod>
+    <data>
+        <display>
+        <title>【置顶】ANNOUNCEMENT</title>
+        <pubTime>9999-12-31T15:59:59.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
+    <lastmod>2018-07-19T10:53:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>「数据结构」线段树</title>
+        <pubTime>2017-10-29T14:39:47.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>模板</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://oi.tiger0132.tk/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/05/20/bit-notes/</loc>
+    <lastmod>2018-07-19T10:52:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>「数据结构」树状数组 (+6)</title>
+        <pubTime>2018-05-20T09:04:06.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://oi.tiger0132.tk/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/07/10/ahoi2009-seq/</loc>
+    <lastmod>2018-07-11T04:57:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>「AHOI2009」维护序列 - 线段树</title>
+        <pubTime>2018-07-10T14:24:17.000Z</pubTime>
+        
+        <tag>AHOI</tag>
+         
+        <tag>线段树</tag>
+         
+        <tag>BZOJ</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/06/22/codeforces-999d/</loc>
+    <lastmod>2018-06-22T05:23:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>「Codeforces 999D」Equalize the Remainders - 贪心</title>
+        <pubTime>2018-06-22T05:09:56.000Z</pubTime>
+        
+        <tag>Codeforces</tag>
+         
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/12/mistakes/</loc>
+    <lastmod>2018-06-19T12:35:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>常见错误</title>
+        <pubTime>2017-10-12T05:05:15.000Z</pubTime>
+        
+        <tag>常见错误</tag>
+         
+         
+           
+             
+              <breadCrumb title="总结" url="http://oi.tiger0132.tk/categories/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2018/06/07/aho-corasick-automaton-notes/</loc>
-    <lastmod>2018-06-07T05:52:35.175Z</lastmod>
+    <lastmod>2018-06-07T09:46:08.000Z</lastmod>
     <data>
         <display>
         <title>「算法」AC自动机</title>
@@ -29,7 +178,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/06/01/kmp-notes/</loc>
-    <lastmod>2018-06-06T11:23:34.102Z</lastmod>
+    <lastmod>2018-06-06T11:23:36.000Z</lastmod>
     <data>
         <display>
         <title>「算法」KMP</title>
@@ -55,7 +204,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/30/luogu-1262/</loc>
-    <lastmod>2018-05-30T05:17:25.433Z</lastmod>
+    <lastmod>2018-05-30T05:17:26.000Z</lastmod>
     <data>
         <display>
         <title>「洛谷 P1262」间谍网络 - 强连通分量</title>
@@ -84,23 +233,8 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/9999/12/31/DISCLAIMER/</loc>
-    <lastmod>2018-05-29T15:44:16.146Z</lastmod>
-    <data>
-        <display>
-        <title>【置顶】DISCLAIMER</title>
-        <pubTime>9999-12-31T15:59:59.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2018/05/29/system-of-difference-constraints-notes/</loc>
-    <lastmod>2018-05-29T15:43:26.381Z</lastmod>
+    <lastmod>2018-05-29T15:43:28.000Z</lastmod>
     <data>
         <display>
         <title>「算法」差分约束系统</title>
@@ -124,7 +258,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/05/network-flow-notes/</loc>
-    <lastmod>2018-05-29T15:17:13.075Z</lastmod>
+    <lastmod>2018-05-29T15:17:14.000Z</lastmod>
     <data>
         <display>
         <title>「算法」网络流</title>
@@ -132,9 +266,9 @@
         
         <tag>模板</tag>
          
-        <tag>图论</tag>
-         
         <tag>网络流</tag>
+         
+        <tag>图论</tag>
          
         <tag>最大流</tag>
          
@@ -152,7 +286,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/19/tarjan-scc-notes/</loc>
-    <lastmod>2018-05-29T14:46:11.314Z</lastmod>
+    <lastmod>2018-05-29T14:46:12.000Z</lastmod>
     <data>
         <display>
         <title>「算法」Tarjan强连通分量</title>
@@ -178,7 +312,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/</loc>
-    <lastmod>2018-05-29T14:45:51.477Z</lastmod>
+    <lastmod>2018-05-29T14:45:52.000Z</lastmod>
     <data>
         <display>
         <title>「算法」Tarjan割点</title>
@@ -204,7 +338,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/</loc>
-    <lastmod>2018-05-29T14:45:38.465Z</lastmod>
+    <lastmod>2018-05-29T14:45:40.000Z</lastmod>
     <data>
         <display>
         <title>「赛后总结」Codeforces Round #472 (Div. 2) (+2)</title>
@@ -231,30 +365,8 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/05/20/bit-notes/</loc>
-    <lastmod>2018-05-29T14:44:32.169Z</lastmod>
-    <data>
-        <display>
-        <title>「算法」树状数组 (+6)</title>
-        <pubTime>2018-05-20T09:04:06.000Z</pubTime>
-        
-        <tag>模板</tag>
-         
-        <tag>树状数组</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2018/05/24/pollard-rho-notes/</loc>
-    <lastmod>2018-05-24T15:32:34.674Z</lastmod>
+    <lastmod>2018-05-24T15:32:36.000Z</lastmod>
     <data>
         <display>
         <title>「算法」Pollard-Rho算法</title>
@@ -279,30 +391,8 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
-    <lastmod>2018-05-24T05:40:39.188Z</lastmod>
-    <data>
-        <display>
-        <title>「算法」线段树</title>
-        <pubTime>2017-10-29T14:39:47.000Z</pubTime>
-        
-        <tag>模板</tag>
-         
-        <tag>线段树</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2018/05/22/miller-rabin-notes/</loc>
-    <lastmod>2018-05-24T05:39:53.433Z</lastmod>
+    <lastmod>2018-05-24T05:39:54.000Z</lastmod>
     <data>
         <display>
         <title>「算法」Miller-Rabin算法</title>
@@ -328,7 +418,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/05/jsoi2009-count/</loc>
-    <lastmod>2018-05-20T04:05:17.731Z</lastmod>
+    <lastmod>2018-05-20T04:05:18.000Z</lastmod>
     <data>
         <display>
         <title>「JSOI2009」计数问题 - 树状数组</title>
@@ -352,7 +442,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-872c/</loc>
-    <lastmod>2018-05-12T15:33:33.067Z</lastmod>
+    <lastmod>2018-05-12T15:33:34.000Z</lastmod>
     <data>
         <display>
         <title>「Codeforces 872C」Maximum splitting - 数学</title>
@@ -374,7 +464,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-886c/</loc>
-    <lastmod>2018-05-12T15:33:17.753Z</lastmod>
+    <lastmod>2018-05-12T15:33:18.000Z</lastmod>
     <data>
         <display>
         <title>「Codeforces 886C」Petya and Catacombs - 贪心</title>
@@ -396,7 +486,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961d/</loc>
-    <lastmod>2018-05-12T15:32:52.939Z</lastmod>
+    <lastmod>2018-05-12T15:32:54.000Z</lastmod>
     <data>
         <display>
         <title>「Codeforces 961D」Pair Of Lines - 数学 + 几何</title>
@@ -420,7 +510,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/12/day6-morning-notes/</loc>
-    <lastmod>2018-05-12T15:27:28.038Z</lastmod>
+    <lastmod>2018-05-12T15:27:30.000Z</lastmod>
     <data>
         <display>
         <title>「笔记」day6上午 - 分治</title>
@@ -440,7 +530,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/01/01/codeforces-897c/</loc>
-    <lastmod>2018-05-12T15:26:30.446Z</lastmod>
+    <lastmod>2018-05-12T15:26:32.000Z</lastmod>
     <data>
         <display>
         <title>「Codeforces 897C」Short Program - 位运算</title>
@@ -462,7 +552,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1711/</loc>
-    <lastmod>2018-05-12T15:23:24.948Z</lastmod>
+    <lastmod>2018-05-12T15:23:26.000Z</lastmod>
     <data>
         <display>
         <title>「BZOJ1711」吃饭 - 网络流</title>
@@ -484,7 +574,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1001/</loc>
-    <lastmod>2018-05-12T15:22:16.876Z</lastmod>
+    <lastmod>2018-05-12T15:22:18.000Z</lastmod>
     <data>
         <display>
         <title>「BeiJing2006」狼抓兔子 - 网络流</title>
@@ -506,7 +596,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/10/day4-notes/</loc>
-    <lastmod>2018-05-12T15:20:02.113Z</lastmod>
+    <lastmod>2018-05-12T15:20:04.000Z</lastmod>
     <data>
         <display>
         <title>「笔记」day4 - 图论</title>
@@ -526,7 +616,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961e/</loc>
-    <lastmod>2018-05-12T15:12:30.657Z</lastmod>
+    <lastmod>2018-05-12T15:12:32.000Z</lastmod>
     <data>
         <display>
         <title>「Codeforces 961E」Tufurama - 树状数组</title>
@@ -548,15 +638,15 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/16/sdoi2009-diff/</loc>
-    <lastmod>2018-05-12T15:00:22.939Z</lastmod>
+    <lastmod>2018-05-12T15:00:24.000Z</lastmod>
     <data>
         <display>
         <title>「SDOI2009」HH 的项链 - 莫队</title>
         <pubTime>2018-02-16T02:49:51.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>BZOJ</tag>
+         
+        <tag>模板</tag>
          
         <tag>SDOI</tag>
          
@@ -573,28 +663,8 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/02/06/code-snippet/</loc>
-    <lastmod>2018-05-12T14:47:03.446Z</lastmod>
-    <data>
-        <display>
-        <title>代码片段</title>
-        <pubTime>2018-02-06T15:57:28.000Z</pubTime>
-        
-        <tag>代码片段</tag>
-         
-         
-           
-             
-              <breadCrumb title="Internal" url="http://oi.tiger0132.tk/categories/Internal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2018/03/08/gaussian-elimination-notes/</loc>
-    <lastmod>2018-05-12T14:38:59.268Z</lastmod>
+    <lastmod>2018-05-12T14:39:00.000Z</lastmod>
     <data>
         <display>
         <title>「算法」高斯消元</title>
@@ -618,7 +688,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/06/network-flow-problems/</loc>
-    <lastmod>2018-05-05T16:57:49.761Z</lastmod>
+    <lastmod>2018-05-05T16:57:50.000Z</lastmod>
     <data>
         <display>
         <title>「题目汇总」网络流题目汇总</title>
@@ -626,9 +696,9 @@
         
         <tag>Y</tag>
          
-        <tag>图论</tag>
-         
         <tag>网络流</tag>
+         
+        <tag>图论</tag>
          
         <tag>最大流</tag>
          
@@ -646,7 +716,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/16/tarjan-problems/</loc>
-    <lastmod>2018-05-05T15:48:29.153Z</lastmod>
+    <lastmod>2018-05-05T15:48:30.000Z</lastmod>
     <data>
         <display>
         <title>「题目汇总」Tarjan题目汇总</title>
@@ -670,7 +740,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/08/undefined-behavior-notes/</loc>
-    <lastmod>2018-05-03T11:18:55.382Z</lastmod>
+    <lastmod>2018-05-03T11:18:56.000Z</lastmod>
     <data>
         <display>
         <title>「Internal」一个UB引发的血案 - 底层</title>
@@ -690,7 +760,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/08/deep-copy-notes/</loc>
-    <lastmod>2018-05-03T11:18:15.453Z</lastmod>
+    <lastmod>2018-05-03T11:18:16.000Z</lastmod>
     <data>
         <display>
         <title>「Internetl」深拷贝之殇 - 底层</title>
@@ -710,7 +780,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/02/poj-3613/</loc>
-    <lastmod>2018-05-03T11:12:56.824Z</lastmod>
+    <lastmod>2018-05-03T11:12:58.000Z</lastmod>
     <data>
         <display>
         <title>「POJ 3613」Cow Relays - Floyd + 矩阵快速幂</title>
@@ -720,9 +790,9 @@
          
         <tag>Floyd</tag>
          
-        <tag>POJ</tag>
-         
         <tag>矩阵快速幂</tag>
+         
+        <tag>POJ</tag>
          
          
            
@@ -736,7 +806,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/02/poj-1734/</loc>
-    <lastmod>2018-05-02T03:18:24.228Z</lastmod>
+    <lastmod>2018-05-02T03:18:26.000Z</lastmod>
     <data>
         <display>
         <title>「POJ 1734」Sightseeing trip  - Floyd求最小环</title>
@@ -746,9 +816,9 @@
          
         <tag>Floyd</tag>
          
-        <tag>最小环</tag>
-         
         <tag>POJ</tag>
+         
+        <tag>最小环</tag>
          
          
            
@@ -762,7 +832,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/03/luogu-1686/</loc>
-    <lastmod>2018-04-23T05:19:12.260Z</lastmod>
+    <lastmod>2018-04-23T05:19:14.000Z</lastmod>
     <data>
         <display>
         <title>「Luogu P1886」滑动窗口 - 单调队列</title>
@@ -786,17 +856,17 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/22/bzoj-1214/</loc>
-    <lastmod>2018-04-23T05:15:02.869Z</lastmod>
+    <lastmod>2018-04-23T05:15:04.000Z</lastmod>
     <data>
         <display>
         <title>「BZOJ1214」团伙 - 并查集</title>
         <pubTime>2018-02-22T14:28:25.000Z</pubTime>
         
+        <tag>BZOJ</tag>
+         
         <tag>图论</tag>
          
         <tag>并查集</tag>
-         
-        <tag>BZOJ</tag>
          
          
            
@@ -810,7 +880,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/20/yali-1216-d/</loc>
-    <lastmod>2018-04-23T05:14:50.650Z</lastmod>
+    <lastmod>2018-04-23T05:14:52.000Z</lastmod>
     <data>
         <display>
         <title>1216-D - 差分</title>
@@ -832,17 +902,17 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/15/bzoj-1997/</loc>
-    <lastmod>2018-04-23T05:13:05.987Z</lastmod>
+    <lastmod>2018-04-23T05:13:06.000Z</lastmod>
     <data>
         <display>
         <title>「BZOJ1997」Planar - 并查集</title>
         <pubTime>2018-04-15T07:39:44.000Z</pubTime>
         
+        <tag>BZOJ</tag>
+         
         <tag>图论</tag>
          
         <tag>并查集</tag>
-         
-        <tag>BZOJ</tag>
          
         <tag>HNOI</tag>
          
@@ -858,7 +928,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/17/codeforces-round-464/</loc>
-    <lastmod>2018-04-23T05:12:31.992Z</lastmod>
+    <lastmod>2018-04-23T05:12:32.000Z</lastmod>
     <data>
         <display>
         <title>「赛后总结」Codeforces Round #464 (Div. 2) (+1)</title>
@@ -886,7 +956,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/24/manacher-notes/</loc>
-    <lastmod>2018-04-23T05:03:47.862Z</lastmod>
+    <lastmod>2018-04-23T05:03:48.000Z</lastmod>
     <data>
         <display>
         <title>「算法」Manacher</title>
@@ -908,7 +978,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/22/bzoj-2442/</loc>
-    <lastmod>2018-04-23T05:01:44.099Z</lastmod>
+    <lastmod>2018-04-23T05:01:46.000Z</lastmod>
     <data>
         <display>
         <title>「BZOJ 2442」修剪草坪 - DP + 单调队列</title>
@@ -934,7 +1004,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/09/day3-notes/</loc>
-    <lastmod>2018-04-23T04:57:07.272Z</lastmod>
+    <lastmod>2018-04-23T04:57:08.000Z</lastmod>
     <data>
         <display>
         <title>「笔记」day3 - DP</title>
@@ -954,7 +1024,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/09/luogu-1704/</loc>
-    <lastmod>2018-04-23T04:56:29.550Z</lastmod>
+    <lastmod>2018-04-23T04:56:30.000Z</lastmod>
     <data>
         <display>
         <title>「Luogu P1704」寻找最优美做题曲线 - DP</title>
@@ -976,7 +1046,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/08/day2-notes/</loc>
-    <lastmod>2018-04-23T04:55:32.990Z</lastmod>
+    <lastmod>2018-04-23T04:55:34.000Z</lastmod>
     <data>
         <display>
         <title>「笔记」day2 - DP</title>
@@ -996,7 +1066,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/07/day1-notes/</loc>
-    <lastmod>2018-04-23T04:55:29.186Z</lastmod>
+    <lastmod>2018-04-23T04:55:30.000Z</lastmod>
     <data>
         <display>
         <title>「笔记」day1 - DP</title>
@@ -1016,7 +1086,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/</loc>
-    <lastmod>2018-04-23T04:51:28.711Z</lastmod>
+    <lastmod>2018-04-23T04:51:30.000Z</lastmod>
     <data>
         <display>
         <title>「Internal」二元组dp - DP</title>
@@ -1035,28 +1105,8 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2017/10/12/mistakes/</loc>
-    <lastmod>2018-04-23T04:47:57.375Z</lastmod>
-    <data>
-        <display>
-        <title>常见错误</title>
-        <pubTime>2017-10-12T05:05:15.000Z</pubTime>
-        
-        <tag>常见错误</tag>
-         
-         
-           
-             
-              <breadCrumb title="总结" url="http://oi.tiger0132.tk/categories/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://oi.tiger0132.tk/2017/11/24/eight-digits-puzzle/</loc>
-    <lastmod>2018-04-23T04:46:14.326Z</lastmod>
+    <lastmod>2018-04-23T04:46:16.000Z</lastmod>
     <data>
         <display>
         <title>「经典」八数码问题 - BFS</title>

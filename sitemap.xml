@@ -2,16 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oi.tiger0132.tk/2018/07/19/splay-notes/</loc>
+    
+    <lastmod>2018-08-07T12:40:42.035Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/9999/12/31/ANNOUNCEMENT/</loc>
+    
+    <lastmod>2018-08-07T09:27:47.366Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
+    
+    <lastmod>2018-07-19T10:53:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/05/20/bit-notes/</loc>
+    
+    <lastmod>2018-07-19T10:52:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/07/10/ahoi2009-seq/</loc>
+    
+    <lastmod>2018-07-11T04:57:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/06/22/codeforces-999d/</loc>
+    
+    <lastmod>2018-06-22T05:23:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oi.tiger0132.tk/2017/10/12/mistakes/</loc>
+    
+    <lastmod>2018-06-19T12:35:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://oi.tiger0132.tk/2018/06/07/aho-corasick-automaton-notes/</loc>
     
-    <lastmod>2018-06-07T05:52:35.175Z</lastmod>
+    <lastmod>2018-06-07T09:46:08.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/06/01/kmp-notes/</loc>
     
-    <lastmod>2018-06-06T11:23:34.102Z</lastmod>
+    <lastmod>2018-06-06T11:23:36.000Z</lastmod>
     
   </url>
   
@@ -32,280 +81,252 @@
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/30/luogu-1262/</loc>
     
-    <lastmod>2018-05-30T05:17:25.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://oi.tiger0132.tk/9999/12/31/DISCLAIMER/</loc>
-    
-    <lastmod>2018-05-29T15:44:16.146Z</lastmod>
+    <lastmod>2018-05-30T05:17:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/29/system-of-difference-constraints-notes/</loc>
     
-    <lastmod>2018-05-29T15:43:26.381Z</lastmod>
+    <lastmod>2018-05-29T15:43:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/05/network-flow-notes/</loc>
     
-    <lastmod>2018-05-29T15:17:13.075Z</lastmod>
+    <lastmod>2018-05-29T15:17:14.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/19/tarjan-scc-notes/</loc>
     
-    <lastmod>2018-05-29T14:46:11.314Z</lastmod>
+    <lastmod>2018-05-29T14:46:12.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/</loc>
     
-    <lastmod>2018-05-29T14:45:51.477Z</lastmod>
+    <lastmod>2018-05-29T14:45:52.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/</loc>
     
-    <lastmod>2018-05-29T14:45:38.465Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/05/20/bit-notes/</loc>
-    
-    <lastmod>2018-05-29T14:44:32.169Z</lastmod>
+    <lastmod>2018-05-29T14:45:40.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/24/pollard-rho-notes/</loc>
     
-    <lastmod>2018-05-24T15:32:34.674Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
-    
-    <lastmod>2018-05-24T05:40:39.188Z</lastmod>
+    <lastmod>2018-05-24T15:32:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/22/miller-rabin-notes/</loc>
     
-    <lastmod>2018-05-24T05:39:53.433Z</lastmod>
+    <lastmod>2018-05-24T05:39:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/05/jsoi2009-count/</loc>
     
-    <lastmod>2018-05-20T04:05:17.731Z</lastmod>
+    <lastmod>2018-05-20T04:05:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-872c/</loc>
     
-    <lastmod>2018-05-12T15:33:33.067Z</lastmod>
+    <lastmod>2018-05-12T15:33:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/06/codeforces-886c/</loc>
     
-    <lastmod>2018-05-12T15:33:17.753Z</lastmod>
+    <lastmod>2018-05-12T15:33:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961d/</loc>
     
-    <lastmod>2018-05-12T15:32:52.939Z</lastmod>
+    <lastmod>2018-05-12T15:32:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/12/day6-morning-notes/</loc>
     
-    <lastmod>2018-05-12T15:27:28.038Z</lastmod>
+    <lastmod>2018-05-12T15:27:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/01/01/codeforces-897c/</loc>
     
-    <lastmod>2018-05-12T15:26:30.446Z</lastmod>
+    <lastmod>2018-05-12T15:26:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1711/</loc>
     
-    <lastmod>2018-05-12T15:23:24.948Z</lastmod>
+    <lastmod>2018-05-12T15:23:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/04/bzoj-1001/</loc>
     
-    <lastmod>2018-05-12T15:22:16.876Z</lastmod>
+    <lastmod>2018-05-12T15:22:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/10/day4-notes/</loc>
     
-    <lastmod>2018-05-12T15:20:02.113Z</lastmod>
+    <lastmod>2018-05-12T15:20:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/06/codeforces-961e/</loc>
     
-    <lastmod>2018-05-12T15:12:30.657Z</lastmod>
+    <lastmod>2018-05-12T15:12:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/16/sdoi2009-diff/</loc>
     
-    <lastmod>2018-05-12T15:00:22.939Z</lastmod>
+    <lastmod>2018-05-12T15:00:24.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/08/gaussian-elimination-notes/</loc>
     
-    <lastmod>2018-05-12T14:38:59.268Z</lastmod>
+    <lastmod>2018-05-12T14:39:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/06/network-flow-problems/</loc>
     
-    <lastmod>2018-05-05T16:57:49.761Z</lastmod>
+    <lastmod>2018-05-05T16:57:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/16/tarjan-problems/</loc>
     
-    <lastmod>2018-05-05T15:48:29.153Z</lastmod>
+    <lastmod>2018-05-05T15:48:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/02/poj-3613/</loc>
     
-    <lastmod>2018-05-03T11:12:56.824Z</lastmod>
+    <lastmod>2018-05-03T11:12:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/05/02/poj-1734/</loc>
     
-    <lastmod>2018-05-02T03:18:24.228Z</lastmod>
+    <lastmod>2018-05-02T03:18:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/03/luogu-1686/</loc>
     
-    <lastmod>2018-04-23T05:19:12.260Z</lastmod>
+    <lastmod>2018-04-23T05:19:14.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/22/bzoj-1214/</loc>
     
-    <lastmod>2018-04-23T05:15:02.869Z</lastmod>
+    <lastmod>2018-04-23T05:15:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/20/yali-1216-d/</loc>
     
-    <lastmod>2018-04-23T05:14:50.650Z</lastmod>
+    <lastmod>2018-04-23T05:14:52.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/15/bzoj-1997/</loc>
     
-    <lastmod>2018-04-23T05:13:05.987Z</lastmod>
+    <lastmod>2018-04-23T05:13:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/17/codeforces-round-464/</loc>
     
-    <lastmod>2018-04-23T05:12:31.992Z</lastmod>
+    <lastmod>2018-04-23T05:12:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/03/24/manacher-notes/</loc>
     
-    <lastmod>2018-04-23T05:03:47.862Z</lastmod>
+    <lastmod>2018-04-23T05:03:48.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/04/22/bzoj-2442/</loc>
     
-    <lastmod>2018-04-23T05:01:44.099Z</lastmod>
+    <lastmod>2018-04-23T05:01:46.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/09/day3-notes/</loc>
     
-    <lastmod>2018-04-23T04:57:07.272Z</lastmod>
+    <lastmod>2018-04-23T04:57:08.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2017/12/09/luogu-1704/</loc>
     
-    <lastmod>2018-04-23T04:56:29.550Z</lastmod>
+    <lastmod>2018-04-23T04:56:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/08/day2-notes/</loc>
     
-    <lastmod>2018-04-23T04:55:32.990Z</lastmod>
+    <lastmod>2018-04-23T04:55:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2018/02/07/day1-notes/</loc>
     
-    <lastmod>2018-04-23T04:55:29.186Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://oi.tiger0132.tk/2017/10/12/mistakes/</loc>
-    
-    <lastmod>2018-04-23T04:47:57.375Z</lastmod>
+    <lastmod>2018-04-23T04:55:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://oi.tiger0132.tk/2017/11/24/eight-digits-puzzle/</loc>
     
-    <lastmod>2018-04-23T04:46:14.326Z</lastmod>
+    <lastmod>2018-04-23T04:46:16.000Z</lastmod>
     
   </url>
   
