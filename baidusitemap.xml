@@ -4,23 +4,27 @@
 
     
   <url>
-    <loc>http://oi.tiger0132.tk/2018/07/19/splay-notes/</loc>
-    <lastmod>2018-08-07T12:40:42.035Z</lastmod>
+    <loc>http://oi.tiger0132.tk/2018/09/04/noip2015-transport/</loc>
+    <lastmod>2018-09-04T07:40:18.480Z</lastmod>
     <data>
         <display>
-        <title>「数据结构」Splay</title>
-        <pubTime>2018-07-19T10:46:26.000Z</pubTime>
+        <title>「NOIp2015」运输计划 - 二分 + 树上差分 + LCA</title>
+        <pubTime>2018-09-04T07:19:50.000Z</pubTime>
         
-        <tag>模板</tag>
+        <tag>BZOJ</tag>
          
-        <tag>数据结构</tag>
+        <tag>洛谷</tag>
          
-        <tag>平衡树</tag>
+        <tag>NOIp</tag>
+         
+        <tag>树上差分</tag>
+         
+        <tag>二分</tag>
          
          
            
              
-              <breadCrumb title="数据结构" url="http://oi.tiger0132.tk/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+              <breadCrumb title="题解" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E8%A7%A3/"/>
           
         </display>
     </data>
@@ -29,7 +33,7 @@
     
   <url>
     <loc>http://oi.tiger0132.tk/9999/12/31/ANNOUNCEMENT/</loc>
-    <lastmod>2018-08-07T09:27:47.366Z</lastmod>
+    <lastmod>2018-09-04T07:25:38.960Z</lastmod>
     <data>
         <display>
         <title>【置顶】ANNOUNCEMENT</title>
@@ -43,16 +47,63 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/08/26/tree-divide-notes/</loc>
+    <lastmod>2018-08-27T00:40:38.961Z</lastmod>
+    <data>
+        <display>
+        <title>「算法」点分治</title>
+        <pubTime>2018-08-26T14:03:30.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>点分治</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2017/10/29/segment-tree-notes/</loc>
-    <lastmod>2018-07-19T10:53:06.000Z</lastmod>
+    <lastmod>2018-08-26T14:08:54.593Z</lastmod>
     <data>
         <display>
         <title>「数据结构」线段树</title>
         <pubTime>2017-10-29T14:39:47.000Z</pubTime>
         
+        <tag>模板</tag>
+         
         <tag>线段树</tag>
          
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://oi.tiger0132.tk/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/07/19/splay-notes/</loc>
+    <lastmod>2018-08-07T12:40:42.035Z</lastmod>
+    <data>
+        <display>
+        <title>「数据结构」Splay</title>
+        <pubTime>2018-07-19T10:46:26.000Z</pubTime>
+        
         <tag>模板</tag>
+         
+        <tag>数据结构</tag>
+         
+        <tag>平衡树</tag>
          
          
            
@@ -266,9 +317,9 @@
         
         <tag>模板</tag>
          
-        <tag>网络流</tag>
-         
         <tag>图论</tag>
+         
+        <tag>网络流</tag>
          
         <tag>最大流</tag>
          
@@ -644,9 +695,9 @@
         <title>「SDOI2009」HH 的项链 - 莫队</title>
         <pubTime>2018-02-16T02:49:51.000Z</pubTime>
         
-        <tag>BZOJ</tag>
-         
         <tag>模板</tag>
+         
+        <tag>BZOJ</tag>
          
         <tag>SDOI</tag>
          
@@ -696,9 +747,9 @@
         
         <tag>Y</tag>
          
-        <tag>网络流</tag>
-         
         <tag>图论</tag>
+         
+        <tag>网络流</tag>
          
         <tag>最大流</tag>
          
