@@ -4,8 +4,77 @@
 
     
   <url>
+    <loc>http://oi.tiger0132.tk/2018/10/03/problemsetting-notes/</loc>
+    <lastmod>2018-10-13T15:31:18.482Z</lastmod>
+    <data>
+        <display>
+        <title>出题小记</title>
+        <pubTime>2018-10-03T12:20:25.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/10/13/codeforces-round-514/</loc>
+    <lastmod>2018-10-13T14:25:05.619Z</lastmod>
+    <data>
+        <display>
+        <title>「订正」Codeforces Round #514 (Div. 2)</title>
+        <pubTime>2018-10-13T11:22:54.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>二分</tag>
+         
+        <tag>倍增</tag>
+         
+         
+           
+             
+              <breadCrumb title="订正" url="http://oi.tiger0132.tk/categories/%E8%AE%A2%E6%AD%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://oi.tiger0132.tk/2018/05/06/network-flow-problems/</loc>
+    <lastmod>2018-10-13T11:27:27.524Z</lastmod>
+    <data>
+        <display>
+        <title>「题目汇总」网络流题目汇总</title>
+        <pubTime>2018-05-05T16:02:01.000Z</pubTime>
+        
+        <tag>Y</tag>
+         
+        <tag>网络流</tag>
+         
+        <tag>图论</tag>
+         
+        <tag>最大流</tag>
+         
+        <tag>费用流</tag>
+         
+         
+           
+             
+              <breadCrumb title="题目汇总" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oi.tiger0132.tk/2018/10/13/codeforces-round-513/</loc>
-    <lastmod>2018-10-13T03:00:39.680Z</lastmod>
+    <lastmod>2018-10-13T11:25:50.664Z</lastmod>
     <data>
         <display>
         <title>「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)</title>
@@ -76,11 +145,11 @@
          
         <tag>洛谷</tag>
          
+        <tag>二分</tag>
+         
         <tag>NOIp</tag>
          
         <tag>树上差分</tag>
-         
-        <tag>二分</tag>
          
          
            
@@ -425,9 +494,9 @@
          
         <tag>Codeforces</tag>
          
-        <tag>前缀</tag>
-         
         <tag>two-pointer</tag>
+         
+        <tag>前缀</tag>
          
          
            
@@ -755,34 +824,6 @@
            
              
               <breadCrumb title="算法" url="http://oi.tiger0132.tk/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://oi.tiger0132.tk/2018/05/06/network-flow-problems/</loc>
-    <lastmod>2018-05-05T16:57:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>「题目汇总」网络流题目汇总</title>
-        <pubTime>2018-05-05T16:02:01.000Z</pubTime>
-        
-        <tag>Y</tag>
-         
-        <tag>网络流</tag>
-         
-        <tag>图论</tag>
-         
-        <tag>最大流</tag>
-         
-        <tag>费用流</tag>
-         
-         
-           
-             
-              <breadCrumb title="题目汇总" url="http://oi.tiger0132.tk/categories/%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/"/>
           
         </display>
     </data>
