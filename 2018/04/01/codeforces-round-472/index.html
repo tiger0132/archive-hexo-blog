@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,40 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
+<meta name="keywords" content="模拟,枚举&#x2F;暴力,Codeforces,two-pointer,前缀">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/B.png">
+<meta property="og:updated_time" content="2018-05-29T14:45:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
+<meta name="twitter:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
+<meta name="twitter:image" content="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/B.png">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「赛后总结」Codeforces Round #472 (Div. 2) (+2) | Tiger0132的小站</title>
   
@@ -187,13 +148,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +189,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +216,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +306,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +335,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +359,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「赛后总结」Codeforces Round #472 (Div. 2) (+2)</h2>
+          <h2 class="post-title" itemprop="name headline">「赛后总结」Codeforces Round #472 (Div. 2) (+2)
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T00:09:39+08:00">2018-04-01</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-29T22:45:40+08:00">2018-05-29</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/赛后总结/" itemprop="url" rel="index">
-                    <span itemprop="name">赛后总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -461,47 +407,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
         <p>传送门：<a href="http://codeforces.com/contest/957" target="_blank" rel="noopener">Codeforces Round #472 (Div. 2)</a></p>
 <p>这次本来可以做<code>D</code>，可惜只做出<code>A</code>和<code>B</code>。</p>
-<p>可惜<code>C</code>我想到了思路但没去做😢。</p>
+<p>可惜<code>C</code>我想到了思路但没去做:cry:。</p>
 <p>UPD：</p>
-<ol>
+<ol type="1">
 <li><code>2018-03-26 19:25:24</code>：Initial Commit</li>
 <li><code>2018-04-01 00:09:39</code>：Add <code>C</code></li>
 </ol>
 <a id="more"></a>
-<h1 id="a"><a class="markdownIt-Anchor" href="#a"></a> A</h1>
-<h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
+<h1 id="a">A</h1>
+<h2 id="题意">题意</h2>
 <p>现在有<code>ABM</code>三种颜色，<code>?</code>是空白。现在问你是否有多余一种方式填满所有的<code>?</code>，并且相邻两个颜色<strong>不相同</strong>。</p>
-<h2 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h2>
+<h2 id="解法">解法</h2>
 <p>很明显，如果<code>?</code>两边的颜色不同，那么这个肯定只有一种填法。</p>
 <p>如果<code>?</code>在开头结尾，或者有几个连在一起，那么肯定有至少一种填法。</p>
 <p>于是这就很简单了。只是细节很多。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> last, bcount;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">int</span> n, f;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; s;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == last &amp;&amp; s[i] != <span class="string">'?'</span>) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		bcount += (s[i] == <span class="string">'?'</span>);</span><br><span class="line">		last = s[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (!bcount) &#123;</span><br><span class="line">		<span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'?'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i == <span class="number">0</span> || i == n - <span class="number">1</span>) f = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (s[i - <span class="number">1</span>] == <span class="string">'?'</span> || s[i + <span class="number">1</span>] == <span class="string">'?'</span>) f = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (s[i - <span class="number">1</span>] == s[i + <span class="number">1</span>]) f = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (f == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="b"><a class="markdownIt-Anchor" href="#b"></a> B</h1>
-<h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2>
-<p>有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">n</span></span></span></span>次操作，每一次可以选择一些行和列，然后把它们的交点全部染成黑色。</p>
-<p>现在问你，给你一个黑白局面，问你能不能从白棋盘用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">n</span></span></span></span>次得到它，并且<strong>满足所有操作中的行和列全部不重复</strong>。</p>
-<h2 id="解法-2"><a class="markdownIt-Anchor" href="#解法-2"></a> 解法</h2>
+<h1 id="b">B</h1>
+<h2 id="题意-1">题意</h2>
+<p>有<span class="math inline">\(n\)</span>次操作，每一次可以选择一些行和列，然后把它们的交点全部染成黑色。</p>
+<p>现在问你，给你一个黑白局面，问你能不能从白棋盘用<span class="math inline">\(n\)</span>次得到它，并且<strong>满足所有操作中的行和列全部不重复</strong>。</p>
+<h2 id="解法-1">解法</h2>
 <p>如图，</p>
-<p><img src="/2018/04/01/codeforces-round-472/B.png" alt="图挂了(T_T)"></p>
-<p>显然如果紫色点有任意三个被选了，那么另外一个肯定会也是黑的。<br>
-对于所有两两的行和列，如果这样的紫色点有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>个、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span></span></span></span>个或者<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">4</span></span></span></span>个，那么一定是<code>Yes</code>，否则是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">No</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit">o</span></span></span></span>。</p>
-<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<figure>
+<img src="/2018/04/01/codeforces-round-472/B.png" alt="图挂了(T_T)"><figcaption>图挂了(T_T)</figcaption>
+</figure>
+<p>显然如果紫色点有任意三个被选了，那么另外一个肯定会也是黑的。 对于所有两两的行和列，如果这样的紫色点有<span class="math inline">\(1\)</span>个、<span class="math inline">\(2\)</span>个或者<span class="math inline">\(4\)</span>个，那么一定是<code>Yes</code>，否则是<span class="math inline">\(No\)</span>。</p>
+<h2 id="代码">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> rec[<span class="number">233</span>][<span class="number">233</span>];</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d\n"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		gets(rec[i] + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i != j) <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">1</span>; p &lt;= m; p++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> q = <span class="number">1</span>; q &lt;= m; q++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (p == q) <span class="keyword">continue</span>;</span><br><span class="line">					<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">					<span class="keyword">if</span> (rec[i][p] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[i][q] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[j][p] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[j][q] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (count == <span class="number">3</span>) &#123;</span><br><span class="line">						<span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">						<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="c"><a class="markdownIt-Anchor" href="#c"></a> C</h1>
-<h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2>
-<p>一串单调递增序列<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span>，要你选<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">3</span></span></span></span>个不相同的下标<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo separator="true">,</mo><mi>k</mi><mo>)</mo><mo separator="true">,</mo><mo>(</mo><mi>i</mi><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(i,j,k),(i\le j\le k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>，满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>−</mo><msub><mi>E</mi><mi>i</mi></msub><mo>≤</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">E_k-E_i \le U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit" style="margin-right:0.10903em;">U</span></span></span></span>，并且满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub></mrow><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>−</mo><msub><mi>E</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{E_k-E_j}{E_k-E_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.985651em;"></span><span class="strut bottom" style="height:1.4365109999999999em;vertical-align:-0.4508599999999999em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.985651em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"></span></span></span></span></span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4508599999999999em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>是所有满足条件的三元组中最小的。求出这个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub></mrow><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>−</mo><msub><mi>E</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{E_k-E_j}{E_k-E_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.985651em;"></span><span class="strut bottom" style="height:1.4365109999999999em;vertical-align:-0.4508599999999999em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.985651em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"></span></span></span></span></span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.05764em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4508599999999999em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。</p>
-<h2 id="解法-3"><a class="markdownIt-Anchor" href="#解法-3"></a> 解法</h2>
-<p>固定<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>。那么<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>很明显应该等于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span>。那么<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>肯定是满足单调性的。那么只需要找出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>≤</mo><msub><mi>E</mi><mi>i</mi></msub><mo>+</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">E_k\le E_i+U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.10903em;">U</span></span></span></span>的最大的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>。所以可以二分。时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>。</p>
-<p>其实还有个更好的办法——<code>two-pointer</code>。枚举<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>，然后将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span>时的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>用一次循环递增到当前<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>时最大的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>，然后再更新最终的答案。最终<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>移动的次数是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>量级的，所以复杂度降到了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>。</p>
-<h2 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码</h2>
+<h1 id="c">C</h1>
+<h2 id="题意-2">题意</h2>
+<p>一串单调递增序列<span class="math inline">\(E\)</span>，要你选<span class="math inline">\(3\)</span>个不相同的下标<span class="math inline">\((i,j,k),(i\le j\le k)\)</span>，满足<span class="math inline">\(E_k-E_i \le U\)</span>，并且满足<span class="math inline">\(\frac{E_k-E_j}{E_k-E_i}\)</span>是所有满足条件的三元组中最小的。求出这个<span class="math inline">\(\frac{E_k-E_j}{E_k-E_i}\)</span>。</p>
+<h2 id="解法-2">解法</h2>
+<p>固定<span class="math inline">\(i\)</span>。那么<span class="math inline">\(j\)</span>很明显应该等于<span class="math inline">\(i+1\)</span>。那么<span class="math inline">\(k\)</span>肯定是满足单调性的。那么只需要找出<span class="math inline">\(E_k\le E_i+U\)</span>的最大的<span class="math inline">\(k\)</span>。所以可以二分。时间复杂度<span class="math inline">\(O(n\log n)\)</span>。</p>
+<p>其实还有个更好的办法——<code>two-pointer</code>。枚举<span class="math inline">\(i\)</span>，然后将<span class="math inline">\(i-1\)</span>时的<span class="math inline">\(k\)</span>用一次循环递增到当前<span class="math inline">\(i\)</span>时最大的<span class="math inline">\(k\)</span>，然后再更新最终的答案。最终<span class="math inline">\(k\)</span>移动的次数是<span class="math inline">\(O(n)\)</span>量级的，所以复杂度降到了<span class="math inline">\(O(n)\)</span>。</p>
+<h2 id="代码-1">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, u, k, rec[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">int</span> ai, aj, ak;</span><br><span class="line"><span class="keyword">double</span> loss;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;u);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, rec + i);</span><br><span class="line">	&#125;</span><br><span class="line">	loss = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> j = i + <span class="number">1</span>;</span><br><span class="line">		k = max(k, i);</span><br><span class="line">		<span class="keyword">while</span> (k + <span class="number">1</span> &lt;= n &amp;&amp; rec[k + <span class="number">1</span>] - rec[i] &lt;= u) k++;</span><br><span class="line">		<span class="keyword">if</span> (k &lt;= i + <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">double</span> tl = <span class="number">1.</span> * (rec[k] - rec[j]) / (rec[k] - rec[i]);</span><br><span class="line">		loss = max(loss, tl);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (loss == <span class="number">-1</span>) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%.12lf"</span>, loss);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="d"><a class="markdownIt-Anchor" href="#d"></a> D</h1>
-<h2 id="题意-4"><a class="markdownIt-Anchor" href="#题意-4"></a> 题意</h2>
-<p>有条河，第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>(</mo><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">i(1\le i\le n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">i</span><span class="mopen">(</span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>天水的高度是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>i</mi><mi>n</mi><mi>e</mi><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">undefined_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">u</span><span class="mord mathit">n</span><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>。如果某个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>i</mi><mi>n</mi><mi>e</mi><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">undefined_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">u</span><span class="mord mathit">n</span><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>在以前没有出现过，那么就在那里打上标记。水不会冲掉标记。现在已知每一天河水以上(<strong>不包括当前标记</strong>)的标记数，求河水下(也不包括当前标记)最少有多少个标记。</p>
-<h2 id="解法-4"><a class="markdownIt-Anchor" href="#解法-4"></a> 解法</h2>
+<h1 id="d">D</h1>
+<h2 id="题意-3">题意</h2>
+<p>有条河，第<span class="math inline">\(i(1\le i\le n)\)</span>天水的高度是<span class="math inline">\(undefined_i\)</span>。如果某个<span class="math inline">\(undefined_i\)</span>在以前没有出现过，那么就在那里打上标记。水不会冲掉标记。现在已知每一天河水以上(<strong>不包括当前标记</strong>)的标记数，求河水下(也不包括当前标记)最少有多少个标记。</p>
+<h2 id="解法-3">解法</h2>
 <p>首先考虑这个思路：</p>
-<p>弄一个变量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">m</span></span></span></span>，如果每出现一个数字大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">m</span></span></span></span>，那么就<code>m++</code>(因为每多一个标记那么这时河水的位置一定在那时所有标记之前，并且还会增加一个标记)。</p>
-<p>如果小于等于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">m</span></span></span></span>，那么直接<code>ans += m - 高度</code>。</p>
+<p>弄一个变量<span class="math inline">\(m\)</span>，如果每出现一个数字大于<span class="math inline">\(m\)</span>，那么就<code>m++</code>(因为每多一个标记那么这时河水的位置一定在那时所有标记之前，并且还会增加一个标记)。</p>
+<p>如果小于等于<span class="math inline">\(m\)</span>，那么直接<code>ans += m - 高度</code>。</p>
 <p>这个思路的问题是这样的数据就可以hack掉这个思路：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">0 0 0 2</span><br></pre></td></tr></table></figure>
 <p>解决方案是把这种数据处理成这样：</p>
@@ -510,15 +457,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11</span><br><span class="line">0 0 0 0 0 0 0 2 4 6 8</span><br></pre></td></tr></table></figure>
 <p>和这个就是等价的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11</span><br><span class="line">0 0 0 1 2 3 4 5 6 7 8</span><br></pre></td></tr></table></figure>
-<p>做法是先前缀最大值一遍，然后在再数据变得&quot;平滑&quot;。也就是把所有前缀最大值中相邻两项差不小于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span></span></span></span>的全部&quot;整平&quot;。</p>
-<p>&quot;整平&quot;代码如下：</p>
+<p>做法是先前缀最大值一遍，然后在再数据变得“平滑”。也就是把所有前缀最大值中相邻两项差不小于<span class="math inline">\(2\)</span>的全部“整平”。</p>
+<p>“整平”代码如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, rec + i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// "整平"</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">	smax[i] = max(smax[i - <span class="number">1</span>], rec[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">	mrec[i] = t = max(smax[i], t - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">	mrec[i] = mrec[i + <span class="number">1</span>] - mrec[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其中<code>mrec</code>代表修改过的数组，<code>smax</code>代表前缀最大值。</p>
-<h2 id="代码-3"><a class="markdownIt-Anchor" href="#代码-3"></a> 代码</h2>
+<h2 id="代码-2">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, rec[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">int</span> mrec[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">int</span> smax[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans;</span><br><span class="line"><span class="keyword">int</span> t;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, rec + i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		smax[i] = max(smax[i - <span class="number">1</span>], rec[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">		mrec[i] = t = max(smax[i], t - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		mrec[i] = mrec[i + <span class="number">1</span>] - mrec[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		ans += m - rec[i];</span><br><span class="line">		m += mrec[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+
+    
+
     
     
     
@@ -531,17 +481,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/" title="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">http://oi.tiger0132.tk/2018/04/01/codeforces-round-472/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -600,17 +546,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -651,64 +590,211 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -764,6 +850,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -778,7 +867,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text"> A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.2.</span> <span class="nav-text"> 解法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text"> B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-2"><span class="nav-number">2.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text"> C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-3"><span class="nav-number">3.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-3"><span class="nav-number">3.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-2"><span class="nav-number">3.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text"> D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-4"><span class="nav-number">4.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-4"><span class="nav-number">4.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-3"><span class="nav-number">4.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.2.</span> <span class="nav-text">解法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-1"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-1"><span class="nav-number">2.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-2"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-2"><span class="nav-number">3.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text">D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-3"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-3"><span class="nav-number">4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-2"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -786,13 +875,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -805,11 +887,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -817,7 +899,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -825,12 +911,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -843,9 +930,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -869,7 +964,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -879,7 +973,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -898,23 +991,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -922,36 +1005,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -959,11 +1028,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-
   
-
-
 
 
 
@@ -1025,6 +1090,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1058,6 +1125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1183,7 +1251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1307,11 +1375,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 

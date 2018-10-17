@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,38 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="题意 传送门：洛谷 P1262 - 间谍网络 国家内部出现了一些间谍。有一部分间谍给钱就能控制。如果控制了一个间谍就可以控制其他的一些间谍。问最少需要多少钱可以控制所有的间谍。或者说这是不可能的。 可以说是非常模板的一道题了。">
+<meta name="keywords" content="图论,洛谷,Tarjan,强连通分量,缩点,DAG">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「洛谷 P1262」间谍网络 - 强连通分量">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/05/30/luogu-1262/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content="题意 传送门：洛谷 P1262 - 间谍网络 国家内部出现了一些间谍。有一部分间谍给钱就能控制。如果控制了一个间谍就可以控制其他的一些间谍。问最少需要多少钱可以控制所有的间谍。或者说这是不可能的。 可以说是非常模板的一道题了。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-30T05:17:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「洛谷 P1262」间谍网络 - 强连通分量">
+<meta name="twitter:description" content="题意 传送门：洛谷 P1262 - 间谍网络 国家内部出现了一些间谍。有一部分间谍给钱就能控制。如果控制了一个间谍就可以控制其他的一些间谍。问最少需要多少钱可以控制所有的间谍。或者说这是不可能的。 可以说是非常模板的一道题了。">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/30/luogu-1262/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「洛谷 P1262」间谍网络 - 强连通分量 | Tiger0132的小站</title>
   
@@ -187,13 +146,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +187,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +214,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +357,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「洛谷 P1262」间谍网络 - 强连通分量</h2>
+          <h2 class="post-title" itemprop="name headline">「洛谷 P1262」间谍网络 - 强连通分量
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T12:57:26+08:00">2018-05-30</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-30T13:17:26+08:00">2018-05-30</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/题解/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -459,24 +403,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
 
       
-        <h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
+        <h1 id="题意">题意</h1>
 <p>传送门：<a href="https://www.luogu.org/problemnew/show/P1262" target="_blank" rel="noopener">洛谷 P1262 - 间谍网络</a></p>
 <p>国家<!-- GJ -->内部出现了一些间谍。有一部分间谍给钱就能控制。如果控制了一个间谍就可以控制其他的一些间谍。问最少需要多少钱可以控制所有的间谍。或者说这是不可能的。</p>
 <p>可以说是非常模板的一道题了。</p>
 <a id="more"></a>
-<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
+<h1 id="解法">解法</h1>
 <p>显然如果一个强连通分量中有一个间谍被控制了，那么整个强连通分量(里的间谍)就都被控制了。</p>
 <p>显然在<strong>图中没有环</strong>的时候，控制了所有<strong>入度为0</strong>的间谍就可以控制整张图。</p>
 <p>缩点后维护两个信息：控制这个强连通分量所需的最少的钱数和强连通分量里编号最小的点。</p>
 <p>根据上面的结论，显然可以推出，如果入度为0的点控制不了那么就NO了。</p>
 <p>于是我们可以强连通分量缩点之后在DAG上按照上面的策略dfs就好了。</p>
-<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<h1 id="代码">代码</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> from, to, next;</span><br><span class="line">&#125; e[<span class="number">20004</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> deg[<span class="number">3003</span>], srcv[<span class="number">3003</span>], val[<span class="number">3003</span>], controlled;</span><br><span class="line"><span class="keyword">int</span> head[<span class="number">3003</span>], cnt, ans, m;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">3003</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    e[++cnt] = (edge)&#123;x, y, head[x]&#125;; head[x] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> idx, scnt, dfn[<span class="number">3003</span>], low[<span class="number">3003</span>], scc[<span class="number">3003</span>], id[<span class="number">3003</span>];</span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	dfn[x] = low[x] = ++idx; vis[x] = <span class="literal">true</span>;</span><br><span class="line">	st.push(x);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (!dfn[nx]) &#123;</span><br><span class="line">			tarjan(nx);</span><br><span class="line">			low[x] = min(low[x], low[nx]);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (vis[nx]) &#123;</span><br><span class="line">			low[x] = min(low[x], dfn[nx]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (dfn[x] == low[x]) &#123;</span><br><span class="line">		val[++scnt] = srcv[x];</span><br><span class="line">		id[scnt] = x;</span><br><span class="line">		<span class="comment">// printf("scc #%d:\n", scnt);</span></span><br><span class="line">		<span class="keyword">while</span> (!st.empty()) &#123;</span><br><span class="line">			<span class="keyword">int</span> _ = st.top(); st.pop();</span><br><span class="line">			<span class="comment">// printf("%d\n", _);</span></span><br><span class="line">			scc[_] = scnt;</span><br><span class="line">			vis[_] = <span class="literal">false</span>;</span><br><span class="line">			id[scnt] = min(id[scnt], _);</span><br><span class="line">			val[scnt] = min(val[scnt], srcv[_]);</span><br><span class="line">			<span class="keyword">if</span> (_ == x) <span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (vis[x]) <span class="keyword">return</span>;</span><br><span class="line">    vis[x] = <span class="literal">true</span>;</span><br><span class="line">    controlled++;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">        dfs(e[i].to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k, x, y;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(srcv, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> srcv);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">while</span> (k--) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</span><br><span class="line">        srcv[x] = min(srcv[x], y);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k);</span><br><span class="line">    <span class="keyword">while</span> (k--) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</span><br><span class="line">        addedge(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!dfn[i]) tarjan(i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	n = scnt; m = cnt;</span><br><span class="line">	<span class="built_in">memset</span>(head, <span class="number">0</span>, <span class="keyword">sizeof</span> head); cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (scc[e[i].from] != scc[e[i].to]) &#123;</span><br><span class="line">			deg[scc[e[i].to]]++;</span><br><span class="line">			addedge(scc[e[i].from], scc[e[i].to]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!deg[i]) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val[i] == <span class="number">0x3f3f3f3f</span>) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"NO\n%d"</span>, id[i]);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += val[i];</span><br><span class="line">            dfs(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    assert(controlled == n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"YES\n%d"</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h1>
+<h1 id="总结">总结</h1>
 <p>很多DAG上的东西在一般的有向图上很难做，这是就可以考虑用Tarjan将图变成DAG。</p>
 
       
     </div>
+
+    
+
     
     
     
@@ -489,17 +436,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/05/30/luogu-1262/" title="「洛谷 P1262」间谍网络 - 强连通分量">http://oi.tiger0132.tk/2018/05/30/luogu-1262/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -560,17 +503,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -611,64 +547,211 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -724,6 +807,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -738,7 +824,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text"> 总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -746,13 +832,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -765,11 +844,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -777,7 +856,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -785,12 +868,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -803,9 +887,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -829,7 +921,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -839,7 +930,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -858,23 +948,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -882,36 +962,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -919,11 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-
   
-
-
 
 
 
@@ -985,6 +1047,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1018,6 +1082,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1143,7 +1208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1267,11 +1332,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 

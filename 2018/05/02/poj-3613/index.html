@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,38 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
+<meta name="keywords" content="图论,Floyd,POJ,矩阵快速幂">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/05/02/poj-3613/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-03T11:12:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">
+<meta name="twitter:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/02/poj-3613/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「POJ 3613」Cow Relays - Floyd + 矩阵快速幂 | Tiger0132的小站</title>
   
@@ -187,13 +146,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +187,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +214,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +357,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「POJ 3613」Cow Relays - Floyd + 矩阵快速幂</h2>
+          <h2 class="post-title" itemprop="name headline">「POJ 3613」Cow Relays - Floyd + 矩阵快速幂
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T11:17:01+08:00">2018-05-02</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-03T19:12:58+08:00">2018-05-03</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/题解/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -459,39 +403,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
 
       
-        <h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
+        <h1 id="题意">题意</h1>
 <p>传送门：<a href="http://poj.org/problem?id=3613" target="_blank" rel="noopener">POJ 3613 - Cow Relays</a></p>
-<p>求给定<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">t</span></span></span></span>条边的无向图中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">s</span></span></span></span>到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">t</span></span></span></span>长度恰好为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">n</span></span></span></span>的最短路的长度。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>≤</mo><mn>1</mn><mn>0</mn><mn>0</mn><mo separator="true">,</mo><mi>n</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup><mo separator="true">,</mo><mtext>点的编号</mtext><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">t\le100,n\le10^6,\text{点的编号}\le10^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">t</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord cjk_fallback">点的编号</span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></p>
+<p>求给定<span class="math inline">\(t\)</span>条边的无向图中<span class="math inline">\(s\)</span>到<span class="math inline">\(t\)</span>长度恰好为<span class="math inline">\(n\)</span>的最短路的长度。</p>
+<p><span class="math inline">\(t\le100,n\le10^6,\text{点的编号}\le10^3\)</span></p>
 <a id="more"></a>
-<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
-<p>首先离散化点的编号(显然图中最多只有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">200</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span></span></span></span>个点)。</p>
+<h1 id="解法">解法</h1>
+<p>首先离散化点的编号(显然图中最多只有<span class="math inline">\(200\)</span>个点)。</p>
 <p>然后考虑Floyd最短路的转移过程：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for k = 1 .. n</span><br><span class="line">	for i = 1 ... n</span><br><span class="line">		for j = 1 ... n</span><br><span class="line">			g[i][j] = min(g[i][j], g[i][k] + g[k][j])</span><br></pre></td></tr></table></figure>
 <p>再看看矩乘的过程：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for k = 1 .. n</span><br><span class="line">	for i = 1 ... n</span><br><span class="line">		for j = 1 ... n</span><br><span class="line">			g[i][j] = add(g[i][j], g[i][k] * g[k][j])</span><br></pre></td></tr></table></figure>
 <p>容易看出，Floyd只是将矩乘中的add换成了min，乘换成了加而已。</p>
 <p>接着考虑一般的情况。</p>
-<p>一般地，若<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>G</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">G^x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">x</span></span></span></span></span></span></span></span></span></span></span>代表经过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">x</span></span></span></span>条边的最短路，那么它满足关系式<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>G</mi><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></msup><mo>=</mo><msup><mi>G</mi><mi>a</mi></msup></mrow><annotation encoding="application/x-tex">G^{a+b}=G^a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8491079999999999em;"></span><span class="strut bottom" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">a</span><span class="mbin mtight">+</span><span class="mord mathit mtight">b</span></span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">a</span></span></span></span></span></span></span></span></span></span></span><em>乘</em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>G</mi><mi>b</mi></msup></mrow><annotation encoding="application/x-tex">G^b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">b</span></span></span></span></span></span></span></span></span></span></span>。</p>
-<p>于是得出&quot;Floyd运算&quot;也满足结合律。于是可以用矩阵快速幂O(t^3\log n)​求出。</p>
-<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<p>一般地，若<span class="math inline">\(G^x\)</span>代表经过<span class="math inline">\(x\)</span>条边的最短路，那么它满足关系式<span class="math inline">\(G^{a+b}=G^a\)</span><em>乘</em><span class="math inline">\(G^b\)</span>。</p>
+<p>于是得出“Floyd运算”也满足结合律。于是可以用矩阵快速幂<span class="math inline">\(O(t^3\log n)​\)</span>求出。</p>
+<h1 id="代码">代码</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> gph[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dcnt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mul</span><span class="params">(gph x, gph y)</span> </span>&#123; <span class="comment">// mul_equ: *=</span></span><br><span class="line">	gph ret; <span class="built_in">memset</span>(ret, <span class="number">0x3f</span>, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= dcnt; k++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= dcnt; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= dcnt; j++) &#123;</span><br><span class="line">				ret[i][j] = min(ret[i][j], x[i][k] + y[k][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">memcpy</span>(x, ret, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pow</span><span class="params">(gph base, <span class="keyword">int</span> <span class="built_in">exp</span>, gph res)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memcpy</span>(res, base, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>); <span class="built_in">exp</span>--; <span class="comment">// 弃单位矩阵的新科技</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">exp</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">exp</span>&amp;<span class="number">1</span>) mul(res, base);</span><br><span class="line">		mul(base, base);</span><br><span class="line">		<span class="built_in">exp</span> &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, t, s, e, x, y, z;</span><br><span class="line"><span class="keyword">int</span> disc[<span class="number">1000006</span>];</span><br><span class="line">gph rec, ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(rec, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> rec);</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;n, &amp;t, &amp;s, &amp;e); t--; ) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z);</span><br><span class="line">		<span class="keyword">if</span> (!disc[y]) disc[y] = ++dcnt;</span><br><span class="line">		<span class="keyword">if</span> (!disc[z]) disc[z] = ++dcnt;</span><br><span class="line">		rec[disc[y]][disc[z]] = rec[disc[z]][disc[y]] = x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">pow</span>(rec, n, ans);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans[disc[s]][disc[e]]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="拓展"><a class="markdownIt-Anchor" href="#拓展"></a> 拓展</h1>
-<p>矩阵快速幂的基础是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>G</mi><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></msup><mo>=</mo><msup><mi>G</mi><mi>a</mi></msup><mo>×</mo><msup><mi>G</mi><mi>b</mi></msup></mrow><annotation encoding="application/x-tex">G^{a+b}=G^a\times G^b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.932438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">a</span><span class="mbin mtight">+</span><span class="mord mathit mtight">b</span></span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">a</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">b</span></span></span></span></span></span></span></span></span></span></span>。然后在该式基础上进行倍增优化。</p>
-<p>其实上式中的乘法可以换成其他运算(<s>倍增加法求矩阵数乘</s>)。如本题的&quot;Floyd运算&quot;。</p>
+<h1 id="拓展">拓展</h1>
+<p>矩阵快速幂的基础是<span class="math inline">\(G^{a+b}=G^a\times G^b\)</span>。然后在该式基础上进行倍增优化。</p>
+<p>其实上式中的乘法可以换成其他运算(<del>倍增加法求矩阵数乘</del>)。如本题的“Floyd运算”。</p>
 <blockquote>
 <p>在邻接矩阵上做运算，多有意思！</p>
 </blockquote>
 <p>EASY版本：</p>
 <ul>
-<li>
-<p>「HDU 5318改」求无权无向图中长度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span>的路径条数。其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>5</mn><mn>0</mn><mo separator="true">,</mo><mi>K</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">n\le50,K\le10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></p>
-<p>做法是把邻接矩阵(01矩阵)快速幂一下求和除以二输出就好了。</p>
-</li>
+<li><p>「HDU 5318改」求无权无向图中长度为<span class="math inline">\(K\)</span>的路径条数。其中<span class="math inline">\(n\le50,K\le10^9\)</span></p>
+<p>做法是把邻接矩阵(01矩阵)快速幂一下求和除以二输出就好了。</p></li>
 </ul>
 
       
     </div>
+
+    
+
     
     
     
@@ -504,17 +449,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/05/02/poj-3613/" title="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">http://oi.tiger0132.tk/2018/05/02/poj-3613/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -571,17 +512,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -622,64 +556,211 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -735,6 +816,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -749,7 +833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text"> 拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text">拓展</span></a></li></ol></div>
             
 
           </div>
@@ -757,13 +841,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -776,11 +853,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -788,7 +865,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -796,12 +877,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -814,9 +896,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -840,7 +930,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -850,7 +939,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -869,23 +957,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -893,36 +971,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -930,11 +994,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-
   
-
-
 
 
 
@@ -996,6 +1056,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1029,6 +1091,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1154,7 +1217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1278,11 +1341,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 

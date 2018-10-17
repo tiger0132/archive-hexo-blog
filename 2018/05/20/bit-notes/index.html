@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,42 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="树状数组，顾名思义望文生义，就是树状的数组。 树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树“堆式存储”后的数组。 (这里所有的操作全都是区间加，区间和) UPD：  2018-03-29 20:55:23：Initial Commit 2018-04-01 22:44:36：Add 支持区间查询 代码3 2018-04-05 18:39:15：Add 二维树状数组,Change">
+<meta name="keywords" content="模板,树状数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「数据结构」树状数组 (+6)">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/05/20/bit-notes/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content="树状数组，顾名思义望文生义，就是树状的数组。 树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树“堆式存储”后的数组。 (这里所有的操作全都是区间加，区间和) UPD：  2018-03-29 20:55:23：Initial Commit 2018-04-01 22:44:36：Add 支持区间查询 代码3 2018-04-05 18:39:15：Add 二维树状数组,Change">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg">
+<meta property="og:image" content="http://oi.tiger0132.tk/2018/05/20/bit-notes/bit-bits.png">
+<meta property="og:image" content="http://oi.tiger0132.tk/2018/05/20/bit-notes/query.jpg">
+<meta property="og:updated_time" content="2018-10-15T07:52:46.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「数据结构」树状数组 (+6)">
+<meta name="twitter:description" content="树状数组，顾名思义望文生义，就是树状的数组。 树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树“堆式存储”后的数组。 (这里所有的操作全都是区间加，区间和) UPD：  2018-03-29 20:55:23：Initial Commit 2018-04-01 22:44:36：Add 支持区间查询 代码3 2018-04-05 18:39:15：Add 二维树状数组,Change">
+<meta name="twitter:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/20/bit-notes/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「数据结构」树状数组 (+6) | Tiger0132的小站</title>
   
@@ -187,13 +150,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +191,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +218,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +308,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +337,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +361,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「数据结构」树状数组 (+6)</h2>
+          <h2 class="post-title" itemprop="name headline">「数据结构」树状数组 (+6)
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T17:04:06+08:00">2018-05-20</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-13T10:00:38+08:00">2018-10-13</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -459,132 +407,135 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
 
       
-        <p>树状数组，<s>顾名思义</s>望文生义，就是树状的数组。</p>
-<p>树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树&quot;堆式存储&quot;后的数组。</p>
+        <p>树状数组，<del>顾名思义</del>望文生义，就是树状的数组。</p>
+<p>树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树“堆式存储”后的数组。</p>
 <p>(这里所有的操作全都是区间加，区间和)</p>
 <p>UPD：</p>
-<ol>
+<ol type="1">
 <li><code>2018-03-29 20:55:23</code>：Initial Commit</li>
 <li><code>2018-04-01 22:44:36</code>：Add <code>支持区间查询</code> <code>代码3</code></li>
 <li><code>2018-04-05 18:39:15</code>：Add <code>二维树状数组</code>,Change<code>[Everything]</code>(更改排版、格式)</li>
 <li><code>2018-05-20 [数据删除]</code>：Add<code>二维树状数组·区间查询</code>,Add<code>例题列表</code>,Change<code>高维树状数组？</code></li>
 </ol>
 <a id="more"></a>
-<h1 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h1>
+<h1 id="概念">概念</h1>
 <p>树状数组长这样：</p>
-<p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg" alt="图挂了(T_T)"></p>
+<figure>
+<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg" alt="图挂了(T_T)"><figcaption>图挂了(T_T)</figcaption>
+</figure>
 <p>观察数组下标的二进制和树，得</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1   1</span><br><span class="line">2   10</span><br><span class="line">3   11</span><br><span class="line">4   100</span><br><span class="line">5   101</span><br><span class="line">6   110</span><br><span class="line">7   111</span><br><span class="line">8   1000</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<p>注意到每一层最左边的点都是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">2^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span>数列上的数。如果按照树形结构排列这些下标，得</p>
-<p><img src="/2018/05/20/bit-notes/bit-bits.png" alt="图挂了(T_T)"></p>
+<p>注意到每一层最左边的点都是<span class="math inline">\(2^n\)</span>数列上的数。如果按照树形结构排列这些下标，得</p>
+<figure>
+<img src="/2018/05/20/bit-notes/bit-bits.png" alt="图挂了(T_T)"><figcaption>图挂了(T_T)</figcaption>
+</figure>
 <p>其中同一个父节点的子节点，越靠左的在上上面的图中越浅。</p>
 <p>然后我们发现，每个点和它的父节点都有些微妙的联系。具体地，就是每一个点的下标加上该下标的<code>lowbit</code>等于它的父节点的下标。</p>
-<p>什么是<code>lowbit</code>呢？如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mn>0</mn><mn>0</mn><mn>1</mn><mn>0</mn><mn>1</mn><mn>0</mn><mn>0</mn><mn>1</mn><mn>1</mn><mn>0</mn><mn>0</mn><msub><mo>)</mo><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">(100101001100)_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>的<code>lowbit</code>就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mn>0</mn><mn>0</mn><msub><mo>)</mo><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">(100)_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>。它可以通过<code>x&amp;-x</code>求出来。</p>
-<h1 id="一维树状数组"><a class="markdownIt-Anchor" href="#一维树状数组"></a> 一维树状数组</h1>
-<h2 id="单点修改区间查询"><a class="markdownIt-Anchor" href="#单点修改区间查询"></a> 单点修改+区间查询</h2>
-<h3 id="区间查询"><a class="markdownIt-Anchor" href="#区间查询"></a> 区间查询</h3>
+<p>什么是<code>lowbit</code>呢？如<span class="math inline">\((100101001100)_2\)</span>的<code>lowbit</code>就是<span class="math inline">\((100)_2\)</span>。它可以通过<code>x&amp;-x</code>求出来。</p>
+<h1 id="一维树状数组">一维树状数组</h1>
+<h2 id="单点修改区间查询">单点修改+区间查询</h2>
+<h3 id="区间查询">区间查询</h3>
 <p>因为树状数组只有右子树，所以树状数组只能进行前缀查询。方法是把一个点所在的子树和它左边的所有子树全部加起来。</p>
 <p><strong>注意到树状数组还有一个性质：一个点加上自身的lowbit，得到的点正好是高于该点的左边第一个节点。</strong></p>
 <p>听起来很绕，代个例子就知道了：</p>
-<p>如查询<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>~<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">7</span></span></span></span>时需要访问的点(显然是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span></span></span></span>量级的)：</p>
-<p><img src="/2018/05/20/bit-notes/query.jpg" alt="图挂了(T_T)"></p>
-<p>这些点的下标分别是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">7</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>−</mo><mi>l</mi><mi>o</mi><mi>w</mi><mi>b</mi><mi>i</mi><mi>t</mi><mo>(</mo><mn>7</mn><mo>)</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">7-lowbit(7)=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">7</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">b</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mopen">(</span><span class="mord">7</span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">6</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn><mo>−</mo><mi>l</mi><mi>o</mi><mi>w</mi><mi>b</mi><mi>i</mi><mi>t</mi><mo>(</mo><mn>6</mn><mo>)</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">6-lowbit(6)=4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">6</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">b</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mopen">(</span><span class="mord">6</span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">4</span></span></span></span>……</p>
-<h3 id="单点修改"><a class="markdownIt-Anchor" href="#单点修改"></a> 单点修改</h3>
+<p>如查询<span class="math inline">\(1\)</span>~<span class="math inline">\(7\)</span>时需要访问的点(显然是<span class="math inline">\(\log n\)</span>量级的)：</p>
+<figure>
+<img src="/2018/05/20/bit-notes/query.jpg" alt="图挂了(T_T)"><figcaption>图挂了(T_T)</figcaption>
+</figure>
+<p>这些点的下标分别是<span class="math inline">\(7\)</span>，<span class="math inline">\(7-lowbit(7)=6\)</span>，<span class="math inline">\(6-lowbit(6)=4\)</span>……</p>
+<h3 id="单点修改">单点修改</h3>
 <p>修改一个点的值，只需要修改它到根沿路上所有的点即可。</p>
 <p>那么这些点满足上面的性质，所以只需要一直减去当前下标的lowbit，然后进行相应的修改即可。</p>
 <p>下面提供树状数组最基本实现的代码。</p>
-<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h3>
+<h3 id="代码">代码</h3>
 <p>这里提供<font color="#0a0"><b>Accepted</b></font><a href="https://www.luogu.org/problemnew/show/P3374" target="_blank" rel="noopener">洛谷 P3374 【模板】树状数组 1</a>的代码。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, op, u, v;</span><br><span class="line"><span class="keyword">int</span> rec[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> inp[<span class="number">500005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt;= n; i += lowbit(i)) rec[i] += x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i; i -= lowbit(i)) ret += rec[i];</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, inp + i);</span><br><span class="line">		add(i, inp[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;op, &amp;u, &amp;v);</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="number">1</span>) &#123;</span><br><span class="line">			add(u, v);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, query(v) - query(u - <span class="number">1</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="区间修改单点查询"><a class="markdownIt-Anchor" href="#区间修改单点查询"></a> 区间修改+单点查询</h2>
+<h2 id="区间修改单点查询">区间修改+单点查询</h2>
 <p>树状数组是可以支持区间修改的。</p>
-<p>方法是把原数组的差分数组存在树状数组里。这样区间修改就变成了两个单点修改。如将区间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">[u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">[</span><span class="mord mathit">u</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>的所有数加上<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>，那么相当于在它的差分数组的第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">u</span></span></span></span>个数加<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>，第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span></span>个数减<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>。</p>
+<p>方法是把原数组的差分数组存在树状数组里。这样区间修改就变成了两个单点修改。如将区间<span class="math inline">\([u,v)\)</span>的所有数加上<span class="math inline">\(w\)</span>，那么相当于在它的差分数组的第<span class="math inline">\(u\)</span>个数加<span class="math inline">\(w\)</span>，第<span class="math inline">\(v\)</span>个数减<span class="math inline">\(w\)</span>。</p>
 <p>这样可以比较简单的实现区间修改和单点查询。</p>
-<h3 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码</h3>
+<h3 id="代码-1">代码</h3>
 <p>这里提供<font color="#0a0"><b>Accepted</b></font><a href="https://www.luogu.org/problemnew/show/P3368" target="_blank" rel="noopener">洛谷 P3368 【模板】树状数组 2</a>的代码。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, op, u, v, w, l;</span><br><span class="line"><span class="keyword">int</span> rec[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> inp[<span class="number">500005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt;= n; i += lowbit(i)) rec[i] += x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i; i -= lowbit(i)) ret += rec[i];</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, inp + i);</span><br><span class="line">		add(i, inp[i] - l);</span><br><span class="line">		l = inp[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;op, &amp;u);</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;v, &amp;w);</span><br><span class="line">			add(u, w);</span><br><span class="line">			add(v + <span class="number">1</span>, -w);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, query(u));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="区间修改区间查询"><a class="markdownIt-Anchor" href="#区间修改区间查询"></a> 区间修改+区间查询</h2>
+<h2 id="区间修改区间查询">区间修改+区间查询</h2>
 <p>都支持区间修改了怎么能不支持区间查询？</p>
 <p>还是用差分。</p>
-\begin{align}
-a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i)\\
-&=i\cdot(tree_1+tree_2+\cdots+tree_i)-(i-1)\cdot tree_2-(i-2)tree_3-\cdots-tree_{i-1}
-\end{align}
-
-<p>于是可以开两个树状数组，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>r</mi><mi>e</mi><msub><mi>e</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">tree_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="base"><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>⋅</mo><mi>t</mi><mi>r</mi><mi>e</mi><msub><mi>e</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">i\cdot tree_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.80952em;vertical-align:-0.15em;"></span><span class="base"><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>。</p>
+<p><span class="math display">\[
+\begin{align*}
+a_1+a_2+\cdots+a_i&amp;=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i)\\
+&amp;=i\cdot(tree_1+tree_2+\cdots+tree_i)-(i-1)\cdot tree_2-(i-2)tree_3-\cdots-tree_{i-1}
+\end{align*}
+\]</span></p>
+<p>于是可以开两个树状数组，一个存<span class="math inline">\(tree_i\)</span>，一个存<span class="math inline">\(i\cdot tree_i\)</span>。</p>
 <p>结束了？结束了。</p>
-<h3 id="代码-3"><a class="markdownIt-Anchor" href="#代码-3"></a> 代码</h3>
+<h3 id="代码-2">代码</h3>
 <p>支持区间修改+区间查询，也就是洛谷<code>线段树1</code>要支持的操作了。</p>
 <p>这里提供<font color="#0a0"><b>Accepted</b></font><a href="https://www.luogu.org/problemnew/show/P3372" target="_blank" rel="noopener">洛谷 P3372 【模板】线段树 1</a>的代码。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> rec2[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> rec[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> inp[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> l, u, v, w;</span><br><span class="line"><span class="keyword">int</span> n, m, op;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> x, <span class="keyword">long</span> <span class="keyword">long</span> *arr)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt;= n; i += lowbit(i)) arr[i] += x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">long</span> <span class="keyword">long</span> *arr)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ret = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i; i -= lowbit(i)) ret += arr[i];</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, inp + i);</span><br><span class="line">		add(i, inp[i] - l, rec);</span><br><span class="line">		add(i, (i - <span class="number">1</span>) * (inp[i] - l), rec2);</span><br><span class="line">		l = inp[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%lld%lld"</span>, &amp;op, &amp;u, &amp;v);</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;w);</span><br><span class="line">			add(u, w, rec);</span><br><span class="line">			add(v + <span class="number">1</span>, -w, rec);</span><br><span class="line">			add(u, w * (u - <span class="number">1</span>), rec2);</span><br><span class="line">			add(v + <span class="number">1</span>, -w * v, rec2);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, query(v, rec) * v - query(v, rec2) - query(u - <span class="number">1</span>, rec) * (u - <span class="number">1</span>) + query(u - <span class="number">1</span>, rec2));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
-<p>❗️❗️❗️重点：树状数组中的第个元素表示右端点为，长度为的闭区间。或者说。这也是为什么查询的时候要一直减去lowbit。这样可以&quot;倍增&quot;的覆盖整个区间。</p>
-<h1 id="二维树状数组"><a class="markdownIt-Anchor" href="#二维树状数组"></a> 二维树状数组</h1>
-<p>类比<code>总结1</code>中的线性树状数组，二维树状数组中的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>r</mi><mi>e</mi><msub><mi>e</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">tree_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.9011879999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>表示右下角为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(i,j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>，长为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>w</mi><mi>b</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi>i</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">lowbit(i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">b</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mopen">(</span><span class="mord mathit">i</span><span class="mclose">)</span></span></span></span>，宽为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>w</mi><mi>b</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">lowbit(j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">b</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>的矩阵。</p>
-<h2 id="单点修改区间查询-2"><a class="markdownIt-Anchor" href="#单点修改区间查询-2"></a> 单点修改+区间查询</h2>
-<p>首先我们把二维树状数组想象成树状&quot;树状数组&quot;数组(树状数组套树状数组)。</p>
-<p>然后再次类比<code>总结1</code>中的树状数组结构。现在假设我们要将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>加<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span>。</p>
-<h3 id="单点修改-2"><a class="markdownIt-Anchor" href="#单点修改-2"></a> 单点修改</h3>
-<p>可以考虑把<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mi>x</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,x]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">x</span><span class="mclose">]</span></span></span></span>中的所有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mi>y</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,y]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">]</span></span></span></span>都加上<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span>。然后可以用树状数组的<code>lowbit</code>优化复杂度，于是就变成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>log</mi><mo>⁡</mo><mn>2</mn></msup><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\log^2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8984479999999999em;"></span><span class="strut bottom" style="height:1.148448em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8984479999999999em;"><span style="top:-3.1473400000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>的复杂度了。</p>
-<h3 id="区间查询-2"><a class="markdownIt-Anchor" href="#区间查询-2"></a> 区间查询</h3>
-<p>区间查询就是容斥。求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>)</mo><mo separator="true">,</mo><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">[(x_1,y_1),(x_2,y_2)]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">[</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span>的子矩阵和就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>)</mo><mo>−</mo><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>)</mo><mo>−</mo><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo>)</mo><mo>+</mo><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">query(x_2,y_2)-query(x_1-1,y_2)-query(x_2,y_1-1)+query(x_1-1,y_1-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathit">u</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathit">u</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathit">u</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathit">u</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>。</p>
-<h3 id="模板题1-hdu2642-stars"><a class="markdownIt-Anchor" href="#模板题1-hdu2642-stars"></a> 模板题1 (HDU2642 - Stars)</h3>
-<h4 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h4>
-<p>你要维护一片<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>0</mn><mn>0</mn><mn>1</mn><mo>×</mo><mn>1</mn><mn>0</mn><mn>0</mn><mn>1</mn><mo>(</mo><mn>0</mn><mo>≤</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>≤</mo><mn>1</mn><mn>0</mn><mn>0</mn><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">1001\times1001(0\le x,y\le1000)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mopen">(</span><span class="mord">0</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">)</span></span></span></span>的天空。有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">3</span></span></span></span>种操作。<code>B x y</code>代表让<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>的星星亮，<code>D x y</code>代表让<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>的星星暗，<code>Q x1 x2 y1 y2</code>代表查询<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>)</mo><mo separator="true">,</mo><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">[(x_1,y_1),(x_2,y_2)]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">[</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span>亮的星星数。最开始星星都是暗的。</p>
-<h4 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h4>
+<h2 id="总结">总结</h2>
+<p>:exclamation::exclamation::exclamation:重点：树状数组中的第个元素表示右端点为，长度为的闭区间。或者说。这也是为什么查询的时候要一直减去lowbit。这样可以“倍增”的覆盖整个区间。</p>
+<h1 id="二维树状数组">二维树状数组</h1>
+<p>类比<code>总结1</code>中的线性树状数组，二维树状数组中的<span class="math inline">\(tree_{i,j}\)</span>表示右下角为<span class="math inline">\((i,j)\)</span>，长为<span class="math inline">\(lowbit(i)\)</span>，宽为<span class="math inline">\(lowbit(j)\)</span>的矩阵。</p>
+<h2 id="单点修改区间查询-1">单点修改+区间查询</h2>
+<p>首先我们把二维树状数组想象成树状“树状数组”数组(树状数组套树状数组)。</p>
+<p>然后再次类比<code>总结1</code>中的树状数组结构。现在假设我们要将<span class="math inline">\((x,y)\)</span>加<span class="math inline">\(z\)</span>。</p>
+<h3 id="单点修改-1">单点修改</h3>
+<p>可以考虑把<span class="math inline">\([1,x]\)</span>中的所有<span class="math inline">\([1,y]\)</span>都加上<span class="math inline">\(z\)</span>。然后可以用树状数组的<code>lowbit</code>优化复杂度，于是就变成<span class="math inline">\(O(\log^2n)\)</span>的复杂度了。</p>
+<h3 id="区间查询-1">区间查询</h3>
+<p>区间查询就是容斥。求<span class="math inline">\([(x_1,y_1),(x_2,y_2)]\)</span>的子矩阵和就是<span class="math inline">\(query(x_2,y_2)-query(x_1-1,y_2)-query(x_2,y_1-1)+query(x_1-1,y_1-1)\)</span>。</p>
+<h3 id="模板题1-hdu2642---stars">模板题1 (HDU2642 - Stars)</h3>
+<h4 id="题意">题意</h4>
+<p>你要维护一片<span class="math inline">\(1001\times1001(0\le x,y\le1000)\)</span>的天空。有<span class="math inline">\(3\)</span>种操作。<code>B x y</code>代表让<span class="math inline">\((x,y)\)</span>的星星亮，<code>D x y</code>代表让<span class="math inline">\((x,y)\)</span>的星星暗，<code>Q x1 x2 y1 y2</code>代表查询<span class="math inline">\([(x_1,y_1),(x_2,y_2)]\)</span>亮的星星数。最开始星星都是暗的。</p>
+<h4 id="解法">解法</h4>
 <p>开两个数组(一个其实就够)。一个存树状数组，一个存原数组。如果星星已经亮了那么忽略<code>B</code>操作，否则就让它亮。<code>D</code>操作同理。然后<code>Q</code>操作就直接套一个裸的区间查询即可。</p>
-<h4 id="代码-4"><a class="markdownIt-Anchor" href="#代码-4"></a> 代码</h4>
+<h4 id="代码-3">代码</h4>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, rec[<span class="number">1003</span>][<span class="number">1003</span>], src[<span class="number">1003</span>][<span class="number">1003</span>];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1001</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= N) &#123;</span><br><span class="line">		<span class="keyword">int</span> j_ = j;</span><br><span class="line">		<span class="keyword">while</span> (j_ &lt;= N) &#123;</span><br><span class="line">			rec[i][j_] += x;</span><br><span class="line">			j_ += lowbit(j_);</span><br><span class="line">		&#125;</span><br><span class="line">		i += lowbit(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (x) &#123;</span><br><span class="line">		<span class="keyword">int</span> y_ = y;</span><br><span class="line">		<span class="keyword">while</span> (y_) &#123;</span><br><span class="line">			ret += rec[x][y_];</span><br><span class="line">			y_ -= lowbit(y_);</span><br><span class="line">		&#125;</span><br><span class="line">		x -= lowbit(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> t, X1, Y1, X2, Y2;</span><br><span class="line"><span class="keyword">char</span> op[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s%d%d"</span>, &amp;op, &amp;X1, &amp;X2);</span><br><span class="line">		X1++, X2++;</span><br><span class="line">		<span class="keyword">if</span> (*op == <span class="string">'B'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (!src[X1][X2]) add(X1, X2, <span class="number">1</span>);</span><br><span class="line">			src[X1][X2] = <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (*op == <span class="string">'D'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (src[X1][X2]) add(X1, X2, <span class="number">-1</span>);</span><br><span class="line">			src[X1][X2] = <span class="number">0</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;Y1, &amp;Y2);</span><br><span class="line">			Y1++; Y2++;</span><br><span class="line">			<span class="keyword">int</span> n1 = min(X1, X2), m1 = min(Y1, Y2), n2 = max(X1, X2), m2 = max(Y1, Y2);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, query(n2, m2) - query(n1 - <span class="number">1</span>, m2) - query(n2, m1 - <span class="number">1</span>) + query(n1 - <span class="number">1</span>, m1 - <span class="number">1</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="模板题2-jsoi2009-计数问题"><a class="markdownIt-Anchor" href="#模板题2-jsoi2009-计数问题"></a> 模板题2 (JSOI2009 - 计数问题)</h3>
+<h3 id="模板题2-jsoi2009---计数问题">模板题2 (JSOI2009 - 计数问题)</h3>
 <p>详见<a href="../05/jsoi2009-count">这篇博客</a>。</p>
-<h2 id="区间修改单点查询-2"><a class="markdownIt-Anchor" href="#区间修改单点查询-2"></a> 区间修改+单点查询</h2>
-<p>根据二维前缀和公式，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mi>s</mi><mi>r</mi><msub><mi>c</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>+</mo><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>+</mo><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">sum_{i,j}=src_{i,j}+sum_{i-1,j}+sum_{i,j-1}-sum_{i-1,j-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.8694379999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">s</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。</p>
-<p>那么可以令差分数组<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">d_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>r</mi><msub><mi>c</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">src_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">s</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>r</mi><msub><mi>c</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>+</mo><mi>s</mi><mi>r</mi><msub><mi>c</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><mi>s</mi><mi>r</mi><msub><mi>c</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">src_{i-1,j}+src_{i,j-1}-src_{i-1,j-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.8694379999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">s</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">s</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">s</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>的差。</p>
-<p>比如</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>7</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>4</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>9</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>6</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>5</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>8</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>2</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{pmatrix}
+<h2 id="区间修改单点查询-1">区间修改+单点查询</h2>
+<p>根据二维前缀和公式，<span class="math inline">\(sum_{i,j}=src_{i,j}+sum_{i-1,j}+sum_{i,j-1}-sum_{i-1,j-1}\)</span>。</p>
+<p>那么可以令差分数组<span class="math inline">\(d_{i,j}\)</span>为<span class="math inline">\(src_{i,j}\)</span>与<span class="math inline">\(src_{i-1,j}+src_{i,j-1}-src_{i-1,j-1}\)</span>的差。</p>
+<p>比如 <span class="math display">\[
+\begin{pmatrix}
 1&amp;7&amp;4\\
 9&amp;6&amp;3\\
 5&amp;8&amp;2\\
 \end{pmatrix}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.05002em;"></span><span class="strut bottom" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="base"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">9</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">7</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span></span></span></span></span></span></p>
-<p>的差分矩阵就是</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>6</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>8</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>9</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>4</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>6</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{pmatrix}
+\]</span> 的差分矩阵就是 <span class="math display">\[
+\begin{pmatrix}
 1&amp;6&amp;-3\\
 8&amp;-9&amp;0\\
 -4&amp;6&amp;-3\\
 \end{pmatrix}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.05002em;"></span><span class="strut bottom" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="base"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">9</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span></span></span></span></span></span></p>
-<p>如果要把<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">7</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>9</mn></mrow><annotation encoding="application/x-tex">9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">9</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">6</span></span></span></span>都加上<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">x</span></span></span></span>，那么在差分数组里这样更新：</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn><mstyle mathcolor="red"><mo>+</mo><mi>x</mi></mstyle></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>6</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn><mstyle mathcolor="red"><mo>−</mo><mi>x</mi></mstyle></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>8</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>9</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>4</mn><mstyle mathcolor="red"><mo>−</mo><mi>x</mi></mstyle></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>6</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn><mstyle mathcolor="red"><mo>+</mo><mi>x</mi></mstyle></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{pmatrix}
+\]</span> 如果要把<span class="math inline">\(1\)</span>、<span class="math inline">\(7\)</span>、<span class="math inline">\(9\)</span>、<span class="math inline">\(6\)</span>都加上<span class="math inline">\(x\)</span>，那么在差分数组里这样更新： <span class="math display">\[
+\begin{pmatrix}
 1\color{red}+x&amp;6&amp;-3\color{red}-x\\
 8&amp;-9&amp;0\\
 -4\color{red}-x&amp;6&amp;-3\color{red}+x\\
 \end{pmatrix}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.05002em;"></span><span class="strut bottom" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="base"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="color:red;">x</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">4</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="color:red;">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">9</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">3</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="color:red;">x</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">3</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="color:red;">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"></span></span></span></span></span></span></span></span></span></span></p>
-<p>然后区间修改就被转化成了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">4</span></span></span></span>次单点修改。</p>
-<h2 id="区间修改区间查询-2"><a class="markdownIt-Anchor" href="#区间修改区间查询-2"></a> 区间修改+区间查询</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>的前缀和可以表示为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>x</mi></munderover><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>y</mi></munderover><munderover><mo>∑</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>i</mi></munderover><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>j</mi></munderover><msub><mi>d</mi><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{i=1}^x\sum_{j=1}^y\sum_{p=1}^i\sum_{q=1}^jd_{p,q}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.8587770000000001em;"></span><span class="strut bottom" style="height:3.272554em;vertical-align:-1.4137769999999998em;"></span><span class="base"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6985050000000006em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8116690000000002em;"><span style="top:-1.8828869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.403221em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8587770000000001em;"><span style="top:-1.8828869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03588em;">q</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.403221em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">q</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。</p>
-<p>统计<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>r</mi><mi>e</mi><msub><mi>e</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">tree_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.9011879999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>的出现次数，得<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>x</mi></munderover><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>y</mi></munderover><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>i</mi><mo>)</mo><mo>(</mo><mi>y</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>j</mi><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{i=1}^x\sum_{j=1}^yd_{i,j}(x+1-i)(y+1-j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.6985050000000006em;"></span><span class="strut bottom" style="height:3.1122820000000004em;vertical-align:-1.4137769999999998em;"></span><span class="base"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6985050000000006em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">i</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>i</mi><mo>)</mo><mo>(</mo><mi>y</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x+1-i)(y+1-j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">i</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>展开得<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>y</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>−</mo><mo>(</mo><mi>y</mi><mo>+</mo><mn>1</mn><mo>)</mo><mi>i</mi><mo>−</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mi>j</mi><mo>+</mo><mi>i</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">(x+1)(y+1)-(y+1)i-(x+1)j+ij</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span></p>
-<p>也就是</p>
+\]</span> 然后区间修改就被转化成了<span class="math inline">\(4\)</span>次单点修改。</p>
+<h2 id="区间修改区间查询-1">区间修改+区间查询</h2>
+<p><span class="math inline">\((x,y)\)</span>的前缀和可以表示为<span class="math inline">\(\displaystyle\sum_{i=1}^x\sum_{j=1}^y\sum_{p=1}^i\sum_{q=1}^jd_{p,q}\)</span>。</p>
+<p>统计<span class="math inline">\(tree_{i,j}\)</span>的出现次数，得<span class="math inline">\(\displaystyle\sum_{i=1}^x\sum_{j=1}^yd_{i,j}(x+1-i)(y+1-j)\)</span>。</p>
+<p><span class="math inline">\((x+1-i)(y+1-j)\)</span>展开得<span class="math inline">\((x+1)(y+1)-(y+1)i-(x+1)j+ij\)</span></p>
+<p>也就是 <span class="math display">\[
 \begin{align*}
-&\sum_{i=1}^x\sum_{j=1}^yd_{i,j}(x+1-i)(y+1-j)\\
-=&(x+1)(y+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\\
--&(x+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot j\\
--&(y+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot i\\
-+&\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot i\cdot j\\
+&amp;\sum_{i=1}^x\sum_{j=1}^yd_{i,j}(x+1-i)(y+1-j)\\
+=&amp;(x+1)(y+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\\
+-&amp;(x+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot j\\
+-&amp;(y+1)\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot i\\
++&amp;\sum_{i=1}^x\sum_{j=1}^yd_{i,j}\cdot i\cdot j\\
 \end{align*}
-
-<p>于是可以开四个树状数组，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">d_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>⋅</mo><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">i\cdot d_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi><mo>⋅</mo><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">j\cdot d_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>，一个存<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>⋅</mo><mi>j</mi><mo>⋅</mo><msub><mi>d</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">i\cdot j\cdot d_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。</p>
+\]</span> 于是可以开四个树状数组，一个存<span class="math inline">\(d_{i,j}\)</span>，一个存<span class="math inline">\(i\cdot d_{i,j}\)</span>，一个存<span class="math inline">\(j\cdot d_{i,j}\)</span>，一个存<span class="math inline">\(i\cdot j\cdot d_{i,j}\)</span>。</p>
 <p>结束了？结束了。</p>
-<h3 id="模板题-bzoj3132-上帝造题的七分钟"><a class="markdownIt-Anchor" href="#模板题-bzoj3132-上帝造题的七分钟"></a> 模板题 (BZOJ3132 - 上帝造题的七分钟)</h3>
+<h3 id="模板题-bzoj3132---上帝造题的七分钟">模板题 (BZOJ3132 - 上帝造题的七分钟)</h3>
 <p>单独放在一篇博客里，未完待续……</p>
-<h1 id="高维树状数组"><a class="markdownIt-Anchor" href="#高维树状数组"></a> 高维树状数组？</h1>
+<h1 id="高维树状数组">高维树状数组？</h1>
 <p>可以通过高维差分和高维前缀和类比低维情况实现。(显然我不会)</p>
-<p>然后就可以做到每次<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>log</mi><mo>⁡</mo><mi>d</mi></msup><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\log^dn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9334479999999998em;"></span><span class="strut bottom" style="height:1.1834479999999998em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9334479999999998em;"><span style="top:-3.1473400000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">d</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>时间复杂度了。(看起来要开<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">2^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">d</span></span></span></span></span></span></span></span></span></span></span>个树状数组？吐血)</p>
-<p>UPD：有位dalao写了一个四维偏序，貌似是用三维单点查询单点修改的树状数组做的。<s>但显然我不会偏序</s></p>
-<h1 id="例题列表"><a class="markdownIt-Anchor" href="#例题列表"></a> 例题列表</h1>
-<h2 id="一维"><a class="markdownIt-Anchor" href="#一维"></a> 一维</h2>
+<p>然后就可以做到每次<span class="math inline">\(O(\log^dn)\)</span>时间复杂度了。(看起来要开<span class="math inline">\(2^d\)</span>个树状数组？吐血)</p>
+<p>UPD：有位dalao写了一个四维偏序，貌似是用三维单点查询单点修改的树状数组做的。<del>但显然我不会偏序</del></p>
+<h1 id="例题列表">例题列表</h1>
+<h2 id="一维">一维</h2>
 <p>单点修改+区间查询：</p>
 <ul>
 <li><a href="https://www.luogu.org/problemnew/show/P3374" target="_blank" rel="noopener">洛谷 P3374 【模板】树状数组 1</a></li>
@@ -597,7 +548,7 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 <ul>
 <li><a href="https://www.luogu.org/problemnew/show/P3372" target="_blank" rel="noopener">洛谷 P3372 【模板】线段树 1</a></li>
 </ul>
-<h2 id="二维"><a class="markdownIt-Anchor" href="#二维"></a> 二维</h2>
+<h2 id="二维">二维</h2>
 <p>单点修改+区间查询：</p>
 <ul>
 <li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2642" target="_blank" rel="noopener">HDU2642 Stars</a></li>
@@ -610,6 +561,9 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
       
     </div>
+
+    
+
     
     
     
@@ -622,17 +576,13 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/05/20/bit-notes/" title="「数据结构」树状数组 (+6)">http://oi.tiger0132.tk/2018/05/20/bit-notes/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -685,17 +635,10 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -736,64 +679,211 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -849,6 +939,9 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -863,7 +956,7 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text"> 概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一维树状数组"><span class="nav-number">2.</span> <span class="nav-text"> 一维树状数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单点修改区间查询"><span class="nav-number">2.1.</span> <span class="nav-text"> 单点修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 区间查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单点修改"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 单点修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改单点查询"><span class="nav-number">2.2.</span> <span class="nav-text"> 区间修改+单点查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-2"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改区间查询"><span class="nav-number">2.3.</span> <span class="nav-text"> 区间修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-3"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.4.</span> <span class="nav-text"> 总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二维树状数组"><span class="nav-number">3.</span> <span class="nav-text"> 二维树状数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单点修改区间查询-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 单点修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单点修改-2"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 单点修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询-2"><span class="nav-number">3.1.2.</span> <span class="nav-text"> 区间查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题1-hdu2642-stars"><span class="nav-number">3.1.3.</span> <span class="nav-text"> 模板题1 (HDU2642 - Stars)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意"><span class="nav-number">3.1.3.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解法"><span class="nav-number">3.1.3.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-4"><span class="nav-number">3.1.3.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题2-jsoi2009-计数问题"><span class="nav-number">3.1.4.</span> <span class="nav-text"> 模板题2 (JSOI2009 - 计数问题)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改单点查询-2"><span class="nav-number">3.2.</span> <span class="nav-text"> 区间修改+单点查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改区间查询-2"><span class="nav-number">3.3.</span> <span class="nav-text"> 区间修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题-bzoj3132-上帝造题的七分钟"><span class="nav-number">3.3.1.</span> <span class="nav-text"> 模板题 (BZOJ3132 - 上帝造题的七分钟)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高维树状数组"><span class="nav-number">4.</span> <span class="nav-text"> 高维树状数组？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题列表"><span class="nav-number">5.</span> <span class="nav-text"> 例题列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一维"><span class="nav-number">5.1.</span> <span class="nav-text"> 一维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维"><span class="nav-number">5.2.</span> <span class="nav-text"> 二维</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一维树状数组"><span class="nav-number">2.</span> <span class="nav-text">一维树状数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单点修改区间查询"><span class="nav-number">2.1.</span> <span class="nav-text">单点修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询"><span class="nav-number">2.1.1.</span> <span class="nav-text">区间查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单点修改"><span class="nav-number">2.1.2.</span> <span class="nav-text">单点修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改单点查询"><span class="nav-number">2.2.</span> <span class="nav-text">区间修改+单点查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改区间查询"><span class="nav-number">2.3.</span> <span class="nav-text">区间修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二维树状数组"><span class="nav-number">3.</span> <span class="nav-text">二维树状数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单点修改区间查询-1"><span class="nav-number">3.1.</span> <span class="nav-text">单点修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单点修改-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">单点修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">区间查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题1-hdu2642---stars"><span class="nav-number">3.1.3.</span> <span class="nav-text">模板题1 (HDU2642 - Stars)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解法"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-3"><span class="nav-number">3.1.3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题2-jsoi2009---计数问题"><span class="nav-number">3.1.4.</span> <span class="nav-text">模板题2 (JSOI2009 - 计数问题)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改单点查询-1"><span class="nav-number">3.2.</span> <span class="nav-text">区间修改+单点查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间修改区间查询-1"><span class="nav-number">3.3.</span> <span class="nav-text">区间修改+区间查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板题-bzoj3132---上帝造题的七分钟"><span class="nav-number">3.3.1.</span> <span class="nav-text">模板题 (BZOJ3132 - 上帝造题的七分钟)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高维树状数组"><span class="nav-number">4.</span> <span class="nav-text">高维树状数组？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题列表"><span class="nav-number">5.</span> <span class="nav-text">例题列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一维"><span class="nav-number">5.1.</span> <span class="nav-text">一维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维"><span class="nav-number">5.2.</span> <span class="nav-text">二维</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -871,13 +964,6 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -890,11 +976,11 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -902,7 +988,11 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -910,12 +1000,13 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -928,9 +1019,17 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -954,7 +1053,6 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
 
 
-  
 
 
 
@@ -964,7 +1062,6 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
 
 
-  
 
 
 
@@ -983,23 +1080,13 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -1007,36 +1094,22 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -1044,11 +1117,7 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
 
 
-
-
   
-
-
 
 
 
@@ -1110,6 +1179,8 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1143,6 +1214,7 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1268,7 +1340,7 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1392,11 +1464,50 @@ a_1+a_2+\cdots+a_i&=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tree_i
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 

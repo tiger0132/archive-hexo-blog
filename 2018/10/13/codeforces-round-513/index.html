@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,38 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content="传送门：Codeforces Round #513 (Div. 1 + Div. 2) 比赛的时候状态不大好，本来 A~E 都能做，结果 B 题 FST……">
+<meta name="keywords" content="贪心,前缀,dfs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/10/13/codeforces-round-513/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content="传送门：Codeforces Round #513 (Div. 1 + Div. 2) 比赛的时候状态不大好，本来 A~E 都能做，结果 B 题 FST……">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-13T11:25:50.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)">
+<meta name="twitter:description" content="传送门：Codeforces Round #513 (Div. 1 + Div. 2) 比赛的时候状态不大好，本来 A~E 都能做，结果 B 题 FST……">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/10/13/codeforces-round-513/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2) | Tiger0132的小站</title>
   
@@ -187,13 +146,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +187,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +214,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +357,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)</h2>
+          <h2 class="post-title" itemprop="name headline">「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-13T10:01:29+08:00">2018-10-13</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-13T19:25:50+08:00">2018-10-13</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/赛后总结/" itemprop="url" rel="index">
-                    <span itemprop="name">赛后总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -462,57 +406,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>传送门：<a href="http://codeforces.com/contest/1060" target="_blank" rel="noopener">Codeforces Round #513 (Div. 1 + Div. 2)</a></p>
 <p>比赛的时候状态不大好，本来 A~E 都能做，结果 B 题 FST……</p>
 <a id="more"></a>
-<h1 id="a"><a class="markdownIt-Anchor" href="#a"></a> A</h1>
-<p>答案是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>min</mi><mo>⁡</mo><mo>{</mo><mtext>8的数量</mtext><mo separator="true">,</mo><mfrac><mi>n</mi><mrow><mn>1</mn><mn>1</mn></mrow></mfrac><mo>}</mo></mrow><annotation encoding="application/x-tex">\min\{\text{8的数量},\dfrac n{11}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.10756em;"></span><span class="strut bottom" style="height:1.7935600000000003em;vertical-align:-0.686em;"></span><span class="base"><span class="mop">min</span><span class="mopen">{</span><span class="mord text"><span class="mord">8</span><span class="mord cjk_fallback">的数量</span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">1</span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathit">n</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">}</span></span></span></span>。</p>
-<h1 id="b"><a class="markdownIt-Anchor" href="#b"></a> B</h1>
-<h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
+<h1 id="a">A</h1>
+<p>答案是 <span class="math inline">\(\min\{\text{8的数量},\dfrac n{11}\}\)</span>。</p>
+<h1 id="b">B</h1>
+<h2 id="题意">题意</h2>
 <p>给定一个整数，你要把它表示成两个非负整数之和，使得两数各位之和的和最大。</p>
-<h2 id="解法1"><a class="markdownIt-Anchor" href="#解法1"></a> 解法1</h2>
-<p>令 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>=</mo><mo>⌊</mo><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>⌋</mo></mrow><annotation encoding="application/x-tex">d = \lfloor \lg n \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">d</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mopen">⌊</span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">⌋</span></span></span></span>，则将原树分为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mi>d</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">10^d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.932438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">d</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn><msup><mn>0</mn><mi>d</mi></msup><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 10^d + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.932438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">d</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span>。</p>
-<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h3>
+<h2 id="解法1">解法1</h2>
+<p>令 <span class="math inline">\(d = \lfloor \lg n \rfloor\)</span>，则将原树分为 <span class="math inline">\(10^d-1\)</span> 和 <span class="math inline">\(n - 10^d + 1\)</span>。</p>
+<h3 id="代码">代码</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n, t, q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>) ret += f(x / <span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> ret + x % <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    t = <span class="built_in">log10</span>(n);</span><br><span class="line">    q = (<span class="keyword">long</span> <span class="keyword">long</span>)<span class="built_in">pow</span>(<span class="number">10</span>, t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, f(q<span class="number">-1</span>) + f(n-q+<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="伪hack"><a class="markdownIt-Anchor" href="#伪hack"></a> 伪·hack</h3>
+<h3 id="伪hack">伪·hack</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input: 9999999998</span><br></pre></td></tr></table></figure>
-<p>这个数据我的代码会得到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>8</mn><mo>+</mo><mn>9</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">999999998 + 9000000000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">8</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">9</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
-<p>但是按照思路，答案应该是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mo>+</mo><mn>8</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">999999999 + 8999999999</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">8</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span></span></span></span>。</p>
-<p>然后我把 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">q-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-q+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span> 输出了下，发现 <code>pow</code> 函数出现了误差。</p>
-<p>修改方式也很简单，把 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span><span class="mord">5</span></span></span></span> 行改成 <code>q = (long long)(pow(10, t) + .5);</code></p>
-<p><strong>⚠️ <code>pow</code>函数误差大，尽量不用或者使用时记得四舍五入。</strong></p>
-<h2 id="思路2"><a class="markdownIt-Anchor" href="#思路2"></a> 思路2</h2>
-<p>枚举所有的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mi>d</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">10^d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.932438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">d</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span>，然后计算即可。代码略。</p>
-<h1 id="c"><a class="markdownIt-Anchor" href="#c"></a> C</h1>
-<h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2>
-<p>给你两串数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mi>a</mi><mo>}</mo><mo separator="true">,</mo><mo>{</mo><mi>b</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">\{a\},\{b\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">{</span><span class="mord mathit">a</span><span class="mclose">}</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mopen">{</span><span class="mord mathit">b</span><span class="mclose">}</span></span></span></span>，构造一个矩阵 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">c</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">c_{i,j} = a_i \cdot b_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。你要选出一个最大的子矩阵使得它的和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\le k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="base"><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>。</p>
+<p>这个数据我的代码会得到 <span class="math inline">\(999999998 + 9000000000\)</span>。</p>
+<p>但是按照思路，答案应该是<span class="math inline">\(999999999 + 8999999999\)</span>。</p>
+<p>然后我把 <span class="math inline">\(q-1\)</span> 和 <span class="math inline">\(n-q+1\)</span> 输出了下，发现 <code>pow</code> 函数出现了误差。</p>
+<p>修改方式也很简单，把 <span class="math inline">\(15\)</span> 行改成 <code>q = (long long)(pow(10, t) + .5);</code></p>
+<p><strong>:warning: <code>pow</code>函数误差大，尽量不用或者使用时记得四舍五入。</strong></p>
+<h2 id="思路2">思路2</h2>
+<p>枚举所有的 <span class="math inline">\(10^d-1\)</span>，然后计算即可。代码略。</p>
+<h1 id="c">C</h1>
+<h2 id="题意-1">题意</h2>
+<p>给你两串数 <span class="math inline">\(\{a\},\{b\}\)</span>，构造一个矩阵 <span class="math inline">\(c\)</span>，使得 <span class="math inline">\(c_{i,j} = a_i \cdot b_j\)</span>。你要选出一个最大的子矩阵使得它的和 <span class="math inline">\(\le k\)</span>。</p>
 <p>或者：</p>
-<p>给你两串数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mi>a</mi><mo>}</mo><mo separator="true">,</mo><mo>{</mo><mi>b</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">\{a\},\{b\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">{</span><span class="mord mathit">a</span><span class="mclose">}</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mopen">{</span><span class="mord mathit">b</span><span class="mclose">}</span></span></span></span>，在每个序列中取一个子段，使得子段和的乘积 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">\le k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="base"><span class="mrel">≤</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>，并且最大化长度的成绩。</p>
+<p>给你两串数 <span class="math inline">\(\{a\},\{b\}\)</span>，在每个序列中取一个子段，使得子段和的乘积 <span class="math inline">\(\le k\)</span>，并且最大化长度的成绩。</p>
 <p>比赛的时候我一直在考虑二分，认为没有复杂度正确的算法……</p>
-<h2 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h2>
+<h2 id="解法">解法</h2>
 <p>十分简单。对于每一个序列的每个子段长度，我们计算出该长度的子段的最小和。</p>
 <p>预处理完后枚举两个序列的子段长度即可。</p>
-<h2 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码</h2>
+<h2 id="代码-1">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">3003</span>;</span><br><span class="line"></span><br><span class="line">ll a[N], b[N], ax[N], bx[N], x;</span><br><span class="line"><span class="keyword">int</span> n, m, ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, a+i);</span><br><span class="line">		a[i] += a[i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, b+i);</span><br><span class="line">		b[i] += b[i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, &amp;x);</span><br><span class="line">	<span class="built_in">memset</span>(ax, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> ax);</span><br><span class="line">	<span class="built_in">memset</span>(bx, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> bx);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">			ax[i - j] = min(ax[i - j], a[i] - a[j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">			bx[i - j] = min(bx[i - j], b[i] - b[j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (ax[i] * bx[j] &lt;= x) &#123;</span><br><span class="line">				ans = max(ans, i*j);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="d"><a class="markdownIt-Anchor" href="#d"></a> D</h1>
-<h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2>
+<h1 id="d">D</h1>
+<h2 id="题意-2">题意</h2>
 <p>有一些人来吃饭，你需要把座位排成若干个圈。</p>
-<p>每个人希望顺时针方向有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>l</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">l_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> 个座位是空的，逆时针 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">r_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> 个座位是空的。</p>
+<p>每个人希望顺时针方向有 <span class="math inline">\(l_i\)</span> 个座位是空的，逆时针 <span class="math inline">\(r_i\)</span> 个座位是空的。</p>
 <p>输出满足所有人要求时，最少需要安排的座位数。</p>
-<h2 id="解法-2"><a class="markdownIt-Anchor" href="#解法-2"></a> 解法</h2>
-<p><strong>不用考虑座位是怎么安排的，只需要知道，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msub><mi mathvariant="bold">l</mi><mi mathvariant="bold">i</mi></msub></mrow></mrow><annotation encoding="application/x-tex">\bold{l_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord"><span class="mord mathbf">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathbf mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></span> 最小的人应该和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msub><mi mathvariant="bold">r</mi><mi mathvariant="bold">i</mi></msub></mrow></mrow><annotation encoding="application/x-tex">\bold{r_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.59444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord"><span class="mord mathbf">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathbf mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></span> 坐在一起，然后以此类推即可。</strong></p>
-<h2 id="代码-3"><a class="markdownIt-Anchor" href="#代码-3"></a> 代码</h2>
+<h2 id="解法-1">解法</h2>
+<p><strong>不用考虑座位是怎么安排的，只需要知道，<span class="math inline">\(\bold{l_i}\)</span> 最小的人应该和 <span class="math inline">\(\bold{r_i}\)</span> 坐在一起，然后以此类推即可。</strong></p>
+<h2 id="代码-2">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>;</span><br><span class="line"></span><br><span class="line">ll l[N], r[N], ans;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%I64d%I64d"</span>, l+i, r+i);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(l+<span class="number">1</span>, l+n+<span class="number">1</span>);</span><br><span class="line">	sort(r+<span class="number">1</span>, r+n+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		ans += max(l[i], r[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d"</span>, ans+n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="e"><a class="markdownIt-Anchor" href="#e"></a> E</h1>
-<h2 id="题意-4"><a class="markdownIt-Anchor" href="#题意-4"></a> 题意</h2>
-<p>给你一棵树，然后对于所有距离为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span></span></span></span> 的点对 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(i, j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>，都连一条无向边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(i, j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>。求所有点对的距离和。</p>
-<h2 id="解法-3"><a class="markdownIt-Anchor" href="#解法-3"></a> 解法</h2>
+<h1 id="e">E</h1>
+<h2 id="题意-3">题意</h2>
+<p>给你一棵树，然后对于所有距离为 <span class="math inline">\(2\)</span> 的点对 <span class="math inline">\((i, j)\)</span>，都连一条无向边 <span class="math inline">\((i, j)\)</span>。求所有点对的距离和。</p>
+<h2 id="解法-2">解法</h2>
 <p>考虑加完边后对答案的影响。</p>
-<p>首先对树黑白染色。显然，对于所有的同色点对，它们的距离变成了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>i</mi><mi>s</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{dis}2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord">2</span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">d</span><span class="mord mathit">i</span><span class="mord mathit">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。对于异色点对，他们的距离变成了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{dis+1}2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord">2</span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">d</span><span class="mord mathit">i</span><span class="mord mathit">s</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。</p>
+<p>首先对树黑白染色。显然，对于所有的同色点对，它们的距离变成了 <span class="math inline">\(\dfrac{dis}2\)</span>。对于异色点对，他们的距离变成了 <span class="math inline">\(\dfrac{dis+1}2\)</span>。</p>
 <p>所以我们只需要把答案加上异色点对数(即黑点数与白点数的乘积)再除以二就好了。</p>
 <p>统计所有点对距离和很简单：对于每一条边，将答案加上左侧点数和右侧点数的乘积。</p>
-<h2 id="代码-4"><a class="markdownIt-Anchor" href="#代码-4"></a> 代码</h2>
+<h2 id="代码-3">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">200005</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> to, next;</span><br><span class="line">&#125; e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> head[N], cnt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	e[++cnt] = (edge)&#123;y, head[x]&#125;; head[x] = cnt;</span><br><span class="line">	e[++cnt] = (edge)&#123;x, head[y]&#125;; head[y] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> _[<span class="number">2</span>], ans;</span><br><span class="line"><span class="keyword">int</span> n, x, y;</span><br><span class="line"><span class="keyword">int</span> size[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">	_[c]++;</span><br><span class="line">	size[x] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (nx == p) <span class="keyword">continue</span>;</span><br><span class="line">		dfs(nx, x, c^<span class="number">1</span>);</span><br><span class="line">		size[x] += size[nx];</span><br><span class="line">	&#125;</span><br><span class="line">	ans += <span class="number">1l</span>l * size[x] * (n - size[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</span><br><span class="line">		addedge(x, y);</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d"</span>, (ans + _[<span class="number">0</span>] * _[<span class="number">1</span>]) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+
+    
+
     
     
     
@@ -525,17 +472,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/10/13/codeforces-round-513/" title="「赛后总结」Codeforces Round #513 (Div. 1 + Div. 2)">http://oi.tiger0132.tk/2018/10/13/codeforces-round-513/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -590,17 +533,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -641,64 +577,211 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -754,6 +837,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -768,7 +854,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text"> A</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text"> B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法1"><span class="nav-number">2.2.</span> <span class="nav-text"> 解法1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪hack"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 伪·hack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路2"><span class="nav-number">2.3.</span> <span class="nav-text"> 思路2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text"> C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">3.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-2"><span class="nav-number">3.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text"> D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-3"><span class="nav-number">4.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-2"><span class="nav-number">4.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-3"><span class="nav-number">4.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#e"><span class="nav-number">5.</span> <span class="nav-text"> E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-4"><span class="nav-number">5.1.</span> <span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-3"><span class="nav-number">5.2.</span> <span class="nav-text"> 解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-4"><span class="nav-number">5.3.</span> <span class="nav-text"> 代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text">A</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法1"><span class="nav-number">2.2.</span> <span class="nav-text">解法1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪hack"><span class="nav-number">2.2.2.</span> <span class="nav-text">伪·hack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路2"><span class="nav-number">2.3.</span> <span class="nav-text">思路2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-1"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">3.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text">D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-2"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-1"><span class="nav-number">4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-2"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#e"><span class="nav-number">5.</span> <span class="nav-text">E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-3"><span class="nav-number">5.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-2"><span class="nav-number">5.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-3"><span class="nav-number">5.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -776,13 +862,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -795,11 +874,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -807,7 +886,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -815,12 +898,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -833,9 +917,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -859,7 +951,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -869,7 +960,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  
 
 
 
@@ -888,23 +978,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -912,36 +992,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -949,11 +1015,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-
   
-
-
 
 
 
@@ -1015,6 +1077,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1048,6 +1112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1173,7 +1238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1297,11 +1362,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 

@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tiger0132, NOIP, OI, OIer, LYH, Algorithm, 算法, 数据结构, Data Structures" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://oi.tiger0132.tk/about/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:22:48.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Tiger0132，2017级OIer，蒟蒻一枚，奋斗中。 本站地址: tiger0132.tk 欢迎互链。">
 
 
 
@@ -94,17 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,66 +103,38 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://oi.tiger0132.tk/about/"/>
-
+  
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115022538-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="description" content=":warning:注意：这是ZROI集训的源笔记，其中有很多缺失和遗漏以及无法看懂的部分，大家就不要看了吧。">
+<meta name="keywords" content="DP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「笔记」day2 - DP">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/02/08/day2-notes/index.html">
+<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:description" content=":warning:注意：这是ZROI集训的源笔记，其中有很多缺失和遗漏以及无法看懂的部分，大家就不要看了吧。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-23T04:55:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「笔记」day2 - DP">
+<meta name="twitter:description" content=":warning:注意：这是ZROI集训的源笔记，其中有很多缺失和遗漏以及无法看懂的部分，大家就不要看了吧。">
 
-  gtag('config', 'UA-115022538-1');
+
+
+
+
+
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/02/08/day2-notes/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
-
-<!-- Default Statcounter code for blog http://tiger0132.tk
-
-<script type="text/javascript">
-var sc_project=11567104; 
-var sc_invisible=1; 
-var sc_security="f182c735"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11567104/0/f182c735/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=11567104; 
-  var sc_invisible=1; 
-  var sc_security="f182c735"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-  document.write("<sc"+"ript type='text/javascript' src='" +
-  scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - StatCounter" href="http://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="//c.statcounter.com/11567104/0/f182c735/1/" alt="Web
-  Analytics Made Easy - StatCounter"></a></div></noscript>
-  <!-- End of StatCounter Code for Default Guide -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KD7V3JJ');</script>
-<!-- End Google Tag Manager -->
 
   <title>「笔记」day2 - DP | Tiger0132的小站</title>
   
@@ -187,13 +146,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7V3JJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -204,24 +187,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tiger0132的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -229,86 +214,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-users"></i> <br />
-            
-            友链
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -339,12 +304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -357,6 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -366,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -379,58 +357,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
         
-          <h2 class="post-title" itemprop="name headline">「笔记」day2 - DP</h2>
+          <h2 class="post-title" itemprop="name headline">「笔记」day2 - DP
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T23:33:33+08:00">2018-02-08</time>
+            
             
 
             
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T12:55:34+08:00">2018-04-23</time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -459,20 +403,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
 
       
-        <p>⚠️注意：这是<code>ZROI</code>集训的源笔记，其中有很多缺失和遗漏以及无法看懂的部分，大家就不要看了吧。</p>
+        <p>:warning:注意：这是<code>ZROI</code>集训的源笔记，其中有很多缺失和遗漏以及无法看懂的部分，大家就不要看了吧。</p>
 <a id="more"></a>
 <p>以下是原笔记：</p>
 <hr>
-<h1 id="day1欠账"><a class="markdownIt-Anchor" href="#day1欠账"></a> day1欠账</h1>
-<h2 id="简单题"><a class="markdownIt-Anchor" href="#简单题"></a> 简单题</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>n</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{n,x,y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>长度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">0</span></span></span></span>的奇偶性。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>n</mi><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mi>y</mi></mrow></msub><mo>−</mo><mo>&gt;</mo><msub><mi>f</mi><mrow><mi>n</mi><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mi>y</mi><mtext> </mtext><mi>x</mi><mi>o</mi><mi>r</mi><mtext> </mtext><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">f_{n,0,y} -&gt; f_{n,0,y\ xor\ 1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord">−</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathit mtight">x</span><span class="mord mathit mtight">o</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>n</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mn>0</mn></mrow></msub><mo>−</mo><mo>&gt;</mo><msub><mi>f</mi><mrow><mi>n</mi><mo separator="true">,</mo><mi>x</mi><mtext> </mtext><mi>x</mi><mi>o</mi><mi>r</mi><mtext> </mtext><mn>1</mn><mo separator="true">,</mo><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">f_{n,x,0} -&gt; f_{n,x\ xor\ 1,0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">x</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord">−</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">x</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathit mtight">x</span><span class="mord mathit mtight">o</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span></p>
-<h3 id="矩阵优化"><a class="markdownIt-Anchor" href="#矩阵优化"></a> 矩阵优化</h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn></mrow></msub><mo separator="true">,</mo><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn></mrow></msub><mo separator="true">,</mo><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">f_{n+1,0,0}, f_{n+1,0,1}, f_{n+1,1,0}, f_{n+1,1,1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">0</span></span></span></span>		<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">0/1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">0</span><span class="mord">/</span><span class="mord">1</span></span></span></span>		不放	<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span></p>
-<p>转移矩阵</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[
+<h1 id="day1欠账">day1欠账</h1>
+<h2 id="简单题">简单题</h2>
+<p><span class="math inline">\(f_{n,x,y}\)</span>长度<span class="math inline">\(a\)</span>，<span class="math inline">\(x,y\)</span>表示<span class="math inline">\(1\)</span>和<span class="math inline">\(0\)</span>的奇偶性。</p>
+<p><span class="math inline">\(f_{n,0,y} -&gt; f_{n,0,y\ xor\ 1}\)</span></p>
+<p><span class="math inline">\(f_{n,x,0} -&gt; f_{n,x\ xor\ 1,0}\)</span></p>
+<h3 id="矩阵优化">矩阵优化</h3>
+<p><span class="math inline">\(f_{n+1,0,0}, f_{n+1,0,1}, f_{n+1,1,0}, f_{n+1,1,1}\)</span></p>
+<p><span class="math inline">\(0\)</span> <span class="math inline">\(0/1\)</span> 不放 <span class="math inline">\(1\)</span></p>
+<p>转移矩阵 <span class="math display">\[
+\left[
   \begin{array}{c}
     0 &amp; 1 &amp; 0 &amp; 0\\
     1 &amp; 0 &amp; 0 &amp; 1\\
@@ -480,150 +424,150 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     0 &amp; 1 &amp; 0 &amp; 0
   \end{array}
 \right]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.6520099999999998em;"></span><span class="strut bottom" style="height:4.80204em;vertical-align:-2.15003em;"></span><span class="base"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6520099999999998em;"><span style="top:-1.6499900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-2.80499em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-3.40599em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-4.65201em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6520099999999998em;"><span style="top:-1.6499900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-2.80499em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-3.40599em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-4.65201em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"></span></span></span></span></span></span></span></span></span></span></p>
-<h1 id="树形dp"><a class="markdownIt-Anchor" href="#树形dp"></a> 树形DP</h1>
+\]</span></p>
+<h1 id="树形dp">树形DP</h1>
 <p><strong>重点！如果合并两个子树时间是两个子树的乘积，那么这个树形DP是平方的</strong></p>
-<h2 id="模板"><a class="markdownIt-Anchor" href="#模板"></a> 模板</h2>
+<h2 id="模板">模板</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p)</span> </span>&#123; <span class="comment">// 合并子树 </span></span><br><span class="line">	f[p][<span class="number">0</span>] = f[p][<span class="number">1</span>] + <span class="comment">/* max(f[k][0], f[k][1]) */</span>;</span><br><span class="line">	f[p][<span class="number">1</span>] = f[p][<span class="number">0</span>] + f[x][<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123; <span class="comment">// 初始化 </span></span><br><span class="line"><span class="comment">//	f[k][0] = 0;</span></span><br><span class="line"><span class="comment">//	f[k][1] = 1;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">treedp</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123; <span class="comment">// 树形dp 不需要改 </span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c[x].size(); i++) &#123;</span><br><span class="line">		treedp(c[x][i]);</span><br><span class="line">	&#125;</span><br><span class="line">	init(x);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c[x].size(); i++) &#123;</span><br><span class="line">		merge(c[x][i], x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 状态 -&gt; init -&gt; merge </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="最大独立集"><a class="markdownIt-Anchor" href="#最大独立集"></a> 最大独立集</h2>
+<h2 id="最大独立集">最大独立集</h2>
 <p>同模板</p>
-<h2 id="例题2"><a class="markdownIt-Anchor" href="#例题2"></a> 例题2</h2>
+<h2 id="例题2">例题2</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">state:	f[i][0], f[i][1]</span><br><span class="line">init :	f[i][1] = f[i][0] = 0;</span><br><span class="line">merge:	f[x][1] = max(f[p][1] + max(f[x][1], f[x][0]),</span><br><span class="line">					f[p][0] + f[x][0] + 1);</span><br><span class="line">     :	f[x][0] = f[p][0] + max(f[x][1], f[x][0]);</span><br><span class="line">     // 缺失部分</span><br></pre></td></tr></table></figure>
-<h2 id="例题3"><a class="markdownIt-Anchor" href="#例题3"></a> 例题3</h2>
+<h2 id="例题3">例题3</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">state:	f[i][0] 我不是，孩子也不是[不合法]</span><br><span class="line">     :	f[i][1] 我不是，孩子是[合法]</span><br><span class="line">     :	f[i][2] 我是[满足]</span><br><span class="line">init :	f[i][0] = 0, f[i][2] = 1, f[i][1] = 0x3f3f3f3f</span><br><span class="line">merge:</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
-<tr>
-<th style="text-align:center">x\p</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
+<tr class="header">
+<th style="text-align: center;">x</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center"><strong>0</strong></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">2</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>1</strong></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
+<tr class="even">
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>2</strong></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
 </tr>
 </tbody>
 </table>
-<p>HOMEWORK：距离为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span></span></span></span></p>
-<h2 id="例题4"><a class="markdownIt-Anchor" href="#例题4"></a> 例题4</h2>
-<h3 id="简化版只考虑子树"><a class="markdownIt-Anchor" href="#简化版只考虑子树"></a> 简化版(只考虑子树)</h3>
+<p>HOMEWORK：距离为<span class="math inline">\(2\)</span></p>
+<h2 id="例题4">例题4</h2>
+<h3 id="简化版只考虑子树">简化版(只考虑子树)</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f[i][x][y] 当前子树关键点 当前子树的子树</span><br><span class="line"></span><br><span class="line">f[i][0][0] = 0</span><br><span class="line">f[i][1][0] = 1</span><br><span class="line">f[i][0][1] = f[i][1][1] = 0x3f3f3f3f</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
-<tr>
-<th style="text-align:center">x\p</th>
-<th style="text-align:center">0,0</th>
-<th style="text-align:center">0,1</th>
-<th style="text-align:center">1,0</th>
-<th style="text-align:center">1,1</th>
+<tr class="header">
+<th style="text-align: center;">x</th>
+<th style="text-align: center;">0,0</th>
+<th style="text-align: center;">0,1</th>
+<th style="text-align: center;">1,0</th>
+<th style="text-align: center;">1,1</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center"><strong>0</strong></td>
-<td style="text-align:center">0,1</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1,1</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1,1</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>1</strong></td>
-<td style="text-align:center">1,0</td>
-<td style="text-align:center">1,1</td>
-<td style="text-align:center">1,0</td>
-<td style="text-align:center">1,1</td>
+<tr class="even">
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">1,0</td>
+<td style="text-align: center;">1,1</td>
+<td style="text-align: center;">1,0</td>
+<td style="text-align: center;">1,1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="普通版"><a class="markdownIt-Anchor" href="#普通版"></a> 普通版</h3>
+<h3 id="普通版">普通版</h3>
 <ul>
-<li>
-<p>存在度数大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">3</span></span></span></span>的点</p>
-<p>贪心地选一个度大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">3</span></span></span></span>的点为根，然后同<code>简化版</code></p>
-</li>
-<li>
-<p>不存在(链)，输出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span></span></span></span>。</p>
-</li>
+<li><p>存在度数大于<span class="math inline">\(3\)</span>的点</p>
+<p>贪心地选一个度大于<span class="math inline">\(3\)</span>的点为根，然后同<code>简化版</code></p></li>
+<li><p>不存在(链)，输出<span class="math inline">\(1\)</span>。</p></li>
 </ul>
-<h2 id="例题5"><a class="markdownIt-Anchor" href="#例题5"></a> 例题5</h2>
+<h2 id="例题5">例题5</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">f[i]表示只删以i为根的子树的ans(minimal maximum)</span><br><span class="line"></span><br><span class="line">f[叶子]=0x3f3f3f3f</span><br><span class="line">f[其它]=0</span><br><span class="line"></span><br><span class="line">merge:</span><br><span class="line">f[i]=max(f[i], x);</span><br></pre></td></tr></table></figure>
-<h2 id="练习1"><a class="markdownIt-Anchor" href="#练习1"></a> 练习1</h2>
+<h2 id="练习1">练习1</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  0 1</span><br><span class="line">  ---</span><br><span class="line">0|0 1</span><br><span class="line">1|0 x</span><br></pre></td></tr></table></figure>
 <p><code>ans = 5471492</code></p>
 <p><strong>[暂缺]</strong></p>
-<h2 id="例题6"><a class="markdownIt-Anchor" href="#例题6"></a> 例题6</h2>
-<h3 id="简化版只考虑子树-2"><a class="markdownIt-Anchor" href="#简化版只考虑子树-2"></a> 简化版(只考虑子树)</h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>f</mi></msub><mo>=</mo><mi>max</mi><mo>⁡</mo><mo>(</mo><msub><mi>f</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>−</mo><msub><mi>w</mi><mi>j</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">f_f=\max(f_f, f_j-w_j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop">max</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
-<h3 id="普通版-2"><a class="markdownIt-Anchor" href="#普通版-2"></a> 普通版</h3>
-<p>令子树外最长路为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>u</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">u_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>。</p>
-<p>维护次大值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>g</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">g_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">f_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>的来源<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi><mi>h</mi><mi>e</mi><mi>r</mi><msub><mi>e</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">where_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">h</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>g</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">g_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>初始<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">0</span></span></span></span>。</p>
+<h2 id="例题6">例题6</h2>
+<h3 id="简化版只考虑子树-1">简化版(只考虑子树)</h3>
+<p><span class="math inline">\(f_f=\max(f_f, f_j-w_j)\)</span></p>
+<h3 id="普通版-1">普通版</h3>
+<p>令子树外最长路为<span class="math inline">\(u_i\)</span>。</p>
+<p>维护次大值<span class="math inline">\(g_f\)</span>和<span class="math inline">\(f_f\)</span>的来源<span class="math inline">\(where_f\)</span>。</p>
+<p><span class="math inline">\(g_f\)</span>初始<span class="math inline">\(0\)</span>。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (f[k] + w &gt; f[f]) &#123;</span><br><span class="line">	g[f] = f[k];</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">User -&gt; Web: Submit</span><br><span class="line">Web -&gt; Judger: Submit</span><br><span class="line">Note right of Judger: Waiting &amp; Judging</span><br><span class="line">Judger -&gt; Web: WA</span><br><span class="line">Web -&gt; User: WA</span><br><span class="line">Note left of User: MMP</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">start=&gt;start: 做题</span><br><span class="line">needIOOptimize=&gt;condition: 需要快速IO?</span><br><span class="line">kengDie=&gt;operation: 坑爹,命题人SB</span><br><span class="line">implementation=&gt;condition: 大模拟题?</span><br><span class="line">codeLong=&gt;operation: 难写,命题人SB</span><br><span class="line">constant=&gt;condition: 题目还卡常?</span><br><span class="line">boring=&gt;operation: 无聊,命题人SB</span><br><span class="line">isEasy=&gt;condition: 题目太简单?</span><br><span class="line">water=&gt;operation: 太水,命题人SB</span><br><span class="line">end=&gt;end: 婊死出题人</span><br><span class="line"></span><br><span class="line">start-&gt;needIOOptimize</span><br><span class="line">needIOOptimize(yes)-&gt;kengDie-&gt;end</span><br><span class="line">needIOOptimize(no)-&gt;implementation</span><br><span class="line">implementation(yes)-&gt;codeLong-&gt;end</span><br><span class="line">implementation(no)-&gt;constant</span><br><span class="line">constant(yes)-&gt;boring-&gt;end</span><br><span class="line">constant(no)-&gt;water-&gt;end</span><br></pre></td></tr></table></figure>
-<h2 id="例题7"><a class="markdownIt-Anchor" href="#例题7"></a> 例题7</h2>
-<p>令每条边经过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>次，那么<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi><mo>=</mo><mo>∑</mo><msub><mi>d</mi><mi>i</mi></msub><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">ans = \sum d_if_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="base"><span class="mord mathit">a</span><span class="mord mathit">n</span><span class="mord mathit">s</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">d_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>是权值。</p>
-<p>dfs求出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>即可。</p>
-<h2 id="监测站"><a class="markdownIt-Anchor" href="#监测站"></a> 监测站</h2>
-<p><s>乱搞</s></p>
-<h2 id="树形背包"><a class="markdownIt-Anchor" href="#树形背包"></a> 树形背包</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>子树<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>容量</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>表示不选<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>的子树<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>容量</p>
-<p>初始<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g_{i,j}=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.9305479999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span></span></p>
-<p>如果选<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>就一定选整个子树 ：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo separator="true">,</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><mo>)</mo><mo>(</mo><mi>j</mi><mo>≥</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">max(g_{i,j},\sum v_i)(j \ge \sum v_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo mathvariant="normal">′</mo></msubsup><mo>=</mo><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>a</mi></mrow></msub><mo>+</mo><msub><mi>f</mi><mrow><mi>c</mi><mo separator="true">,</mo><mi>b</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g&#x27;_{i,a+b}=g_{i,a}+f_{c,b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:1.1711079999999998em;vertical-align:-0.4192159999999999em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.4168920000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">a</span><span class="mbin mtight">+</span><span class="mord mathit mtight">b</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4192159999999999em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span></p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>j</mi><mo>&gt;</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo separator="true">,</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><mo>)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>j</mi><mo>≥</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><mi mathvariant="normal">.</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">f_{i,j}=\left\{\begin{array}l
-g_{i,j}				&amp; j&gt;\sum v_i,\\
-max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
+<h2 id="例题7">例题7</h2>
+<p>令每条边经过<span class="math inline">\(f_i\)</span>次，那么<span class="math inline">\(ans = \sum d_if_i\)</span>，<span class="math inline">\(d_i\)</span>是权值。</p>
+<p>dfs求出<span class="math inline">\(f_i\)</span>即可。</p>
+<h2 id="监测站">监测站</h2>
+<p><del>乱搞</del></p>
+<h2 id="树形背包">树形背包</h2>
+<p><span class="math inline">\(f_{i,j}\)</span>表示<span class="math inline">\(i\)</span>子树<span class="math inline">\(j\)</span>容量</p>
+<p><span class="math inline">\(g_{i,j}\)</span>表示不选<span class="math inline">\(i\)</span>的子树<span class="math inline">\(j\)</span>容量</p>
+<p>初始<span class="math inline">\(g_{i,j}=0\)</span></p>
+<p>如果选<span class="math inline">\(i\)</span>就一定选整个子树 ：<span class="math inline">\(max(g_{i,j},\sum v_i)(j \ge \sum v_i)\)</span></p>
+<p><span class="math inline">\(g&#39;_{i,a+b}=g_{i,a}+f_{c,b}\)</span></p>
+<p><span class="math display">\[
+f_{i,j}=\left\{\begin{array}l
+g_{i,j}             &amp; j&gt;\sum v_i,\\
+max(g_{i,j}, \sum v_i)  &amp; j\ge \sum v_i.
 \end{array}\right.
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.45em;"></span><span class="strut bottom" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>3</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
-<h1 id="状压dp"><a class="markdownIt-Anchor" href="#状压dp"></a> 状压DP</h1>
-<h2 id="例题1"><a class="markdownIt-Anchor" href="#例题1"></a> 例题1</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>p</mi><mo>[</mo><mi>n</mi><mo>]</mo></mrow></msub></mrow><annotation encoding="application/x-tex">f_{i,p[n]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:1.04964em;vertical-align:-0.3551999999999999em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight">p</span><span class="mopen mtight">[</span><span class="mord mathit mtight">n</span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"></span></span></span></span></span></span></span></span>前<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>衣服，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">p_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>裤子是否配对。</p>
+\]</span></p>
+<p>时间复杂度<span class="math inline">\(O(n^3)\)</span></p>
+<h1 id="状压dp">状压DP</h1>
+<h2 id="例题1">例题1</h2>
+<p><span class="math inline">\(f_{i,p[n]}\)</span>前<span class="math inline">\(i\)</span>衣服，<span class="math inline">\(p_i\)</span>裤子是否配对。</p>
 <p><code>for j=1...n</code></p>
-<p><code>(i+1, j)</code>可配对，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p_j=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.9305479999999999em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span></span></p>
+<p><code>(i+1, j)</code>可配对，<span class="math inline">\(p_j=0\)</span></p>
 <p><code>f[i+1][j|(1&lt;&lt;(j-1))] += f[i][j];</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 9</span><br><span class="line">1 1 1 2 1 3</span><br><span class="line">2 1 2 2 2 3</span><br><span class="line">3 1 3 2 3 3</span><br></pre></td></tr></table></figure>
-<h2 id="例题2-拓扑排序计数np-hard"><a class="markdownIt-Anchor" href="#例题2-拓扑排序计数np-hard"></a> 例题2 拓扑排序计数(NP-Hard)</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">f_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>选的点数。</p>
-<p>对于所有满足要求的<code>(k, j)</code>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>没被选，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>放了，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>p</mi><mi mathvariant="normal">∣</mi><mo>(</mo><mn>1</mn><mo>&lt;</mo><mo>&lt;</mo><mo>(</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>)</mo></mrow></msub><mo>+</mo><mo>=</mo><msub><mi>f</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">f_{p|(1&lt;&lt;(j-1))} += f_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:1.04964em;vertical-align:-0.3551999999999999em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="mord mtight">∣</span><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mrel mtight">&lt;</span><span class="mrel mtight">&lt;</span><span class="mopen mtight">(</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"></span></span></span></span></span><span class="mord">+</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span>。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mn>0</mn><mo>:</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">20: 2^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base"><span class="mord">2</span><span class="mord">0</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>8</mn><mo>:</mo><msup><mn>2</mn><mi>n</mi></msup><mi>n</mi></mrow><annotation encoding="application/x-tex">18: 2^nn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span><span class="mord">8</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span><span class="mord mathit">n</span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>6</mn><mo>:</mo><msup><mn>2</mn><mi>n</mi></msup><msup><mi>n</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><msup><mn>3</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">16: 2^nn^2 / 3^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">1</span><span class="mord">6</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord">3</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span></p>
-<h2 id="例题3-2"><a class="markdownIt-Anchor" href="#例题3-2"></a> 例题3</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>代表第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">i</span></span></span></span>条直线覆盖点的。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>p</mi></msub><mo>=</mo><mi>min</mi><mo>⁡</mo><mo>(</mo><msub><mi>f</mi><mrow><mi>p</mi><mi mathvariant="normal">∣</mi><msub><mi>t</mi><mi>i</mi></msub></mrow></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>f</mi><mi>p</mi></msub><mo>+</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">f_p=\min(f_{p|t_i},...,f_p+1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.1052em;vertical-align:-0.3551999999999999em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="mord mtight">∣</span><span class="mord mtight"><span class="mord mathit mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
-<p>固定一个端点，可以将枚举直线改为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>。</p>
-<p><s>2<sup>n</sup>个点最短路乱搞？</s></p>
-<h2 id="例题4-2"><a class="markdownIt-Anchor" href="#例题4-2"></a> 例题4</h2>
+<h2 id="例题2-拓扑排序计数np-hard">例题2 拓扑排序计数(NP-Hard)</h2>
+<p><span class="math inline">\(f_p\)</span>选的点数。</p>
+<p>对于所有满足要求的<code>(k, j)</code>，<span class="math inline">\(j\)</span>没被选，<span class="math inline">\(k\)</span>放了，<span class="math inline">\(f_{p|(1&lt;&lt;(j-1))} += f_p\)</span>。</p>
+<p><span class="math inline">\(20: 2^n\)</span></p>
+<p><span class="math inline">\(18: 2^nn\)</span></p>
+<p><span class="math inline">\(16: 2^nn^2 / 3^n\)</span></p>
+<h2 id="例题3-1">例题3</h2>
+<p><span class="math inline">\(t_i\)</span>代表第<span class="math inline">\(i\)</span>条直线覆盖点的。</p>
+<p><span class="math inline">\(f_p=\min(f_{p|t_i},...,f_p+1)\)</span></p>
+<p>固定一个端点，可以将枚举直线改为<span class="math inline">\(O(n)\)</span>。</p>
+<p><del>2<sup>n</sup>个点最短路乱搞？</del></p>
+<h2 id="例题4-1">例题4</h2>
 <blockquote>
 <p>Who knows？</p>
 </blockquote>
 <p><code>for i=1..m</code></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>p</mi><mi mathvariant="normal">∣</mi><msub><mi>t</mi><mi>i</mi></msub></mrow></msub><mo>=</mo><mi>max</mi><mo>⁡</mo><mo>(</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>f</mi><mi>p</mi></msub><mo>+</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>p</mi><mi mathvariant="normal">&amp;</mi><msub><mi>t</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">f_{p|t_i}=\max(..., f_p+1)(p\&amp;t_i=0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.1052em;vertical-align:-0.3551999999999999em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="mord mtight">∣</span><span class="mord mtight"><span class="mord mathit mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop">max</span><span class="mopen">(</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit">p</span><span class="mord">&amp;</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span></p>
-<h2 id="例题5-最长简单环np-hard-npc"><a class="markdownIt-Anchor" href="#例题5-最长简单环np-hard-npc"></a> 例题5 最长简单环(NP-Hard NPC)</h2>
-<h1 id="实现例题2-选做例题5"><a class="markdownIt-Anchor" href="#实现例题2-选做例题5"></a> 实现例题2 (选做例题5)</h1>
+<p><span class="math inline">\(f_{p|t_i}=\max(..., f_p+1)(p\&amp;t_i=0)\)</span></p>
+<h2 id="例题5-最长简单环np-hard-npc">例题5 最长简单环(NP-Hard NPC)</h2>
+<h1 id="实现例题2-选做例题5">实现例题2 (选做例题5)</h1>
 
       
     </div>
+
+    
+
     
     
     
@@ -636,17 +580,13 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    Tiger0132
-  </li>
+    <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://oi.tiger0132.tk/2018/02/08/day2-notes/" title="「笔记」day2 - DP">http://oi.tiger0132.tk/2018/02/08/day2-notes/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -697,17 +637,10 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -748,64 +681,211 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">53</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">61</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiger0132" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
             </div>
           
 
           
           
             <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
                 <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
@@ -861,6 +941,9 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
           
 
           
+            
+          
+          
 
         </div>
       </section>
@@ -875,7 +958,7 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day1欠账"><span class="nav-number">1.</span> <span class="nav-text"> day1欠账</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单题"><span class="nav-number">1.1.</span> <span class="nav-text"> 简单题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵优化"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 矩阵优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树形dp"><span class="nav-number">2.</span> <span class="nav-text"> 树形DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板"><span class="nav-number">2.1.</span> <span class="nav-text"> 模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大独立集"><span class="nav-number">2.2.</span> <span class="nav-text"> 最大独立集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题2"><span class="nav-number">2.3.</span> <span class="nav-text"> 例题2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题3"><span class="nav-number">2.4.</span> <span class="nav-text"> 例题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题4"><span class="nav-number">2.5.</span> <span class="nav-text"> 例题4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简化版只考虑子树"><span class="nav-number">2.5.1.</span> <span class="nav-text"> 简化版(只考虑子树)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通版"><span class="nav-number">2.5.2.</span> <span class="nav-text"> 普通版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题5"><span class="nav-number">2.6.</span> <span class="nav-text"> 例题5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习1"><span class="nav-number">2.7.</span> <span class="nav-text"> 练习1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题6"><span class="nav-number">2.8.</span> <span class="nav-text"> 例题6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简化版只考虑子树-2"><span class="nav-number">2.8.1.</span> <span class="nav-text"> 简化版(只考虑子树)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通版-2"><span class="nav-number">2.8.2.</span> <span class="nav-text"> 普通版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题7"><span class="nav-number">2.9.</span> <span class="nav-text"> 例题7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监测站"><span class="nav-number">2.10.</span> <span class="nav-text"> 监测站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树形背包"><span class="nav-number">2.11.</span> <span class="nav-text"> 树形背包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状压dp"><span class="nav-number">3.</span> <span class="nav-text"> 状压DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题1"><span class="nav-number">3.1.</span> <span class="nav-text"> 例题1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题2-拓扑排序计数np-hard"><span class="nav-number">3.2.</span> <span class="nav-text"> 例题2 拓扑排序计数(NP-Hard)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题3-2"><span class="nav-number">3.3.</span> <span class="nav-text"> 例题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题4-2"><span class="nav-number">3.4.</span> <span class="nav-text"> 例题4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题5-最长简单环np-hard-npc"><span class="nav-number">3.5.</span> <span class="nav-text"> 例题5 最长简单环(NP-Hard NPC)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现例题2-选做例题5"><span class="nav-number">4.</span> <span class="nav-text"> 实现例题2 (选做例题5)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day1欠账"><span class="nav-number">1.</span> <span class="nav-text">day1欠账</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单题"><span class="nav-number">1.1.</span> <span class="nav-text">简单题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵优化"><span class="nav-number">1.1.1.</span> <span class="nav-text">矩阵优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树形dp"><span class="nav-number">2.</span> <span class="nav-text">树形DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板"><span class="nav-number">2.1.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大独立集"><span class="nav-number">2.2.</span> <span class="nav-text">最大独立集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题2"><span class="nav-number">2.3.</span> <span class="nav-text">例题2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题3"><span class="nav-number">2.4.</span> <span class="nav-text">例题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题4"><span class="nav-number">2.5.</span> <span class="nav-text">例题4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简化版只考虑子树"><span class="nav-number">2.5.1.</span> <span class="nav-text">简化版(只考虑子树)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通版"><span class="nav-number">2.5.2.</span> <span class="nav-text">普通版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题5"><span class="nav-number">2.6.</span> <span class="nav-text">例题5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习1"><span class="nav-number">2.7.</span> <span class="nav-text">练习1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题6"><span class="nav-number">2.8.</span> <span class="nav-text">例题6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简化版只考虑子树-1"><span class="nav-number">2.8.1.</span> <span class="nav-text">简化版(只考虑子树)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通版-1"><span class="nav-number">2.8.2.</span> <span class="nav-text">普通版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题7"><span class="nav-number">2.9.</span> <span class="nav-text">例题7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监测站"><span class="nav-number">2.10.</span> <span class="nav-text">监测站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树形背包"><span class="nav-number">2.11.</span> <span class="nav-text">树形背包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状压dp"><span class="nav-number">3.</span> <span class="nav-text">状压DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题1"><span class="nav-number">3.1.</span> <span class="nav-text">例题1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题2-拓扑排序计数np-hard"><span class="nav-number">3.2.</span> <span class="nav-text">例题2 拓扑排序计数(NP-Hard)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题3-1"><span class="nav-number">3.3.</span> <span class="nav-text">例题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题4-1"><span class="nav-number">3.4.</span> <span class="nav-text">例题4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题5-最长简单环np-hard-npc"><span class="nav-number">3.5.</span> <span class="nav-text">例题5 最长简单环(NP-Hard NPC)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现例题2-选做例题5"><span class="nav-number">4.</span> <span class="nav-text">实现例题2 (选做例题5)</span></a></li></ol></div>
             
 
           </div>
@@ -883,13 +966,6 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -902,11 +978,11 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
 
   
 
@@ -914,7 +990,11 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -922,12 +1002,13 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
 
         
+
 
 
 
@@ -940,9 +1021,17 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
     </footer>
 
     
-
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -966,7 +1055,6 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
 
 
-  
 
 
 
@@ -976,7 +1064,6 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
 
 
-  
 
 
 
@@ -995,23 +1082,13 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script id="ribbon" type="text/javascript" size="100" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
 
@@ -1019,36 +1096,22 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -1056,11 +1119,7 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
 
 
-
-
   
-
-
 
 
 
@@ -1122,6 +1181,8 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1155,6 +1216,7 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1280,7 +1342,7 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1404,11 +1466,50 @@ max(g_{i,j}, \sum v_i)	&amp; j\ge \sum v_i.
   
 
   
+  
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
 
   
 
