@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,21 +56,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
@@ -85,8 +85,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '6.5.0',
+    sidebar: {"b2t":true,"scrollpercent":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域">
-<meta name="keywords" content="DP">
+  <meta name="description" content="简介 ODT 是一种基于平衡树的算法，可以高效地处理带有区间 set 操作的问题，且数据随机。">
+<meta name="keywords" content="ODT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「Internal」二元组dp - DP">
-<meta property="og:url" content="http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域">
+<meta property="og:title" content="「算法」ODT (TBC)">
+<meta property="og:url" content="http://oi.tiger0132.tk/2018/10/23/odt-notes/index.html">
+<meta property="og:site_name" content="Tiger0132 的小站">
+<meta property="og:description" content="简介 ODT 是一种基于平衡树的算法，可以高效地处理带有区间 set 操作的问题，且数据随机。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-15T04:49:56.237Z">
+<meta property="og:updated_time" content="2018-11-20T05:12:04.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「Internal」二元组dp - DP">
-<meta name="twitter:description" content="强相互作用力材料制作死线加固曲率引擎驱动超膜跨宇宙导航超弦计算量子算法高端大气上档次低调奢华有内涵的未知领域">
+<meta name="twitter:title" content="「算法」ODT (TBC)">
+<meta name="twitter:description" content="简介 ODT 是一种基于平衡树的算法，可以高效地处理带有区间 set 操作的问题，且数据随机。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/"/>
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/10/23/odt-notes/">
 
 
 
@@ -136,8 +136,10 @@
   };
 </script>
 
-  <title>「Internal」二元组dp - DP | Tiger0132的小站</title>
+  <title>「算法」ODT (TBC) | Tiger0132 的小站</title>
   
+
+
 
 
 
@@ -176,17 +178,15 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
-    
-  
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container  page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -194,7 +194,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tiger0132的小站</span>
+        <span class="site-title">Tiger0132 的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -225,40 +225,95 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">67</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">53</span></a>
+
   </li>
 
       
@@ -268,7 +323,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -288,9 +343,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -335,21 +388,21 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/">
+    <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2018/10/23/odt-notes/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
       <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132 的小站">
     </span>
 
     
@@ -357,7 +410,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">「Internal」二元组dp - DP
+          <h2 class="post-title" itemprop="name headline">「算法」ODT (TBC)
               
             
           </h2>
@@ -371,10 +424,57 @@
             
 
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-10-23 15:30:43" itemprop="dateCreated datePublished" datetime="2018-10-23T15:30:43+08:00">2018-10-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -403,20 +503,46 @@
       
 
       
-        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="请从纯文本意识流中导出密码">
-    <label for="pass">请从纯文本意识流中导出密码</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h1 id="简介">简介</h1>
+<p>ODT 是一种<strong>基于平衡树</strong>的<strong>算法</strong>，可以<strong>高效</strong>地处理带有<strong>区间 set </strong>操作的问题，且<font color="#e74c3c"><strong>数据随机</strong></font>。</p>
+<a id="more"></a>
+<h1 id="思想">思想</h1>
+<p>ODT 的主要思想是：因为数据随机，所以区间 set 操作非常常见。我们可以在区间 set 时<strong>将多个节点合并为一个</strong>，以降低复杂度。</p>
+<h1 id="模板题-cf897e">模板题 (CF897E)</h1>
+<h2 id="题意">题意</h2>
+<p>传送门：<a href="http://codeforces.com/contest/897/problem/E" target="_blank" rel="noopener">Codeforces 897E - Willem, Chtholly and Seniorious</a></p>
+<p>维护一个数列，支持区间加、区间 set、区间 <span class="math inline">\(k\)</span> 小、区间 <span class="math inline">\(x\)</span> 次方和。</p>
+<p>保证数据随机，<span class="math inline">\(n, m \le 10^5\)</span>。</p>
+<h2 id="存储方式">存储方式</h2>
+<p>因为我们有将多个点合并的操作，所以一个点代表一个区间。</p>
+<p>平衡树我们这里使用 <code>std::set</code>。</p>
+<p>为了可以在 <code>std::set</code> 中修改变量，我们这里使用指针来存储值。<del>老 K：语言毒瘤</del></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> l, r, *v;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node&amp; rhs) <span class="keyword">const</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> l &lt; rhs.l;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="各种定义">各种定义</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">std</span>::<span class="built_in">set</span>&lt;node&gt;::iterator _; <span class="comment">/// 迭代器</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">set</span>&lt;node&gt; root; <span class="comment">// 平衡树</span></span><br></pre></td></tr></table></figure>
+<h2 id="分离区间">分离区间</h2>
+<p><code>split(l)</code> 的作用是：返回一个以 <span class="math inline">\(l\)</span> 为左端点的节点。如果没有，则从已有节点中<strong>分裂</strong>出一个。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">_ split(<span class="keyword">int</span> l) &#123;</span><br><span class="line">	_ it = root.lower_bound((node)&#123;l, <span class="number">0</span>, <span class="number">0</span>&#125;);</span><br><span class="line">	<span class="keyword">if</span> (it != root.end() &amp;&amp; it-&gt;l == l) <span class="keyword">return</span> it; <span class="comment">// 已经存在了</span></span><br><span class="line">	it--; <span class="comment">// 如果不存在，lower_bound 会返回第一个大于 l 的节点的迭代器，所以必须减一</span></span><br><span class="line">	<span class="keyword">int</span> L = it-&gt;l, R = it-&gt;r, V = *(it-&gt;v);</span><br><span class="line">	root.erase(it);</span><br><span class="line">	<span class="comment">// 将原来的一个节点分裂成两个</span></span><br><span class="line">	root.insert((node)&#123;L, l<span class="number">-1</span>, <span class="keyword">new</span> <span class="keyword">int</span>(V)&#125;);</span><br><span class="line">	<span class="keyword">return</span> root.insert((node)&#123;l, R, <span class="keyword">new</span> <span class="keyword">int</span>(V)&#125;).first;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间-set">区间 set</h2>
+<p>我们暴力的把 <span class="math inline">\([l, r]\)</span> 区间的所有点删除，然后合并成一个点。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	split(l); _ ub = split(r+<span class="number">1</span>);</span><br><span class="line">	<span class="comment">// 为了防止迭代器失效引发的 UB，左端点为 l 的迭代器必须要在 split 完之后计算</span></span><br><span class="line">	root.erase(root.lower_bound((node)&#123;l, <span class="number">0</span>, <span class="number">0</span>&#125;), ub);</span><br><span class="line">	root.insert((node)&#123;l, r, <span class="keyword">new</span> <span class="keyword">int</span>(x)&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>std::set&lt;node&gt;::erase(l, r)</code> 代表删除迭代器区间 <span class="math inline">\([l, r)\)</span> 之间的所有元素。</p>
+<h2 id="区间加">区间加</h2>
+<p>暴力加即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	split(l); _ ub = split(r+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (_ i = root.lower_bound((node)&#123;l, <span class="number">0</span>, <span class="number">0</span>&#125;); i != ub; i++) &#123;</span><br><span class="line">		*(i-&gt;v) += x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>什么鬼？</del></p>
+<h2 id="区间-k-小">区间 k 小</h2>
+<p>暴力排序即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ktg</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; vec;</span><br><span class="line">	split(l); _ ub = split(r+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (_ i = root.lower_bound((node)&#123;l, <span class="number">0</span>, <span class="number">0</span>&#125;); i != ub; i++) &#123;</span><br><span class="line">		vec.push_back(<span class="built_in">std</span>::make_pair(*(i-&gt;v), i-&gt;r - i-&gt;l + <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	sort(vec.begin(), vec.end());</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt;::iterator it = vec.begin(); it != vec.end(); it++) &#123;</span><br><span class="line">		<span class="keyword">if</span> ((x -= it-&gt;second) &lt;= <span class="number">0</span>) <span class="keyword">return</span> it-&gt;first;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>怎么越来越暴力了？</del></p>
+<h2 id="区间-x-次方和">区间 x 次方和</h2>
+<p>暴力累加即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">psum</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	split(l); _ ub = split(r+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (_ i = root.lower_bound((node)&#123;l, <span class="number">0</span>, <span class="number">0</span>&#125;); i != ub; i++) &#123;</span><br><span class="line">		(ret += (i-&gt;r - i-&gt;l + <span class="number">1</span>) * p(*(i-&gt;v), x, y)) %= y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>WTF？</del></p>
+<h2 id="复杂度证明">复杂度证明</h2>
+<p>证明十分玄学：<a href="http://codeforces.com/blog/entry/56135?#comment-398940" target="_blank" rel="noopener">这里</a></p>
+<p>如果不是数据随机，这货随便就会 T 飞。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
 
@@ -429,18 +555,30 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
     
 
     
+       
+    
+    
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/" title="「Internal」二元组dp - DP">http://oi.tiger0132.tk/2017/10/15/pair-dp-notes/</a>
+    
+    <a href="http://oi.tiger0132.tk/2018/10/23/odt-notes/" title="「算法」ODT (TBC)">http://oi.tiger0132.tk/2018/10/23/odt-notes/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -450,7 +588,7 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
       
         <div class="post-tags">
           
-            <a href="/tags/DP/" rel="tag"># DP</a>
+            <a href="/tags/ODT/" rel="tag"># ODT</a>
           
         </div>
       
@@ -463,8 +601,8 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/12/mistakes/" rel="next" title="常见错误">
-                <i class="fa fa-chevron-left"></i> 常见错误
+              <a href="/2018/10/17/lyft-level5-challenge-2018-elimination-round/" rel="next" title="「订正」Lyft Level 5 Challenge 2018 - Elimination Round">
+                <i class="fa fa-chevron-left"></i> 「订正」Lyft Level 5 Challenge 2018 - Elimination Round
               </a>
             
           </div>
@@ -473,8 +611,8 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/29/segment-tree-notes/" rel="prev" title="「数据结构」线段树">
-                「数据结构」线段树 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/30/sequnce-partition-problems/" rel="prev" title="「题目汇总」数列分块入门">
+                「题目汇总」数列分块入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -520,10 +658,19 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
               <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
@@ -536,7 +683,7 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -567,7 +714,7 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -706,7 +853,15 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">64</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -720,20 +875,28 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tiger0132" title="GitHub &rarr; https://github.com/tiger0132" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -746,39 +909,39 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/zzqsblog/" title="zzq" target="_blank">zzq</a>
+                    <a href="http://www.cnblogs.com/zzqsblog/" title="http://www.cnblogs.com/zzqsblog/" rel="noopener" target="_blank">zzq</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/wxh010910/" title="wxh" target="_blank">wxh</a>
+                    <a href="https://blog.csdn.net/wxh010910/" title="https://blog.csdn.net/wxh010910/" rel="noopener" target="_blank">wxh</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://oi.men.ci/" title="menci" target="_blank">menci</a>
+                    <a href="http://oi.men.ci/" title="http://oi.men.ci/" rel="noopener" target="_blank">menci</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://hzwer.com/" title="hzwer" target="_blank">hzwer</a>
+                    <a href="http://hzwer.com/" title="http://hzwer.com/" rel="noopener" target="_blank">hzwer</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://algocode.net/" title="larryzhong" target="_blank">larryzhong</a>
+                    <a href="https://algocode.net/" title="https://algocode.net/" rel="noopener" target="_blank">larryzhong</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/weixin_42068627/" title="glx" target="_blank">glx</a>
+                    <a href="https://blog.csdn.net/weixin_42068627/" title="https://blog.csdn.net/weixin_42068627/" rel="noopener" target="_blank">glx</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.cnblogs.com/lrj124/" title="lrj124" target="_blank">lrj124</a>
+                    <a href="https://www.cnblogs.com/lrj124/" title="https://www.cnblogs.com/lrj124/" rel="noopener" target="_blank">lrj124</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://yizr-cnyali.ac.cn/" title="yizr_cnyali" target="_blank">yizr_cnyali</a>
+                    <a href="http://yizr-cnyali.ac.cn/" title="http://yizr-cnyali.ac.cn/" rel="noopener" target="_blank">yizr_cnyali</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/slrslr/" title="slr" target="_blank">slr</a>
+                    <a href="http://www.cnblogs.com/slrslr/" title="http://www.cnblogs.com/slrslr/" rel="noopener" target="_blank">slr</a>
                   </li>
                 
               </ul>
@@ -794,7 +957,30 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思想"><span class="nav-number">2.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板题-cf897e"><span class="nav-number">3.</span> <span class="nav-text">模板题 (CF897E)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储方式"><span class="nav-number">3.2.</span> <span class="nav-text">存储方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种定义"><span class="nav-number">3.3.</span> <span class="nav-text">各种定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分离区间"><span class="nav-number">3.4.</span> <span class="nav-text">分离区间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间-set"><span class="nav-number">3.5.</span> <span class="nav-text">区间 set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间加"><span class="nav-number">3.6.</span> <span class="nav-text">区间加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间-k-小"><span class="nav-number">3.7.</span> <span class="nav-text">区间 k 小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间-x-次方和"><span class="nav-number">3.8.</span> <span class="nav-text">区间 x 次方和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度证明"><span class="nav-number">3.9.</span> <span class="nav-text">复杂度证明</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -807,11 +993,11 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">tiger0132</span>
 
   
 
@@ -819,11 +1005,7 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
 </div>
 
 
-  
-
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -831,9 +1013,11 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
 
 
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
 
 
         
@@ -849,11 +1033,6 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -915,32 +1094,32 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
@@ -1292,6 +1471,8 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
   
 
   
+
+  
   
 
   
@@ -1306,7 +1487,12 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
+      TeX: {equationNumbers: { autoNumber: "AMS" }},
+      menuSettings: {
+        zoom: "Zoom",
+        mpContext: true,
+        mpMouse: true
+      }
     });
 </script>
 
@@ -1339,6 +1525,77 @@ U2FsdGVkX1/LYWFDrLaR7WdgCaCegggKYjFMMe1/AEM3k53t5QtRzcbHDQJbbYukGBAc3gczV9hMthEp
   
 
   
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 

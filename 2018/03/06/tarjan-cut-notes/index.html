@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,21 +56,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
@@ -85,8 +85,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '6.5.0',
+    sidebar: {"b2t":true,"scrollpercent":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -113,11 +113,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="「算法」Tarjan割点">
 <meta property="og:url" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="简介 如果在一张无向图上删除它和它的所有边使图的连通性改变，那么这个点就这张无向图的割点。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/sample-graph.png">
-<meta property="og:updated_time" content="2018-05-29T14:45:52.000Z">
+<meta property="og:updated_time" content="2018-11-20T05:12:04.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「算法」Tarjan割点">
 <meta name="twitter:description" content="简介 如果在一张无向图上删除它和它的所有边使图的连通性改变，那么这个点就这张无向图的割点。">
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/"/>
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/">
 
 
 
@@ -138,8 +138,10 @@
   };
 </script>
 
-  <title>「算法」Tarjan割点 | Tiger0132的小站</title>
+  <title>「算法」Tarjan割点 | Tiger0132 的小站</title>
   
+
+
 
 
 
@@ -178,17 +180,15 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
-    
-  
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container  page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -196,7 +196,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tiger0132的小站</span>
+        <span class="site-title">Tiger0132 的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -227,40 +227,95 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">67</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">53</span></a>
+
   </li>
 
       
@@ -270,7 +325,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -290,9 +345,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -337,21 +390,21 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
       <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132 的小站">
     </span>
 
     
@@ -373,10 +426,57 @@
             
 
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-06 20:55:28" itemprop="dateCreated datePublished" datetime="2018-03-06T20:55:28+08:00">2018-03-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -412,9 +512,7 @@
 <p><strong>强烈建议看割点之前先右转看看<a href="/../../../../2018/03/04/【Tarjan-强连通分量】强连通分量">强连通分量</a></strong></p>
 <p>和<code>强连通分量</code>不同，<code>割点</code>只会在无向图中出现。因为<code>DFS树</code>的特性，这棵树上只会有两种边：树边和反向边。</p>
 <p>如下面这张图：</p>
-<figure>
-<img src="/2018/03/06/tarjan-cut-notes/sample-graph.png" alt="图挂了(T_T)"><figcaption>图挂了(T_T)</figcaption>
-</figure>
+<p><img src="/2018/03/06/tarjan-cut-notes/sample-graph.png"></p>
 <p>从<span class="math inline">\(1\)</span>点对它进行<code>DFS</code>，可以得到以下的<code>DFS树</code>(这个例子貌似有点极端)：</p>
 <p>还是一样，定义<code>dfn[i]</code>和<code>low[i]</code>。</p>
 <p><code>dfn[i]</code>代表第<span class="math inline">\(i\)</span>个点的<code>DFS序</code>，<code>low[i]</code>代表第<span class="math inline">\(i\)</span>个点<strong>及其子树</strong>上的某个点通过<strong>一条横叉边或返祖边</strong>能到达的<code>DFS序</code><strong>最小</strong>的点的<code>DFS</code>序。</p>
@@ -434,7 +532,7 @@
 <h1 id="代码">代码</h1>
 <p>该代码用于<font color="#0a0"><b>Accepted</b></font><a href="https://www.luogu.org/problemnew/show/P3388" target="_blank" rel="noopener">洛谷 P3388 - 【模板】割点（割顶）</a>。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>, M = <span class="number">200005</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> to, next;</span><br><span class="line">&#125; e[M];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> head[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cut_count, edge_count, dfn_index;</span><br><span class="line"><span class="keyword">int</span> n, m, dfn[N], low[N], par[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> cut[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> cur)</span> </span>&#123;</span><br><span class="line">    dfn[cur] = low[cur] = ++dfn_index;</span><br><span class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = head[cur]; i; i = e[i].next) &#123;</span><br><span class="line">        <span class="keyword">int</span> nxt = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (nxt == par[cur]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (!dfn[nxt]) &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            par[nxt] = cur;</span><br><span class="line">            tarjan(nxt);</span><br><span class="line">            low[cur] = min(low[cur], low[nxt]);</span><br><span class="line">            <span class="keyword">if</span> (par[cur] &amp;&amp; low[nxt] &gt;= dfn[cur]) &#123;</span><br><span class="line">                cut_count += !cut[cur];</span><br><span class="line">                cut[cur] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            low[cur] = min(low[cur], dfn[nxt]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!par[cur] &amp;&amp; cnt &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">        cut_count += !cut[cur];</span><br><span class="line">        cut[cur] = <span class="number">1</span>;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[++edge_count] = (Edge)&#123;v, head[u]&#125;;</span><br><span class="line">    head[u] = edge_count;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> u, v;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;u, &amp;v);</span><br><span class="line">        addEdge(u, v);</span><br><span class="line">        addEdge(v, u);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!dfn[i]) &#123;</span><br><span class="line">            tarjan(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, cut_count);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cut[i]) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
 
@@ -447,18 +545,30 @@
     
 
     
+       
+    
+    
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/" title="「算法」Tarjan割点">http://oi.tiger0132.tk/2018/03/06/tarjan-cut-notes/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -556,7 +666,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
               <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
@@ -569,7 +679,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -600,7 +710,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -739,7 +849,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">64</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -753,20 +871,28 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tiger0132" title="GitHub &rarr; https://github.com/tiger0132" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -779,39 +905,39 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/zzqsblog/" title="zzq" target="_blank">zzq</a>
+                    <a href="http://www.cnblogs.com/zzqsblog/" title="http://www.cnblogs.com/zzqsblog/" rel="noopener" target="_blank">zzq</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/wxh010910/" title="wxh" target="_blank">wxh</a>
+                    <a href="https://blog.csdn.net/wxh010910/" title="https://blog.csdn.net/wxh010910/" rel="noopener" target="_blank">wxh</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://oi.men.ci/" title="menci" target="_blank">menci</a>
+                    <a href="http://oi.men.ci/" title="http://oi.men.ci/" rel="noopener" target="_blank">menci</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://hzwer.com/" title="hzwer" target="_blank">hzwer</a>
+                    <a href="http://hzwer.com/" title="http://hzwer.com/" rel="noopener" target="_blank">hzwer</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://algocode.net/" title="larryzhong" target="_blank">larryzhong</a>
+                    <a href="https://algocode.net/" title="https://algocode.net/" rel="noopener" target="_blank">larryzhong</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/weixin_42068627/" title="glx" target="_blank">glx</a>
+                    <a href="https://blog.csdn.net/weixin_42068627/" title="https://blog.csdn.net/weixin_42068627/" rel="noopener" target="_blank">glx</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.cnblogs.com/lrj124/" title="lrj124" target="_blank">lrj124</a>
+                    <a href="https://www.cnblogs.com/lrj124/" title="https://www.cnblogs.com/lrj124/" rel="noopener" target="_blank">lrj124</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://yizr-cnyali.ac.cn/" title="yizr_cnyali" target="_blank">yizr_cnyali</a>
+                    <a href="http://yizr-cnyali.ac.cn/" title="http://yizr-cnyali.ac.cn/" rel="noopener" target="_blank">yizr_cnyali</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/slrslr/" title="slr" target="_blank">slr</a>
+                    <a href="http://www.cnblogs.com/slrslr/" title="http://www.cnblogs.com/slrslr/" rel="noopener" target="_blank">slr</a>
                   </li>
                 
               </ul>
@@ -845,6 +971,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -856,11 +989,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">tiger0132</span>
 
   
 
@@ -868,11 +1001,7 @@
 </div>
 
 
-  
-
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -880,9 +1009,11 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
 
 
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
 
 
         
@@ -898,11 +1029,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -964,32 +1090,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
@@ -1341,6 +1467,8 @@
   
 
   
+
+  
   
 
   
@@ -1355,7 +1483,12 @@
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
+      TeX: {equationNumbers: { autoNumber: "AMS" }},
+      menuSettings: {
+        zoom: "Zoom",
+        mpContext: true,
+        mpMouse: true
+      }
     });
 </script>
 
@@ -1388,6 +1521,77 @@
   
 
   
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 

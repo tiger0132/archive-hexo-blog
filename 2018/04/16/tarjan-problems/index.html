@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,21 +56,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
@@ -85,8 +85,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '6.5.0',
+    sidebar: {"b2t":true,"scrollpercent":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -113,10 +113,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="「题目汇总」Tarjan题目汇总">
 <meta property="og:url" content="http://oi.tiger0132.tk/2018/04/16/tarjan-problems/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
+<meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="这里是一些Tarjan题目的汇总。 进度：ABCDEF。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-05T15:48:30.000Z">
+<meta property="og:updated_time" content="2018-11-20T05:12:04.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「题目汇总」Tarjan题目汇总">
 <meta name="twitter:description" content="这里是一些Tarjan题目的汇总。 进度：ABCDEF。">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://oi.tiger0132.tk/2018/04/16/tarjan-problems/"/>
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/04/16/tarjan-problems/">
 
 
 
@@ -136,8 +136,10 @@
   };
 </script>
 
-  <title>「题目汇总」Tarjan题目汇总 | Tiger0132的小站</title>
+  <title>「题目汇总」Tarjan题目汇总 | Tiger0132 的小站</title>
   
+
+
 
 
 
@@ -176,17 +178,15 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
-    
-  
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container  page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -194,7 +194,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tiger0132的小站</span>
+        <span class="site-title">Tiger0132 的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -225,40 +225,95 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">67</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">53</span></a>
+
   </li>
 
       
@@ -268,7 +323,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -288,9 +343,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -335,21 +388,21 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2018/04/16/tarjan-problems/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
       <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132 的小站">
     </span>
 
     
@@ -371,10 +424,57 @@
             
 
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-04-16 12:20:01" itemprop="dateCreated datePublished" datetime="2018-04-16T12:20:01+08:00">2018-04-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/题目汇总/" itemprop="url" rel="index"><span itemprop="name">题目汇总</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -406,22 +506,22 @@
         <p>这里是一些Tarjan题目的汇总。</p>
 <p>进度：<b><font color="#5eb95e">A</font><font color="#e74c3c">BC</font><font color="#f1c40f">D<font color="#e74c3c">EF</font></font></b>。</p>
 <a id="more"></a>
-<h1 id="a-caocaos-bridges-桥">A, Caocao’s Bridges, 桥</h1>
+<h1 id="a-caocaos-bridges-桥">A, Caocao's Bridges, 桥</h1>
 <p>传送门：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=4738" target="_blank" rel="noopener">HDU4738</a>，<a href="http://220.168.106.172:1980/v3/contest_show.php?cid=309#problem/A" target="_blank" rel="noopener">YaliOJ</a>。</p>
 <h2 id="题意">题意</h2>
-<p>曹操在长江上弄了一些点，点之间有桥。每座桥上有若干人守卫。现在刘备有一枚炸弹，问最少带多少人去炸桥可以使点之间不连通。如果不可能输出<span class="math inline">\(-1\)</span>。</p>
+<p>曹操在长江上弄了一些点，点之间有桥。每座桥上有若干人守卫。现在刘备有一枚炸弹，问最少带多少人去炸桥可以使点之间不连通。如果不可能输出 <span class="math inline">\(-1\)</span>。</p>
 <h2 id="解法">解法</h2>
-<p>边<span class="math inline">\((u,v)\)</span>(<span class="math inline">\(u\)</span>在dfs树下为<span class="math inline">\(v\)</span>的子节点)为桥的充要条件是<span class="math inline">\(low_v&gt;dfn_u\)</span>，也就是<span class="math inline">\(u\)</span>的子节点<span class="math inline">\(v\)</span>无法到达<span class="math inline">\(u\)</span>及其之上的点，那么如果切断<span class="math inline">\((u,v)\)</span>那么图将不会联通。</p>
+<p>边 <span class="math inline">\((u,v)\)</span> （<span class="math inline">\(u\)</span> 在 dfs 树下为 <span class="math inline">\(v\)</span> 的子节点） 为桥的充要条件是 <span class="math inline">\(low_v&gt;dfn_u\)</span>，也就是 <span class="math inline">\(u\)</span> 的子节点 <span class="math inline">\(v\)</span> 无法到达 <span class="math inline">\(u\)</span> 及其之上的点，那么如果切断 <span class="math inline">\((u,v)\)</span> 那么图将不会联通。</p>
 <p>这道题的坑点如下：</p>
 <ul>
-<li><p>如果已经不连通了<strong>输出0</strong>。</p>
-<p>处理方式：记录dfs拓展出的节点数，如果发现不到<span class="math inline">\(n\)</span>那么显然不连通，输出<span class="math inline">\(0\)</span>即可。</p>
+<li><p>如果已经不连通了<strong>输出 0</strong>。</p>
+<p>处理方式：记录 dfs 拓展出的节点数，如果发现不到 <span class="math inline">\(n\)</span> 那么显然不连通，输出 <span class="math inline">\(0\)</span> 即可。</p>
 <p><code>(expand+1 == n) * ans</code></p></li>
-<li><p>如果没人守卫还是要<strong>输出1</strong>。</p>
-<p>处理方式：如果<span class="math inline">\(ans\)</span>为<span class="math inline">\(0\)</span>那么取<span class="math inline">\(ans\)</span>和<span class="math inline">\(1\)</span>的max就好了。</p>
+<li><p>如果没人守卫还是要<strong>输出 1</strong>。</p>
+<p>处理方式：如果 <span class="math inline">\(ans\)</span> 为 <span class="math inline">\(0\)</span> 那么取 <span class="math inline">\(ans\)</span> 和 <span class="math inline">\(1\)</span> 的 max 就好了。</p>
 <p><code>(expand+1 == n) * max(1, ans)</code></p>
-<p>最后加上对<span class="math inline">\(ans=+\infty\)</span>的特判：<code>ans == 0x3f3f3f3f ? -1 : (expand+1 == n) * max(1, ans)</code></p></li>
-<li><p>重边需要特殊处理。(因为dfs树的特殊性，只需考虑父节点——子节点的重边即可)</p>
+<p>最后加上对 <span class="math inline">\(ans=+\infty\)</span> 的特判：<code>ans == 0x3f3f3f3f ? -1 : (expand+1 == n) * max(1, ans)</code></p></li>
+<li><p>重边需要特殊处理。（因为 dfs 树的特殊性，只需考虑父节点——子节点的重边即可）</p>
 <p>处理方式：如果父节点到子节点只连了一次边，那么不需要用父节点更新。否则<strong>把父节点当成子节点更新</strong>。</p></li>
 </ul>
 <h2 id="代码">代码</h2>
@@ -436,12 +536,12 @@
 <h2 id="题意-1">题意</h2>
 <p>给你一张图，问你删掉两个点最多能有多少个连通块。<span class="math inline">\(n,m\le5000\)</span>。</p>
 <h2 id="解法-1">解法</h2>
-<p>枚举其中一个删除的点，然后Tarjan求一遍割点。答案取max。</p>
+<p>枚举其中一个删除的点，然后 Tarjan 求一遍割点。答案取 max。</p>
 <p>未完待续……</p>
 <h2 id="代码-1">代码</h2>
 <h1 id="e-warm-up-边双缩点">E, Warm up, 边双缩点</h1>
 <h1 id="f-important-sisters-支配树">F, Important Sisters, 支配树</h1>
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
 
@@ -454,18 +554,30 @@
     
 
     
+       
+    
+    
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="http://oi.tiger0132.tk/2018/04/16/tarjan-problems/" title="「题目汇总」Tarjan题目汇总">http://oi.tiger0132.tk/2018/04/16/tarjan-problems/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -561,7 +673,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
               <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
@@ -574,7 +686,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -605,7 +717,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -744,7 +856,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">64</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -758,20 +878,28 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tiger0132" title="GitHub &rarr; https://github.com/tiger0132" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -784,39 +912,39 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/zzqsblog/" title="zzq" target="_blank">zzq</a>
+                    <a href="http://www.cnblogs.com/zzqsblog/" title="http://www.cnblogs.com/zzqsblog/" rel="noopener" target="_blank">zzq</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/wxh010910/" title="wxh" target="_blank">wxh</a>
+                    <a href="https://blog.csdn.net/wxh010910/" title="https://blog.csdn.net/wxh010910/" rel="noopener" target="_blank">wxh</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://oi.men.ci/" title="menci" target="_blank">menci</a>
+                    <a href="http://oi.men.ci/" title="http://oi.men.ci/" rel="noopener" target="_blank">menci</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://hzwer.com/" title="hzwer" target="_blank">hzwer</a>
+                    <a href="http://hzwer.com/" title="http://hzwer.com/" rel="noopener" target="_blank">hzwer</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://algocode.net/" title="larryzhong" target="_blank">larryzhong</a>
+                    <a href="https://algocode.net/" title="https://algocode.net/" rel="noopener" target="_blank">larryzhong</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/weixin_42068627/" title="glx" target="_blank">glx</a>
+                    <a href="https://blog.csdn.net/weixin_42068627/" title="https://blog.csdn.net/weixin_42068627/" rel="noopener" target="_blank">glx</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.cnblogs.com/lrj124/" title="lrj124" target="_blank">lrj124</a>
+                    <a href="https://www.cnblogs.com/lrj124/" title="https://www.cnblogs.com/lrj124/" rel="noopener" target="_blank">lrj124</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://yizr-cnyali.ac.cn/" title="yizr_cnyali" target="_blank">yizr_cnyali</a>
+                    <a href="http://yizr-cnyali.ac.cn/" title="http://yizr-cnyali.ac.cn/" rel="noopener" target="_blank">yizr_cnyali</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/slrslr/" title="slr" target="_blank">slr</a>
+                    <a href="http://www.cnblogs.com/slrslr/" title="http://www.cnblogs.com/slrslr/" rel="noopener" target="_blank">slr</a>
                   </li>
                 
               </ul>
@@ -841,7 +969,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a-caocaos-bridges-桥"><span class="nav-number">1.</span> <span class="nav-text">A, Caocao’s Bridges, 桥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b-railway-点双桥"><span class="nav-number">2.</span> <span class="nav-text">B, Railway, 点双+桥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-network-边双"><span class="nav-number">3.</span> <span class="nav-text">C, Network, 边双</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d-two-nodes-割点"><span class="nav-number">4.</span> <span class="nav-text">D, TWO NODES, 割点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-1"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-1"><span class="nav-number">4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#e-warm-up-边双缩点"><span class="nav-number">5.</span> <span class="nav-text">E, Warm up, 边双缩点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#f-important-sisters-支配树"><span class="nav-number">6.</span> <span class="nav-text">F, Important Sisters, 支配树</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a-caocaos-bridges-桥"><span class="nav-number">1.</span> <span class="nav-text">A, Caocao&#39;s Bridges, 桥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b-railway-点双桥"><span class="nav-number">2.</span> <span class="nav-text">B, Railway, 点双+桥</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-network-边双"><span class="nav-number">3.</span> <span class="nav-text">C, Network, 边双</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d-two-nodes-割点"><span class="nav-number">4.</span> <span class="nav-text">D, TWO NODES, 割点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-1"><span class="nav-number">4.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-1"><span class="nav-number">4.2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#e-warm-up-边双缩点"><span class="nav-number">5.</span> <span class="nav-text">E, Warm up, 边双缩点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#f-important-sisters-支配树"><span class="nav-number">6.</span> <span class="nav-text">F, Important Sisters, 支配树</span></a></li></ol></div>
             
 
           </div>
@@ -849,6 +977,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -861,11 +996,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">tiger0132</span>
 
   
 
@@ -873,11 +1008,7 @@
 </div>
 
 
-  
-
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -885,9 +1016,11 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
 
 
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
 
 
         
@@ -903,11 +1036,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -969,32 +1097,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
@@ -1346,6 +1474,8 @@
   
 
   
+
+  
   
 
   
@@ -1360,7 +1490,12 @@
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
+      TeX: {equationNumbers: { autoNumber: "AMS" }},
+      menuSettings: {
+        zoom: "Zoom",
+        mpContext: true,
+        mpMouse: true
+      }
     });
 </script>
 
@@ -1393,6 +1528,77 @@
   
 
   
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 

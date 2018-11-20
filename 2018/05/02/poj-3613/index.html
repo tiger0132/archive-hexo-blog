@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,21 +56,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
@@ -85,8 +85,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '6.5.0',
+    sidebar: {"b2t":true,"scrollpercent":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
+  <meta name="description" content="题意 传送门：POJ 3613 - Cow Relays 求给定 \(t\) 条边的无向图中 \(s\) 到 \(t\) 长度恰好为 \(n\) 的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
 <meta name="keywords" content="图论,Floyd,POJ,矩阵快速幂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">
 <meta property="og:url" content="http://oi.tiger0132.tk/2018/05/02/poj-3613/index.html">
-<meta property="og:site_name" content="Tiger0132的小站">
-<meta property="og:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
+<meta property="og:site_name" content="Tiger0132 的小站">
+<meta property="og:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定 \(t\) 条边的无向图中 \(s\) 到 \(t\) 长度恰好为 \(n\) 的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-03T11:12:58.000Z">
+<meta property="og:updated_time" content="2018-11-20T05:12:04.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">
-<meta name="twitter:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定\(t\)条边的无向图中\(s\)到\(t\)长度恰好为\(n\)的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
+<meta name="twitter:description" content="题意 传送门：POJ 3613 - Cow Relays 求给定 \(t\) 条边的无向图中 \(s\) 到 \(t\) 长度恰好为 \(n\) 的最短路的长度。 \(t\le100,n\le10^6,\text{点的编号}\le10^3\)">
 
 
 
 
 
 
-  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/02/poj-3613/"/>
+  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/02/poj-3613/">
 
 
 
@@ -136,8 +136,10 @@
   };
 </script>
 
-  <title>「POJ 3613」Cow Relays - Floyd + 矩阵快速幂 | Tiger0132的小站</title>
+  <title>「POJ 3613」Cow Relays - Floyd + 矩阵快速幂 | Tiger0132 的小站</title>
   
+
+
 
 
 
@@ -176,17 +178,15 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
-    
-  
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container  page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -194,7 +194,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tiger0132的小站</span>
+        <span class="site-title">Tiger0132 的小站</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -225,40 +225,95 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">67</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">53</span></a>
+
   </li>
 
       
@@ -268,7 +323,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -288,9 +343,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -335,21 +388,21 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2018/05/02/poj-3613/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
       <meta itemprop="description" content="Think twice, code once.">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tiger0132的小站">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132 的小站">
     </span>
 
     
@@ -371,10 +424,57 @@
             
 
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-05-02 11:17:01" itemprop="dateCreated datePublished" datetime="2018-05-02T11:17:01+08:00">2018-05-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -405,24 +505,24 @@
       
         <h1 id="题意">题意</h1>
 <p>传送门：<a href="http://poj.org/problem?id=3613" target="_blank" rel="noopener">POJ 3613 - Cow Relays</a></p>
-<p>求给定<span class="math inline">\(t\)</span>条边的无向图中<span class="math inline">\(s\)</span>到<span class="math inline">\(t\)</span>长度恰好为<span class="math inline">\(n\)</span>的最短路的长度。</p>
+<p>求给定 <span class="math inline">\(t\)</span> 条边的无向图中 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 长度恰好为 <span class="math inline">\(n\)</span> 的最短路的长度。</p>
 <p><span class="math inline">\(t\le100,n\le10^6,\text{点的编号}\le10^3\)</span></p>
 <a id="more"></a>
 <h1 id="解法">解法</h1>
-<p>首先离散化点的编号(显然图中最多只有<span class="math inline">\(200\)</span>个点)。</p>
-<p>然后考虑Floyd最短路的转移过程：</p>
+<p>首先离散化点的编号(显然图中最多只有 <span class="math inline">\(200\)</span> 个点)。</p>
+<p>然后考虑 Floyd 最短路的转移过程：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for k = 1 .. n</span><br><span class="line">	for i = 1 ... n</span><br><span class="line">		for j = 1 ... n</span><br><span class="line">			g[i][j] = min(g[i][j], g[i][k] + g[k][j])</span><br></pre></td></tr></table></figure>
 <p>再看看矩乘的过程：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for k = 1 .. n</span><br><span class="line">	for i = 1 ... n</span><br><span class="line">		for j = 1 ... n</span><br><span class="line">			g[i][j] = add(g[i][j], g[i][k] * g[k][j])</span><br></pre></td></tr></table></figure>
-<p>容易看出，Floyd只是将矩乘中的add换成了min，乘换成了加而已。</p>
+<p>容易看出，Floyd 只是将矩乘中的 add 换成了 min，乘换成了加而已。</p>
 <p>接着考虑一般的情况。</p>
-<p>一般地，若<span class="math inline">\(G^x\)</span>代表经过<span class="math inline">\(x\)</span>条边的最短路，那么它满足关系式<span class="math inline">\(G^{a+b}=G^a\)</span><em>乘</em><span class="math inline">\(G^b\)</span>。</p>
-<p>于是得出“Floyd运算”也满足结合律。于是可以用矩阵快速幂<span class="math inline">\(O(t^3\log n)​\)</span>求出。</p>
+<p>一般地，若 <span class="math inline">\(G^x\)</span> 代表经过 <span class="math inline">\(x\)</span> 条边的最短路，那么它满足关系式 <span class="math inline">\(G^{a+b}=G^a \operatorname{乘} G^b\)</span>。</p>
+<p>于是得出“Floyd 运算”也满足结合律。于是可以用矩阵快速幂 <span class="math inline">\(O(t^3\log n)\)</span> 求出。</p>
 <h1 id="代码">代码</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> gph[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dcnt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mul</span><span class="params">(gph x, gph y)</span> </span>&#123; <span class="comment">// mul_equ: *=</span></span><br><span class="line">	gph ret; <span class="built_in">memset</span>(ret, <span class="number">0x3f</span>, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= dcnt; k++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= dcnt; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= dcnt; j++) &#123;</span><br><span class="line">				ret[i][j] = min(ret[i][j], x[i][k] + y[k][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">memcpy</span>(x, ret, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pow</span><span class="params">(gph base, <span class="keyword">int</span> <span class="built_in">exp</span>, gph res)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memcpy</span>(res, base, <span class="number">502</span> * <span class="number">502</span> &lt;&lt; <span class="number">2</span>); <span class="built_in">exp</span>--; <span class="comment">// 弃单位矩阵的新科技</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">exp</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">exp</span>&amp;<span class="number">1</span>) mul(res, base);</span><br><span class="line">		mul(base, base);</span><br><span class="line">		<span class="built_in">exp</span> &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, t, s, e, x, y, z;</span><br><span class="line"><span class="keyword">int</span> disc[<span class="number">1000006</span>];</span><br><span class="line">gph rec, ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(rec, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> rec);</span><br><span class="line">	<span class="keyword">for</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;n, &amp;t, &amp;s, &amp;e); t--; ) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z);</span><br><span class="line">		<span class="keyword">if</span> (!disc[y]) disc[y] = ++dcnt;</span><br><span class="line">		<span class="keyword">if</span> (!disc[z]) disc[z] = ++dcnt;</span><br><span class="line">		rec[disc[y]][disc[z]] = rec[disc[z]][disc[y]] = x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">pow</span>(rec, n, ans);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans[disc[s]][disc[e]]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="拓展">拓展</h1>
 <p>矩阵快速幂的基础是<span class="math inline">\(G^{a+b}=G^a\times G^b\)</span>。然后在该式基础上进行倍增优化。</p>
-<p>其实上式中的乘法可以换成其他运算(<del>倍增加法求矩阵数乘</del>)。如本题的“Floyd运算”。</p>
+<p>其实上式中的乘法可以换成其他运算(<del>倍增加法求矩阵数乘</del>)。如本题的&quot;Floyd运算&quot;。</p>
 <blockquote>
 <p>在邻接矩阵上做运算，多有意思！</p>
 </blockquote>
@@ -431,7 +531,7 @@
 <li><p>「HDU 5318改」求无权无向图中长度为<span class="math inline">\(K\)</span>的路径条数。其中<span class="math inline">\(n\le50,K\le10^9\)</span></p>
 <p>做法是把邻接矩阵(01矩阵)快速幂一下求和除以二输出就好了。</p></li>
 </ul>
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
 
@@ -444,18 +544,30 @@
     
 
     
+       
+    
+    
 
     
       <div>
-        <ul class="post-copyright">
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>Tiger0132</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
+    
     <a href="http://oi.tiger0132.tk/2018/05/02/poj-3613/" title="「POJ 3613」Cow Relays - Floyd + 矩阵快速幂">http://oi.tiger0132.tk/2018/05/02/poj-3613/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -553,7 +665,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Tiger0132</p>
               <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
@@ -566,7 +678,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -597,7 +709,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -736,7 +848,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">64</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -750,20 +870,28 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/tiger0132" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tiger0132" title="GitHub &rarr; https://github.com/tiger0132" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
             </div>
           
 
           
-          
-            <div class="cc-license motion-element" itemprop="license">
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -776,39 +904,39 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/zzqsblog/" title="zzq" target="_blank">zzq</a>
+                    <a href="http://www.cnblogs.com/zzqsblog/" title="http://www.cnblogs.com/zzqsblog/" rel="noopener" target="_blank">zzq</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/wxh010910/" title="wxh" target="_blank">wxh</a>
+                    <a href="https://blog.csdn.net/wxh010910/" title="https://blog.csdn.net/wxh010910/" rel="noopener" target="_blank">wxh</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://oi.men.ci/" title="menci" target="_blank">menci</a>
+                    <a href="http://oi.men.ci/" title="http://oi.men.ci/" rel="noopener" target="_blank">menci</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://hzwer.com/" title="hzwer" target="_blank">hzwer</a>
+                    <a href="http://hzwer.com/" title="http://hzwer.com/" rel="noopener" target="_blank">hzwer</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://algocode.net/" title="larryzhong" target="_blank">larryzhong</a>
+                    <a href="https://algocode.net/" title="https://algocode.net/" rel="noopener" target="_blank">larryzhong</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://blog.csdn.net/weixin_42068627/" title="glx" target="_blank">glx</a>
+                    <a href="https://blog.csdn.net/weixin_42068627/" title="https://blog.csdn.net/weixin_42068627/" rel="noopener" target="_blank">glx</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.cnblogs.com/lrj124/" title="lrj124" target="_blank">lrj124</a>
+                    <a href="https://www.cnblogs.com/lrj124/" title="https://www.cnblogs.com/lrj124/" rel="noopener" target="_blank">lrj124</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://yizr-cnyali.ac.cn/" title="yizr_cnyali" target="_blank">yizr_cnyali</a>
+                    <a href="http://yizr-cnyali.ac.cn/" title="http://yizr-cnyali.ac.cn/" rel="noopener" target="_blank">yizr_cnyali</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.cnblogs.com/slrslr/" title="slr" target="_blank">slr</a>
+                    <a href="http://www.cnblogs.com/slrslr/" title="http://www.cnblogs.com/slrslr/" rel="noopener" target="_blank">slr</a>
                   </li>
                 
               </ul>
@@ -842,6 +970,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -853,11 +988,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tiger0132</span>
+  <span class="author" itemprop="copyrightHolder">tiger0132</span>
 
   
 
@@ -865,11 +1000,7 @@
 </div>
 
 
-  
-
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -877,9 +1008,11 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
 
 
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
 
 
         
@@ -895,11 +1028,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -961,32 +1089,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
@@ -1338,6 +1466,8 @@
   
 
   
+
+  
   
 
   
@@ -1352,7 +1482,12 @@
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
+      TeX: {equationNumbers: { autoNumber: "AMS" }},
+      menuSettings: {
+        zoom: "Zoom",
+        mpContext: true,
+        mpMouse: true
+      }
     });
 </script>
 
@@ -1385,6 +1520,77 @@
   
 
   
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 
