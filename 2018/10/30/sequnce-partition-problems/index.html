@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="这里是 LOJ 上「数列分块入门」系列题目的汇总。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-21T10:28:04.147Z">
+<meta property="og:updated_time" content="2018-11-21T10:35:44.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「题目汇总」数列分块入门">
 <meta name="twitter:description" content="这里是 LOJ 上「数列分块入门」系列题目的汇总。">
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-21 18:28:04" itemprop="dateModified" datetime="2018-11-21T18:28:04+08:00">2018-11-21</time>
+                <time title="修改时间：2018-11-21 18:35:44" itemprop="dateModified" datetime="2018-11-21T18:35:44+08:00">2018-11-21</time>
               
             
           </span>
@@ -555,9 +555,9 @@
 <h2 id="题意-4">题意</h2>
 <p>给出一个长为 <span class="math inline">\(n\)</span> 的数列 <span class="math inline">\(a_1\ldots a_n\)</span>，以及 <span class="math inline">\(n\)</span> 个操作，操作涉及区间开方，区间求和。</p>
 <h2 id="解法-4">解法</h2>
-<p>结论：一个数 <span class="math inline">\(n\)</span> 用 <span class="math inline">\(O(\log n)\)</span> 次开方可以变成 <span class="math inline">\(1\)</span>。</p>
+<p>结论：一个数 <span class="math inline">\(n\)</span> 用 <span class="math inline">\(O(\log \log n)\)</span> 次开方可以变成 <span class="math inline">\(1\)</span>。</p>
 <p>然后把数组分成 <span class="math inline">\(k\)</span> 块。并且对于每一块，维护<strong>块内和</strong>和<strong>块内是否有 <span class="math inline">\(\mathbf{&gt;1}\)</span> 的元素</strong>。</p>
-<p>显然每块至多被更新 <span class="math inline">\(\log \text{值域}\)</span> 次，那么 <span class="math inline">\(q (q = n)\)</span> 次更新的<strong>总时间复杂度</strong>是 <span class="math inline">\(O(q \cdot \dfrac nk + k \log \text{值域})\)</span><sup>[可能有锅]</sup>？</p>
+<p>显然每块至多被更新 <span class="math inline">\(\log \text{值域}​\)</span> 次，那么 <span class="math inline">\(q (q = n)​\)</span> 次更新的<strong>总时间复杂度</strong>是 <span class="math inline">\(O(q \cdot \dfrac nk + k \log \log \text{值域})​\)</span><sup>[可能有锅]</sup>？</p>
 <p>单次查询复杂度：<span class="math inline">\(O(\dfrac nk)\)</span>。</p>
 <p>取 <span class="math inline">\(k = \sqrt n\)</span> 时复杂度最优。</p>
 <h2 id="代码-4">代码</h2>
