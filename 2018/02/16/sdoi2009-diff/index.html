@@ -109,7 +109,7 @@
 
 
   <meta name="description" content=":warning:注意：\(\colorbox{lightgray}{「SDOI2009」HH 的项链 - 莫队}\Leftrightarrow\colorbox{lightgray}{「算法」莫队}\)。 题意 传送门：BZOJ1878 - HH的项链 莫队模板题。 给一个长度为\(n\)数列，要你查询\(m\)次\([l,r]\)区间中不同的数字的个数。 \(n\le 10^6,m\le 10">
-<meta name="keywords" content="BZOJ,模板,SDOI,莫队">
+<meta name="keywords" content="模板,BZOJ,SDOI,莫队">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「SDOI2009」HH 的项链 - 莫队">
 <meta property="og:url" content="https://inf.tiger0132.tk/2018/02/16/sdoi2009-diff/index.html">
@@ -574,9 +574,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/BZOJ/" rel="tag"># BZOJ</a>
-          
             <a href="/tags/模板/" rel="tag"># 模板</a>
+          
+            <a href="/tags/BZOJ/" rel="tag"># BZOJ</a>
           
             <a href="/tags/SDOI/" rel="tag"># SDOI</a>
           
@@ -1145,18 +1145,19 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '859336dd9768f326736e',
-          clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-          repo: 'hexo-blog-gitalk',
-          owner: 'tiger0132',
-          admin: ['tiger0132'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
+  <script src="/lib/gitalk/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '859336dd9768f326736e',
+      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
+      repo: 'hexo-blog-gitalk',
+      owner: 'tiger0132',
+      admin: ['tiger0132'],
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')           
+  </script>
 
 
 

@@ -109,7 +109,7 @@
 
 
   <meta name="description" content="简介 如果在一张无向图上删除它和它的所有边使图的连通性改变，那么这个点就这张无向图的割点。">
-<meta name="keywords" content="图论,模板,Tarjan,割点">
+<meta name="keywords" content="模板,图论,Tarjan,割点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「算法」Tarjan割点">
 <meta property="og:url" content="https://inf.tiger0132.tk/2018/03/06/tarjan-cut-notes/index.html">
@@ -578,9 +578,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/图论/" rel="tag"># 图论</a>
-          
             <a href="/tags/模板/" rel="tag"># 模板</a>
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
           
             <a href="/tags/Tarjan/" rel="tag"># Tarjan</a>
           
@@ -1149,18 +1149,19 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '859336dd9768f326736e',
-          clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-          repo: 'hexo-blog-gitalk',
-          owner: 'tiger0132',
-          admin: ['tiger0132'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
+  <script src="/lib/gitalk/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '859336dd9768f326736e',
+      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
+      repo: 'hexo-blog-gitalk',
+      owner: 'tiger0132',
+      admin: ['tiger0132'],
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')           
+  </script>
 
 
 

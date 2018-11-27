@@ -1137,18 +1137,19 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '859336dd9768f326736e',
-          clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-          repo: 'hexo-blog-gitalk',
-          owner: 'tiger0132',
-          admin: ['tiger0132'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
+  <script src="/lib/gitalk/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '859336dd9768f326736e',
+      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
+      repo: 'hexo-blog-gitalk',
+      owner: 'tiger0132',
+      admin: ['tiger0132'],
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')           
+  </script>
 
 
 
