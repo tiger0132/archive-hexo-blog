@@ -112,7 +112,7 @@
 <meta name="keywords" content="模板,网络流,图论,最大流,费用流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「算法」网络流">
-<meta property="og:url" content="http://oi.tiger0132.tk/2018/05/05/network-flow-notes/index.html">
+<meta property="og:url" content="https://inf.tiger0132.tk/2018/05/05/network-flow-notes/index.html">
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="简介 网络流？好难啊。 由于有各种千奇百怪的网络流题的存在，网络流变得异常复杂。 UPD：  2018-02-17 21:09:35：Initial Commit 2018-03-03 22:34:54：Change最小费用最大流 to 费用流，Change代码，Add最小割 2018-03-04 13:07:48：Change代码 2018-05-05 23:31:36：Add费用流">
 <meta property="og:locale" content="zh-CN">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://oi.tiger0132.tk/2018/05/05/network-flow-notes/">
+  <link rel="canonical" href="https://inf.tiger0132.tk/2018/05/05/network-flow-notes/">
 
 
 
@@ -274,7 +274,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">66</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">67</span></a>
 
   </li>
         
@@ -293,7 +293,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
 
   </li>
         
@@ -312,7 +312,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">55</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">56</span></a>
 
   </li>
 
@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://oi.tiger0132.tk/2018/05/05/network-flow-notes/">
+    <link itemprop="mainEntityOfPage" href="https://inf.tiger0132.tk/2018/05/05/network-flow-notes/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tiger0132">
@@ -612,7 +612,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://oi.tiger0132.tk/2018/05/05/network-flow-notes/" title="「算法」网络流">http://oi.tiger0132.tk/2018/05/05/network-flow-notes/</a>
+    <a href="https://inf.tiger0132.tk/2018/05/05/network-flow-notes/" title="「算法」网络流">https://inf.tiger0132.tk/2018/05/05/network-flow-notes/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -681,6 +681,8 @@
           
 
   
+    <div id="gitalk-container"></div>
+  
 
 
 
@@ -728,7 +730,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">56</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -757,7 +759,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,7 +906,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">66</span>
+                      
+                    
+                    <span class="site-state-item-count">67</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1187,6 +1193,23 @@
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'b28eaf905e34ce6f74ec',
+          clientSecret: '7f9a02c9a8be25c19da4579b95771853dbed4d6a',
+          repo: 'hexo-blog',
+          owner: 'tiger0132',
+          admin: ['tiger0132'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 
@@ -1539,12 +1562,7 @@
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       },
-      TeX: {equationNumbers: { autoNumber: "AMS" }},
-      menuSettings: {
-        zoom: "Zoom",
-        mpContext: true,
-        mpMouse: true
-      }
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
     });
 </script>
 
