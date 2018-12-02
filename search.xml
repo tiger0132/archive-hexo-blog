@@ -6,6 +6,19 @@
     <content type="text"><![CDATA[本博客仅供本蒟蒻复习用，建议初学者不要看本蒟蒻的博客。 本博客因为各种咕咕咕一般一个月更新一次 我太弱了什么也不会&gt;_&lt; TODO LIST 本站地址: inf.tiger0132.tk 欢迎互链。 注意：因为我太弱了，所以博客中有一些渲染出错的数学公式 / Markdown代码，请见谅。 永久地址 咕咕咕 LIST 本蒟蒻常用代码头 编译器：gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 代码中的表示 链接 备注 HEADER 1 https://www.luogu.org/paste/z2t5smdd 头文件&lt;bits/stdc++.h&gt;中抽取的部分内容 HEADER 2 https://www.luogu.org/paste/zsrsl7ck 头文件&lt;bits/stdc++.h&gt;的全部内容 HEADER 3 https://www.luogu.org/paste/nt7rzb09 快读和各种宏 1 2 3 4 5 6 7 \(\sum_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}6\) \[\sum_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}6\] abc ==a== ==abc== a1 a2 b1 b2 c a1b1 a1b2 a2b1 a2b2 123​```23333​``` \[ \begin{align*} &amp;(a+b)(c+d)\\ =&amp;a(c+d)+b(c+d)\\ =&amp;ac+ad+bc+bd \end{align*} \]]]></content>
   </entry>
   <entry>
+    <title><![CDATA[「Ynoi 2019」Yuno loves sqrt technology III - 分块]]></title>
+    <url>%2F2018%2F12%2F02%2Fynoi2019-t3%2F</url>
+    <content type="text"><![CDATA[题意 传送门：洛谷 P5048 - Yuno loves sqrt technology III。 维护一个序列，支持查询区间众数出现次数。强制在线。 \(n, m \le 5 \times 10^5\)。空间 64 Mb。 解法 区间众数显然是分块，但是一般的方法空间显然不能接受。 毒瘤 lxl 提出了一种线性空间的算法： 考虑维护 \([i, j]\) 整块的众数，以及每一个数出现的下标。 然后显然，区间众数肯定是 整块的众数 和 非整块中出现的数。 那么记当前答案为 \(ans\)。对于每一个数，如果它在整个区间中出现次数超过 \(ans\)，那么暴力 ans++。 出现次数超过 \(ans\) 怎么判断？ 对于每一个位置，维护一个 lnk，代表它在 vector 中的下标。 如果第 lnk[i] + ans 个数仍然 \(&lt; r\)，那么 ans 就需要更新了。 显然 \(ans\) 更新的次数是 \(O(\sqrt n)\) 的。所以这个做法的时间复杂度是 \(O(n \sqrt n)\)，空间是 \(O(n)\) 的。 代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cstdio&gt;#include &lt;vector&gt;#include &lt;cmath&gt;#define be(x) (((x)-1) / m + 1)#define lb(x) (((x)-1) * m + 1)#define rb(x) std::min((x) * m, n)const int N = 5e5+55, M = 1e3+13;int n, m, q, l, r, L, R, ans, a[N], _[N], cnt[M][M], sum[N], lnk[N], S$;std::vector&lt;int&gt; idx[N];int main() &#123; scanf("%d%d", &amp;n, &amp;q); m = ceil(sqrt(n)); for (int i = 1; i &lt;= n; i++) &#123; scanf("%d", a+i); _[i] = a[i]; &#125; std::sort(_+1, _+n+1); S$ = std::unique(_+1, _+n+1) -_- 1; for (int i = 1; i &lt;= n; i++) &#123; a[i] = std::lower_bound(_+1, _+S$+1, a[i]) - _; idx[a[i]].push_back(i); lnk[i] = idx[a[i]].size()-1; &#125; for (int i = 1; i &lt;= m; i++) &#123; memset(sum, 0, sizeof sum); for (int j = i; j &lt;= m; j++) &#123; cnt[i][j] = cnt[i][j-1]; for (int k = lb(j); k &lt;= rb(j); k++) &#123; cnt[i][j] = std::max(cnt[i][j], ++sum[a[k]]); &#125; &#125; &#125; while (q--) &#123; scanf("%d%d", &amp;l, &amp;r); l ^= ans; r ^= ans; L = be(l); R = be(r); ans = cnt[L+1][R-1]; for (int i = l; i &lt;= std::min(rb(L), r); i++) &#123; while (lnk[i] + ans &lt; idx[a[i]].size() &amp;&amp; idx[a[i]][lnk[i] + ans] &lt;= r) ans++; &#125; if (L != R) for (int i = lb(R); i &lt;= r; i++) &#123; while (lnk[i] - ans &gt;= 0 &amp;&amp; idx[a[i]][lnk[i] - ans] &gt;= l) ans++; &#125; printf("%d\n", ans); &#125;&#125; 拓展 块大小一定要设成 ceil(sqrt(n))！ 这里好像有更好的区间众数科技：Range mode query, Wikipedia。]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>Ynoi</tag>
+        <tag>分块</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数颜色 - 带修莫队]]></title>
     <url>%2F2018%2F12%2F01%2Fbzoj-2120%2F</url>
     <content type="text"><![CDATA[题意 传送门：洛谷 P1903 - 数颜色、BZOJ 2120 - 数颜色、DarkBZOJ 2120 - 数颜色。 维护一个数列，支持两种操作：单点修改和查询区间内的数字种数。 解法 查询操作很容易让人想到莫队。 有修改怎么办？ 对于每个询问，记录三个数：左端点、右端点和时间戳。时间戳就是每个查询前的修改操作数。 比如样例的后两个操作时间戳为 \(1\)。 考虑原来的莫队写法： 1234while (l &lt; q[i].l) del(rec[l++]);while (l &gt; q[i].l) add(rec[--l]);while (r &lt; q[i].r) add(rec[++r]);while (r &gt; q[i].r) del(rec[r--]); 多了时间戳之后，我们可以这样写（tp 即 time point）： 12while (tp &lt; q[i].tp) modify(++tp);while (tp &gt; q[i].tp) modify(tp--); 即如果当前时间戳和目标不同，就把中间的修改操作做掉。 modify 函数实现如下： 123456void modify(int x) &#123; if (l &lt;= upd[x].x &amp;&amp; upd[x].x &lt;= r) &#123; del(rec[upd[x].x]); add(upd[x].y); &#125;&#125; 其中 rec 为原数组、upd 为记录修改操作的数组。 为了方便，我们 modify 完之后，将 rec[upd[x].x] 和 upd[x].y 交换一下。这样我们就不需要写两个函数了。 代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include &lt;algorithm&gt;#include &lt;cstdio&gt;#include &lt;cmath&gt;const int N = 5e4+54, M = 1e6+16;int sz;struct node &#123; int l, r, tp, *ans; bool operator&lt;(const node&amp; rhs) const &#123; return l / sz == rhs.l / sz ? r / sz == rhs.r / sz ? tp &lt; rhs.tp : r &lt; rhs.r : l &lt; rhs.l; &#125;&#125; q[N];struct &#123; int x, y; &#125; upd[N];int rec[N], ans[N], tmp[M], lans, l, r;void a$(int x) &#123; lans += !tmp[x]++; &#125;void d$(int x) &#123; lans -= !--tmp[x]; &#125;void u$(int x) &#123; if (l &lt;= upd[x].x &amp;&amp; upd[x].x &lt;= r) &#123; d$(rec[upd[x].x]); a$(upd[x].y); &#125; std::swap(upd[x].y, rec[upd[x].x]);&#125;int n, m, _, cnt, tp, x, y;char op[2];int main() &#123; scanf("%d%d", &amp;n, &amp;_); sz = sqrt(n)*15; for (int i = 1; i &lt;= n; i++) &#123; scanf("%d", rec+i); &#125; while (_--) &#123; scanf("%s%d%d", op, &amp;x, &amp;y); if (*op ^ 'R') q[++m] = (node)&#123;x, y, cnt, ans+m&#125;; else upd[++cnt] = &#123;x, y&#125;; &#125; std::sort(q+1, q+m+1); l = 1; r = 0; for (int i = 1; i &lt;= m; i++) &#123; while (l &lt; q[i].l) d$(rec[l++]); while (l &gt; q[i].l) a$(rec[--l]); while (r &lt; q[i].r) a$(rec[++r]); while (r &gt; q[i].r) d$(rec[r--]); while (tp &lt; q[i].tp) u$(++tp); while (tp &gt; q[i].tp) u$(tp--); /*printf("query [%d, %d], timepoint = %d\nlans = %d: ", q[i].l, q[i].r, q[i].tp, lans); for (int j = 1; j &lt;= 15; j++) printf("%d ", tmp[j]); puts("");*/ *q[i].ans = lans; &#125; for (int i = 1; i &lt;= m; i++) &#123; printf("%d\n", ans[i]); &#125;&#125;]]></content>
@@ -25,7 +38,6 @@
       </categories>
       <tags>
         <tag>莫队</tag>
-        <tag>洛谷</tag>
       </tags>
   </entry>
   <entry>
@@ -42,7 +54,7 @@
   <entry>
     <title><![CDATA[POI×N 2018 自闭记]]></title>
     <url>%2F2018%2F11%2F23%2Fnoip2018-diary%2F</url>
-    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX1/Ki4ENmtjK6+WyHb1hFla0oiS22LndE0asbua8PA3g/Mb37OGrf7aq6XdU/MsFKIGf8cxm3QJHii0/0g4h5yUSDFjcZiPLZgrLRkYFkC50PgEcfFmiDBn49+0MtH78ugmYP7RROp0qbqzLg8wFG2AF6jJfi0rVAyRD3xbik7N9aqVsHFlU0By0gX/tcDRCg83uFR+1I9tzZ+3JbVHCB6Y2QU8sveItGEniPrvKrRs3ANJCjuMYAsqS]]></content>
+    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX1++7RbeSbDy3ipONZ8vogsVEYNtl/cZ+45hoa2IYa7PK4n5IgR8tu392SxbVxyWTZeDMmePdhFT/aTQYnxKxlZbwAb+garsNrwjDqNd3H263GbtQeN9hTy0nFB6+DRPRfTPN/cMl856uIK17gFyftcxrWNqSXXWwviiAbf7YLcH+k0fcyLLh61QtQBuQamQklCiWOL+qufUqp/IJ/dPr5MsaO9buAIqUqOZbNUap5Z573H7l0j6Q1rl]]></content>
       <categories>
         <category>赛后总结</category>
       </categories>
@@ -71,8 +83,8 @@
         <category>题目汇总</category>
       </categories>
       <tags>
-        <tag>LOJ</tag>
         <tag>分块</tag>
+        <tag>LOJ</tag>
       </tags>
   </entry>
   <entry>
@@ -132,8 +144,8 @@
       </categories>
       <tags>
         <tag>Codeforces</tag>
-        <tag>贪心</tag>
         <tag>数学</tag>
+        <tag>贪心</tag>
         <tag>二分</tag>
         <tag>倍增</tag>
       </tags>
@@ -458,10 +470,10 @@
       </categories>
       <tags>
         <tag>Codeforces</tag>
+        <tag>前缀</tag>
         <tag>模拟</tag>
         <tag>枚举/暴力</tag>
         <tag>two-pointer</tag>
-        <tag>前缀</tag>
       </tags>
   </entry>
   <entry>
@@ -590,8 +602,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>BZOJ</tag>
         <tag>模板</tag>
+        <tag>BZOJ</tag>
         <tag>莫队</tag>
         <tag>SDOI</tag>
       </tags>
