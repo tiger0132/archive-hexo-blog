@@ -6,6 +6,20 @@
     <content type="text"><![CDATA[本博客仅供本蒟蒻复习用，建议初学者不要看本蒟蒻的博客。 本博客因为各种咕咕咕一般一个月更新一次 我太弱了什么也不会&gt;_&lt; TODO LIST 本站地址: inf.tiger0132.tk 欢迎互链。 注意：因为我太弱了，所以博客中有一些渲染出错的数学公式 / Markdown代码，请见谅。 永久地址 咕咕咕 LIST 本蒟蒻常用代码头 编译器：gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 代码中的表示 链接 备注 HEADER 1 https://www.luogu.org/paste/z2t5smdd 头文件&lt;bits/stdc++.h&gt;中抽取的部分内容 HEADER 2 https://www.luogu.org/paste/zsrsl7ck 头文件&lt;bits/stdc++.h&gt;的全部内容 HEADER 3 https://www.luogu.org/paste/nt7rzb09 快读和各种宏 1 2 3 4 5 6 7 \(\sum_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}6\) \[\sum_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}6\] abc ==a== ==abc== a1 a2 b1 b2 c a1b1 a1b2 a2b1 a2b2 123​```23333​``` \[ \begin{align*} &amp;(a+b)(c+d)\\ =&amp;a(c+d)+b(c+d)\\ =&amp;ac+ad+bc+bd \end{align*} \]]]></content>
   </entry>
   <entry>
+    <title><![CDATA[「Codeforces 600E」Lomsat gelral - 线段树合并]]></title>
+    <url>%2F2018%2F12%2F06%2Fcodeforces-600e%2F</url>
+    <content type="text"><![CDATA[题意 传送门：Codeforces 600E - Lomsat gelral。 给你一棵树，每个点有点权。求每个子树中的所有众数的和。 如 1 2 1 3 2，答案为 \(1+2\)。 解法 区间众数。改个标记就可以套板子了。 考虑线段树合并。 对于每个点，开一棵动态开点权值线段树。 然后对于每一个非叶子节点，把所有子节点的线段树合并起来。 维护标记 考虑维护三个标记：max, sum, ans。分别代表指定值域的众数（任意一个）、出现次数和答案。 那么 pushup 可以这么写： 如果左儿子的 sum 更大，那么三个标记都从左儿子更新。 如果右儿子的 sum 更大，那么从右儿子更新。 如果相同，那么 ans 等于两个区间的 ans 的和，其它的从任意一个儿子更新。 合并 node *z = x-&gt;merge(node *y) 代表把 \(x\) 和 \(y\) 所在的子树合并到 \(z\)。且保证 \(x\) 和 \(y\) 的值域区间相同。 合并的流程如下： 如果 \(x\) 为空，返回 \(y\)。 如果 \(y\) 为空，返回 \(x\)。 如果值域里只有一个数，那么将 \(y\) 合并到 \(x\) 并返回 \(x\)。 否则对左右子树分别合并，并将返回值作为新的左右子树。 pushup 后返回 \(x\)。 具体实现如下： 代码 123456789101112struct node &#123; ... node *merge(node *rhs) &#123; if (this == null) return rhs; if (rhs == null) return this; if (l == r) &#123; max = ans = l; sum += rhs-&gt;sum; return this; &#125; lc = lc-&gt;merge(rhs-&gt;lc); rc = rc-&gt;merge(rhs-&gt;rc); pushup(); return this; &#125;&#125; 合并 \(\mathbf{n}\) 棵大小为 \(\mathbf{m}\) 的线段树的时间复杂度是 \(\mathbf{O(n + m \log n)}\)。 代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091#include &lt;algorithm&gt;#include &lt;cstdio&gt;const int N = 1e5+15;extern struct node *newNode(int l, int r), *null;struct node &#123; int max, sum, l, r, mid; long long ans; node *lc, *rc; void pushup() &#123; sum = std::max(lc-&gt;sum, rc-&gt;sum); if (lc-&gt;sum &gt;= rc-&gt;sum) &#123; max = lc-&gt;max; ans = lc-&gt;ans; if (lc-&gt;sum == rc-&gt;sum) ans += rc-&gt;ans; &#125; else &#123; max = rc-&gt;max; ans = rc-&gt;ans; &#125; &#125; void update(int x) &#123; if (l == r) &#123; max = ans = x; sum++; return; &#125; if (x &lt;= mid) &#123; if (lc == null) lc = newNode(l, mid); lc-&gt;update(x); &#125; else &#123; if (rc == null) rc = newNode(mid+1, r); rc-&gt;update(x); &#125; pushup(); &#125; node *merge(node *rhs) &#123; if (this == null) return rhs; if (rhs == null) return this; if (l == r) &#123; max = ans = l; sum += rhs-&gt;sum; return this; &#125; lc = lc-&gt;merge(rhs-&gt;lc); rc = rc-&gt;merge(rhs-&gt;rc); pushup(); return this; &#125;&#125; pool[int(3e6+36)], *null = pool;void init() &#123; null-&gt;max = 0xcfcfcfcf; &#125;node *newNode(int l = 1, int r = 1e5) &#123; static node *ptr = pool+1; ptr-&gt;lc = ptr-&gt;rc = null; ptr-&gt;l = l; ptr-&gt;r = r; ptr-&gt;mid = (l+r)&gt;&gt;1; return ptr++;&#125;struct edge &#123; int to, next; &#125; e[N&lt;&lt;1];int head[N], cnt;void addedge(int x, int y) &#123; e[++cnt] = (edge)&#123;y, head[x]&#125;; head[x] = cnt; e[++cnt] = (edge)&#123;x, head[y]&#125;; head[y] = cnt;&#125;long long ans[N];node *root[N];int c[N];void dfs(int x, int par) &#123; for (int i = head[x]; i; i = e[i].next) &#123; int nx = e[i].to; if (nx == par) continue; dfs(nx, x); root[x]-&gt;merge(root[nx]); &#125; root[x]-&gt;update(c[x]); ans[x] = root[x]-&gt;ans;&#125;int n, x, y;int main() &#123; init(); scanf("%d", &amp;n); for (int i = 1; i &lt;= n; i++) &#123; scanf("%d", c+i); root[i] = newNode(); &#125; for (int i = 1; i &lt; n; i++) &#123; scanf("%d%d", &amp;x, &amp;y); addedge(x, y); &#125; dfs(1, -1); for (int i = 1; i &lt;= n; i++) &#123; printf("%I64d ", ans[i]); &#125;&#125;]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>线段树</tag>
+        <tag>线段树合并</tag>
+        <tag>数据结构</tag>
+        <tag>Codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[「Violet」蒲公英 - 分块]]></title>
     <url>%2F2018%2F12%2F02%2Fluogu-4168%2F</url>
     <content type="text"><![CDATA[题意 传送门：洛谷 P4168 - 蒲公英。 区间众数，强制在线。\(n \le 4 \times 10^4, m \le 5 \times 10^4\)。 解法 沿用 Ynoi 2019 T3 的做法。 但是这道题要求的是最小众数，而不是众数个数。 我们令 \(ans\) 为出现次数，\(out\) 为最小众数，即答案。 我们考虑多维护一个整块最小众数，然后在回答查询的更新 \(ans\) 时更新 \(out\)。 坑 如果一个数不能更新 \(ans\)，但是出现次数等于 \(ans\)，仍然是可以更新 \(out\) 的。 如果区间 \((l, r)\) 是空的，那么需要手动初始化 \(ans\) 和 \(out\)，否则可能会出现奇奇怪怪的锅。 代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cstdio&gt;#include &lt;vector&gt;#include &lt;cmath&gt;#define be(x) (((x)-1) / m + 1)#define lb(x) (((x)-1) * m + 1)#define rb(x) std::min((x) * m, n)const int N = 4e4+44, M = 2e2+22;int n, m, q, l, r, L, R, ans, out, a[N], _[N], cnt[M][M], mode[M][M], sum[N], lnk[N], S$;std::vector&lt;int&gt; idx[N];int main() &#123; scanf("%d%d", &amp;n, &amp;q); m = ceil(sqrt(n)); for (int i = 1; i &lt;= n; i++) &#123; scanf("%d", a+i); _[i] = a[i]; &#125; std::sort(_+1, _+n+1); S$ = std::unique(_+1, _+n+1) -_- 1; for (int i = 1; i &lt;= n; i++) &#123; a[i] = std::lower_bound(_+1, _+S$+1, a[i]) - _; idx[a[i]].push_back(i); lnk[i] = idx[a[i]].size()-1; &#125; memset(mode, 0x3f, sizeof mode); for (int i = 1; i &lt;= m; i++) &#123; memset(sum, 0, sizeof sum); for (int j = i; j &lt;= m; j++) &#123; cnt[i][j] = cnt[i][j-1]; mode[i][j] = mode[i][j-1]; for (int k = lb(j); k &lt;= rb(j); k++) &#123; sum[a[k]]++; if (sum[a[k]] &gt; cnt[i][j] || (sum[a[k]] == cnt[i][j] &amp;&amp; a[k] &lt; mode[i][j])) &#123; cnt[i][j] = sum[a[k]]; mode[i][j] = a[k]; &#125; &#125; &#125; &#125; while (q--) &#123; scanf("%d%d", &amp;l, &amp;r); l = (l + out - 1) % n + 1; r = (r + out - 1) % n + 1; if (l &gt; r) std::swap(l, r); L = be(l); R = be(r); ans = cnt[L+1][R-1]; out = mode[L+1][R-1]; if (!ans) &#123; // 注意这里 ans = 1; out = a[l]; &#125; for (int i = l; i &lt;= std::min(rb(L), r); i++) &#123; int orig = lnk[i] + ans - 1; if (0 &lt;= orig &amp;&amp; orig &lt; idx[a[i]].size() &amp;&amp; // 还有这里 l &lt;= idx[a[i]][orig] &amp;&amp; idx[a[i]][orig] &lt;= r &amp;&amp; a[i] &lt; out) &#123; out = a[i]; &#125; while (lnk[i] + ans &lt; idx[a[i]].size() &amp;&amp; idx[a[i]][lnk[i] + ans] &lt;= r) &#123; out = a[i]; ans++; &#125; &#125; if (L != R) for (int i = lb(R); i &lt;= r; i++) &#123; int orig = lnk[i] - ans + 1; if (0 &lt;= orig &amp;&amp; orig &lt; idx[a[i]].size() &amp;&amp; // 以及这里 l &lt;= idx[a[i]][orig] &amp;&amp; idx[a[i]][orig] &lt;= r &amp;&amp; a[i] &lt; out) &#123; out = a[i]; &#125; while (lnk[i] - ans &gt;= 0 &amp;&amp; idx[a[i]][lnk[i] - ans] &gt;= l) &#123; out = a[i]; ans++; &#125; &#125; printf("%d\n", out = _[out]); // 忘记加上 "out = " 坑了我好久…… &#125;&#125;]]></content>
@@ -13,8 +27,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>分块</tag>
         <tag>数据结构</tag>
+        <tag>分块</tag>
       </tags>
   </entry>
   <entry>
@@ -25,8 +39,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>分块</tag>
         <tag>数据结构</tag>
+        <tag>分块</tag>
         <tag>Ynoi</tag>
       </tags>
   </entry>
@@ -66,7 +80,7 @@
   <entry>
     <title><![CDATA[POI×N 2018 自闭记]]></title>
     <url>%2F2018%2F11%2F23%2Fnoip2018-diary%2F</url>
-    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX18wzgHwv4QGwZ0lwxq0cSB8vUeijKl8RAlEFdMfacetJxuQyfFyTBmvO/BAfLd98j47YpYNOYawRgkNOZ2Fkbt7yEiHLXuCj0aYZN4NMFFinURYHzty2s7x6Am5tKz+WIW4PnHxMkR/YgQryqND1xnsoj/f1vX3q+hLY3AoXJK9tavjIIylErt/ZKG2Ob0FIHv9rjZ63QCKWdzc4RszbOIPZzzQOwNjIIL9IeDHGg7RkrgW4Rw6W068]]></content>
+    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX1/MTuOeaRN0B98Maepy9UN/GUBbBYcrEn03vJzPBtw9r3EkQdbgEG9U1KxI5Ic/GQsamAnxeduMH4TT1E1Wg0WppsN+xqoGtTom+A9bhNMrGo94cVBLUlSuTkSV+dtosL2XGwtTeZKEUx7rATJbOL5LmOynzqwmj1N8MsvjNwPYxTqv1c3SNGVS9l223UqBobIFSGe8v+Vwb/ZAE2o6W6crN6SuKEpfwPpv9a6bpUAzqSSgjt4D0/JA]]></content>
       <categories>
         <category>赛后总结</category>
       </categories>
@@ -211,8 +225,8 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>数据结构</tag>
+        <tag>模板</tag>
         <tag>平衡树</tag>
       </tags>
   </entry>
@@ -249,9 +263,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>AC自动机</tag>
-        <tag>字符串</tag>
         <tag>模板</tag>
+        <tag>字符串</tag>
+        <tag>AC自动机</tag>
       </tags>
   </entry>
   <entry>
@@ -262,9 +276,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>字符串</tag>
         <tag>模板</tag>
         <tag>KMP</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -291,8 +305,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>图论</tag>
+        <tag>模板</tag>
         <tag>差分约束系统</tag>
       </tags>
   </entry>
@@ -304,8 +318,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>数学</tag>
+        <tag>模板</tag>
         <tag>数论</tag>
         <tag>Pollard-Rho</tag>
       </tags>
@@ -318,8 +332,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>数学</tag>
+        <tag>模板</tag>
         <tag>数论</tag>
         <tag>Miller-Rabin</tag>
       </tags>
@@ -332,8 +346,8 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>树状数组</tag>
+        <tag>模板</tag>
       </tags>
   </entry>
   <entry>
@@ -359,9 +373,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>图论</tag>
         <tag>网络流</tag>
+        <tag>模板</tag>
         <tag>最大流</tag>
         <tag>费用流</tag>
       </tags>
@@ -508,8 +522,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>图论</tag>
+        <tag>模板</tag>
         <tag>Tarjan</tag>
         <tag>强连通分量</tag>
       </tags>
@@ -522,9 +536,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>数学</tag>
         <tag>高斯消元</tag>
+        <tag>模板</tag>
       </tags>
   </entry>
   <entry>
@@ -535,8 +549,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>图论</tag>
+        <tag>模板</tag>
         <tag>Tarjan</tag>
         <tag>割点</tag>
       </tags>
@@ -573,9 +587,9 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>单调队列</tag>
         <tag>洛谷</tag>
+        <tag>模板</tag>
       </tags>
   </entry>
   <entry>
@@ -614,9 +628,9 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>模板</tag>
         <tag>BZOJ</tag>
         <tag>莫队</tag>
+        <tag>模板</tag>
         <tag>SDOI</tag>
       </tags>
   </entry>
