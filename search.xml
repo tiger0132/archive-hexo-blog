@@ -41,9 +41,9 @@
       </categories>
       <tags>
         <tag>线段树</tag>
-        <tag>Codeforces</tag>
         <tag>线段树合并</tag>
         <tag>数据结构</tag>
+        <tag>Codeforces</tag>
       </tags>
   </entry>
   <entry>
@@ -107,7 +107,7 @@
   <entry>
     <title><![CDATA[POI×N 2018 自闭记]]></title>
     <url>%2F2018%2F11%2F23%2Fnoip2018-diary%2F</url>
-    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX19Uej1vK21b548eR1RRue0MYfRBRcshzWFPXPB/PWW9frQC6QdaPdWrMd2UjFXjNcc1qjBA9d02KgNuowj+g6itcJ7x79neL2TpaMd+E4EYbZJMVSw5C3xyOrWH5TFMps0EwTkUZuQyXDcT5+sgKivioHZZR6+II/7hWrhyw7oUJfw/yhmQY7wpdFY1Fb298u0zZEQ9fkD/qmk6vqq6KkpAH+IDv2SpRTMUHcOKxZYZyO3/euStAkOg]]></content>
+    <content type="text"><![CDATA[NOIp 爆零了，自闭自闭。 Day \((-\infty, 0]\) 在洛谷和 LOJ 上复习了一些模板，比如 Splay、Z Algorithm 等等……顺便学了下分块入门。 可以的，复习的都没考 Day 1 公布解压密码的时候发现没带眼镜，看不清 &gt;_&lt; 密码好像是 Fei2Xue@Lian$Tian!。 后来查了下跟金庸有关？ 一看题发现 T1 是积木大赛？不对不对，NOIp 怎么会考原题呢……首尾相连肯定是指的环…… 然后发现如果是环，样例应该是 \(7\)。于是写了个链的差分，发现过了大数据。 做完之后发现已经过了一个小时了。 辣鸡 €€£，坑我时间，降我分数。 T2 本来以为是要解扩欧方程，然后发现值域炒鸡小，发现是个复杂度为 \(O(Tn \text{值域})\) 的傻逼题。转移类似于完全背包。 T3 想到了一个树形 DP 的做法，但是转移貌似很麻烦……发现没时间了，只好打一个二叉树的暴力。期望得分：链 + 二叉树 = \(65pts\)。 Day 1 期望得分：100 + 100 + 65 = 265pts。 Day 1.5 改革开放 \(40\) 年？emmm T1 T2 ZZ 题，\(30\) min 秒了。 T3 显然 DP。写了个 \(O(n m^2)\) 的 DP，然后一直没调出来。 只有两个半小时的时候，我弃疗 T3 去做 T4，然后一个小时用树哈希做完了。 最后发现 T3 间隔设小了，改好之后过了。 期望得分：100 + 100 + 100 + 100 = 400pts。 Day 1.75 晚上复习了下 Dinic 和 Splay 板子，水了水群。 Day 2 解压密码 %xiao#SHU!shen9XIA。 T1 题面真鬼畜，绕了半个小时……然后发现对于基环树的情况，直接枚举断一条边就好了，并不想写判环。感觉复杂度 \(O(n^2\log n)\) 是对的。 T2 感觉是奇怪的 DP？写了个奇怪的暴力打表找规律，就像这样： 暴力代码 1234567891011121314151617181920/* abcdefghijklmo*/#define f(x) x &amp;&amp; xfor (int a = 0; a &lt; 2; a++)for (int b = 0; b &lt; 2; b++)...for (int o = 0; o &lt; 2; o++) &#123; int A = a * 16; int D = d * 16; int B = b * 8; ... int O = o; if (A+B+C+G+K &lt;= f(A+B+F+G+K) &lt;= ... &lt;= f(D+H+L+M+O)) ans++;&#125; 然后推出 \(2, 3\) 的规律。\(65\) 分走人。 T3 动态 DP 模板题。void* mmap(void* start,size_t length, int prot, int flags, int fd, off_t offset);。打了个 \(44\) 分走人。 比赛最后我写了个 T2 爆搜验证公式，貌似推出了 \(n = 4\)？反正没分 Day 2 期望得分：100 + 65 + 44 = 209pts。 Day 2.5 我普及 T4 的树哈希貌似被 G♂LX 用链叉了？但是我自己的程序还是过了 2333。 听说 T4 正解 \(O(n \log n)\) 而且 \(3 \text{min}\) 就能写出来？（爆搜）技不如人甘拜下风。 普及 T1 卡各种读入？scanf(&quot;%[^\n]&quot;); 大法好！虽然其实怎么读入都不会被卡 普及 T2 洛谷数据卡 INF？不管不管。 人是死的，程序是活的，出题人是懒的。 T3 其他人都是写的 \(O(n^2 m)​\)？不管不管。 提高 D2T1 会被卡？不管不管。毕竟 €€£ 今年租了北航的少爷机用于骗取上百万的报名费，而且据说少爷机跑得比洛谷评测机快？emmmm 赛后 普及组期望得分：100 + 100 + 100 + 100 = 400pts。 普及组自测得分：100 + 80 + 100 + 100 = 380pts。 普及组实际得分：100 + 100 + 100 + 100 = 400pts。 提高组期望得分：100 + 100 + 65 + 100 + 65 + 44 = 474pts。 提高组自测得分：100 + 100 + 45 + 88 + 65 + 0 = 398pts。 提高组实际得分：100 + 100 + 45 + 100 + 65 + 0 = 410pts。 这次比赛主要的问题在于 D2T3 爆零了，没有达到题题拿分的目标。 分数是同省同届 rk2，海星吧。虽然 D2T3 没爆零就 rk1 了 还有就是 D1T3 炸掉了 \(20\) 分，貌似是二叉树出锅了。 吐槽 春春幼儿园园长竟然是一位道路工程师！ 小凯的疑惑时隔一年加强后重出江湖！ 飞车的葛老师来到了 C 城！ 旅行的小 Y 为何无故倒退？ 毒瘤打表题究竟从何而来？ 动态 DP 又是何方神圣？ 欢迎来到第二十四届 NOIp！ 试探究 \(S_{NOIP}\)、\(S_{\triangle POI}\) 与 \(N\) 的数量关系，并证明你的结论。 \(NOIP = POI \times N\)。 其它的东西 输入密码以查看内容 Incorrect Password! No content to display! U2FsdGVkX19rYxAWz1W59QHdJiak2EORQk3u5BEusURU5qFCmiqIs/pJ611A+Se0CSu3jMVSb+/j+0685RXSlfciMbvCt+9uzCQpThyCPeplXH/QPtSBi5Skil+gvyBKxM3evbmJWbKC4onqPhtL6auuOWEuLzmFsNR+3cW8x74yjeVv8W6esgOKAhJHHPWAmntZnzjvHL6mDBIrpTr/8SNpC0IDf+U5+3bEatd45t45aS9KZHEVZwKKDb7H2Sii]]></content>
       <categories>
         <category>赛后总结</category>
       </categories>
@@ -385,8 +385,8 @@
         <category>题目汇总</category>
       </categories>
       <tags>
-        <tag>图论</tag>
         <tag>网络流</tag>
+        <tag>图论</tag>
         <tag>最大流</tag>
         <tag>费用流</tag>
         <tag>Y</tag>
@@ -401,8 +401,8 @@
       </categories>
       <tags>
         <tag>模板</tag>
-        <tag>图论</tag>
         <tag>网络流</tag>
+        <tag>图论</tag>
         <tag>最大流</tag>
         <tag>费用流</tag>
       </tags>
@@ -417,8 +417,8 @@
       <tags>
         <tag>图论</tag>
         <tag>Floyd</tag>
-        <tag>POJ</tag>
         <tag>矩阵快速幂</tag>
+        <tag>POJ</tag>
       </tags>
   </entry>
   <entry>
@@ -431,8 +431,8 @@
       <tags>
         <tag>图论</tag>
         <tag>Floyd</tag>
-        <tag>最小环</tag>
         <tag>POJ</tag>
+        <tag>最小环</tag>
       </tags>
   </entry>
   <entry>
