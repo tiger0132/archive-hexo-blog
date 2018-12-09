@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="sApoiwW8Pmc8jRlRw7omr4cgku2dO_x1eyXPNpQSZR0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"b2t":true,"scrollpercent":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
+<meta name="keywords" content="点分治,IOI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「IOI 2011」Race - 点分治">
+<meta property="og:url" content="https://inf.tiger0132.tk/2018/12/09/ioi2011-race/index.html">
+<meta property="og:site_name" content="Tiger0132 的小站">
+<meta property="og:description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-09T06:44:49.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「IOI 2011」Race - 点分治">
+<meta name="twitter:description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
+
+
+
+
+
+
+  <link rel="canonical" href="https://inf.tiger0132.tk/2018/12/09/ioi2011-race/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>「IOI 2011」Race - 点分治 | Tiger0132 的小站</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+
+  <div class="container  page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tiger0132 的小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Think twice, code once.</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">71</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">9</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">64</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://inf.tiger0132.tk/2018/12/09/ioi2011-race/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tiger0132">
+      <meta itemprop="description" content="Think twice, code once.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tiger0132 的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">「IOI 2011」Race - 点分治
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-09 13:28:40 / 修改时间：14:44:49" itemprop="dateCreated datePublished" datetime="2018-12-09T13:28:40+08:00">2018-12-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题意">题意</h1>
+<p>传送门：<a href="https://www.luogu.org/problemnew/show/P4149" target="_blank" rel="noopener">洛谷 P4149 - Race</a>、<a href="https://darkbzoj.cf/problem/2599" target="_blank" rel="noopener">DBZOJ 2599 - Race</a>。</p>
+<p>求给定带边权树上链长为 <span class="math inline">\(k\)</span> 的最短链。</p>
+<p><span class="math inline">\(n \le 2 \times 10^5, k \le 10^6\)</span>。</p>
+<a id="more"></a>
+<h1 id="解法">解法</h1>
+<p>显然是点分治。</p>
+<p>记 <code>dis</code> 为距离、<code>dep</code> 为深度、<code>_[x]</code> 为达到距离 <span class="math inline">\(x\)</span> 的最小深度、<code>cnt_[x]</code> 为统计子树答案时的 <code>_[x]</code>。</p>
+<p>然后就是裸题了。</p>
+<h1 id="吐槽">吐槽</h1>
+<p>调了三四个小时……出了这些 BUG：</p>
+<p>（以下为 BZOJ 数据）</p>
+<ol type="1">
+<li><p>最开始交上去，<code>WA + RE</code>，<span class="math inline">\(68\text{pts}\)</span>。</p></li>
+<li><p>本地测发现 dfs1 爆炸了，然后加了一个 <code>vis2</code> 防止环（？？？），发现并没有什么软用，还是 <span class="math inline">\(68\text{pts}\)</span>。</p></li>
+<li><p>接下来发现我的 <code>_</code> 和 <code>cnt_</code> 开小了，调成了 <span class="math inline">\(10^6\)</span> 并且删除 dfs1 后（即不找重心暴力分治）提交，结果 <code>WA + TLE</code>，得到 <span class="math inline">\(73\text{pts}\)</span>。</p></li>
+<li><p>发现忘记在 solve 函数中初始化 <code>_[0] = 0</code>。改好 solve <strong>并且加上调试数据</strong>交上去得到 <code>WA + TLE</code>，<span class="math inline">\(0\text{pts}\)</span>。</p></li>
+<li><p>删掉调试数据，得到 <code>AC + TLE</code>，<span class="math inline">\(89\text{pts}\)</span>。</p></li>
+<li><p>加上找重心，得到 <code>AC + WA</code>，<span class="math inline">\(95\text{pts}\)</span>。</p></li>
+<li><p>我开了一个栈，用于清空 <code>cnt_[x]</code>。结果：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 压栈的时候：</span></span><br><span class="line">stx[++topx] = _;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹栈的时候：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[topx--] = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的操作：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[stx[topx--]] = <span class="number">0x3f3f3f3f</span>;</span><br></pre></td></tr></table></figure>
+<p>提交得到 <span class="math inline">\(100\text{pts}\)</span>。</p></li>
+</ol>
+<!--
+| 提交编号 |                   数组开小                    |                  忘初始化                   |                  忘删调试                   |                  没找重心                   |                  弹栈出错                   |              最终得分              |    备注     |
+| :------: | :-------------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :--------------------------------: | :---------: |
+|   1    | <font color=#e74c3c><b><p>开小了</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>找了</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#f1c40f><p><b>68</b></p></font>  |     1        |
+|   2    | <font color=#e74c3c><b><p>开小了</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#5eb95e><b><p>找了</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#e74c3c><p><b>16</b></p></font>  |      1       |
+|   3    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#e74c3c><b><p>没找</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#f1c40f><p><b>68</b></p></font>  | 加了 `vis2` |
+|   4    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#e74c3c><b><p>没找</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#5eb95e><p><b>73</b></p></font>  | 删了 `vis2` |
+|   5    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#e74c3c><b><p>忘了</b></p></font> | <font color=#e74c3c><b><p>没找</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> |  <font color=#e74c3c><p><b>0</b></p></font>  |     1        |
+|   6    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#e74c3c><b><p>没找</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#5eb95e><p><b>89</b></p></font>  |    1         |
+|   7    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>找了</b></p></font> | <font color=#e74c3c><b><p>出了</b></p></font> | <font color=#5eb95e><p><b>95</b></p></font>  |     1        |
+|   8    | <font color=#5eb95e><b><p>没开小</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>没忘</b></p></font> | <font color=#5eb95e><b><p>找了</b></p></font> | <font color=#5eb95e><b><p>没有</b></p></font> | <font color=#5eb95e><p><b>100</b></p></font> |    1         |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:center;">
+提交编号
+</th>
+<th style="text-align:center;">
+数组开小
+</th>
+<th style="text-align:center;">
+忘初始化
+</th>
+<th style="text-align:center;">
+忘删调试
+</th>
+<th style="text-align:center;">
+没找重心
+</th>
+<th style="text-align:center;">
+弹栈出错
+</th>
+<th style="text-align:center;">
+最终得分
+</th>
+<th style="text-align:center;">
+备注
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>开小了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>找了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#f1c40f">
+<p>
+<b>68</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>开小了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>找了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c">
+<p>
+<b>16</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>没找</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#f1c40f">
+<p>
+<b>68</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+加了 <code>vis2</code>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>没找</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e">
+<p>
+<b>73</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+删了 <code>vis2</code>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>忘了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>没找</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c">
+<p>
+<b>0</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>没找</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e">
+<p>
+<b>89</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>找了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#e74c3c"><b></b>
+<p>
+<b>出了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e">
+<p>
+<b>95</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没开小</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没忘</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>找了</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e"><b></b>
+<p>
+<b>没有</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+<font color="#5eb95e">
+<p>
+<b>100</b>
+</p>
+</font>
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>mmp</strong>。</p>
+<h1 id="代码">代码</h1>
+<div class="spoiler collapsed"><div class="spoiler-title">代码</div><div class="spoiler-content">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span>+<span class="number">52</span>, M = <span class="number">1e6</span>+<span class="number">61</span>, INF = <span class="number">0x01010101</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span> <span class="keyword">int</span> to, next, w; &#125; e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> head[N], cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	e[++cnt] = (edge)&#123;y, head[x], z&#125;; head[x] = cnt;</span><br><span class="line">	e[++cnt] = (edge)&#123;x, head[y], z&#125;; head[y] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k, ans;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> sz[N], mst[N], vis[N], ncnt, rt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> d=<span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">	sz[x] = <span class="number">1</span>; mst[x] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (nx == p || vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		dfs1(nx, x, d+<span class="number">1</span>);</span><br><span class="line">		sz[x] += sz[nx];</span><br><span class="line">		mst[x] = <span class="built_in">std</span>::max(mst[x], sz[nx]);</span><br><span class="line">	&#125;</span><br><span class="line">	mst[x] = <span class="built_in">std</span>::max(mst[x], ncnt - sz[x]);</span><br><span class="line">	<span class="keyword">if</span> (mst[x] &lt; mst[rt]) rt = x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> cnt_[M], dep[N], dis[N], stx[N], topx, idx;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs2</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> d, <span class="keyword">int</span> _x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (_x &gt; k) <span class="keyword">return</span>;</span><br><span class="line">	cnt_[_x] = <span class="built_in">std</span>::min(cnt_[_x], d);</span><br><span class="line">	stx[++topx] = _x;</span><br><span class="line">	dis[++idx] = _x;</span><br><span class="line">	dep[idx] = d;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (nx == p || vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		dfs2(nx, x, d+<span class="number">1</span>, _x + e[i].w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> _[M], st[N], top;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		idx = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (topx) cnt_[stx[topx--]] = <span class="number">0x01010101</span>;</span><br><span class="line">		dfs2(nx, x, <span class="number">1</span>, e[i].w);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= idx; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (k &gt;= dis[j]) ans = <span class="built_in">std</span>::min(ans, _[k - dis[j]] + dep[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= idx; j++) &#123;</span><br><span class="line">			st[++top] = dis[j];</span><br><span class="line">			_[dis[j]] = <span class="built_in">std</span>::min(_[dis[j]], cnt_[dis[j]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (top) _[st[top--]] = <span class="number">0x01010101</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	vis[x] = <span class="number">1</span>; _[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	calc(x);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		ncnt = sz[nx]; mst[rt = <span class="number">0</span>] = INF;</span><br><span class="line">		dfs1(nx, <span class="number">0</span>);</span><br><span class="line">		solve(rt);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x, y, z;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ans = INF;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;k);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z); x++; y++;</span><br><span class="line">		addedge(x, y, z);</span><br><span class="line">	&#125;</span><br><span class="line">	ncnt = n; mst[rt] = INF;</span><br><span class="line">	<span class="built_in">memset</span>(cnt_, <span class="number">0x01</span>, <span class="keyword">sizeof</span> cnt_);</span><br><span class="line">	<span class="built_in">memset</span>(_, <span class="number">0x01</span>, <span class="keyword">sizeof</span> _);</span><br><span class="line">	dfs1(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	solve(rt);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans == INF ? <span class="number">-1</span> : ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Tiger0132</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://inf.tiger0132.tk/2018/12/09/ioi2011-race/" title="「IOI 2011」Race - 点分治">https://inf.tiger0132.tk/2018/12/09/ioi2011-race/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/点分治/" rel="tag"># 点分治</a>
+          
+            <a href="/tags/IOI/" rel="tag"># IOI</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/08/codeforces-570d/" rel="next" title="「Codeforces 570D」Tree Requests - dsu on tree">
+                <i class="fa fa-chevron-left"></i> 「Codeforces 570D」Tree Requests - dsu on tree
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/09/tree-divide-notes/" rel="prev" title="「算法」点分治">
+                「算法」点分治 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div id="gitalk-container"></div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tiger0132</p>
+              <p class="site-description motion-element" itemprop="description">Think twice, code once.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">64</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">71</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tiger0132/" title="GitHub &rarr; https://github.com/tiger0132/" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://t.me/tiger0132/" title="Telegram &rarr; https://t.me/tiger0132/" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/zzqsblog/" title="http://www.cnblogs.com/zzqsblog/" rel="noopener" target="_blank">zzq</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/wxh010910/" title="https://blog.csdn.net/wxh010910/" rel="noopener" target="_blank">wxh</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://oi.men.ci/" title="http://oi.men.ci/" rel="noopener" target="_blank">menci</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://hzwer.com/" title="http://hzwer.com/" rel="noopener" target="_blank">hzwer</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://algocode.net/" title="https://algocode.net/" rel="noopener" target="_blank">larryzhong</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/weixin_42068627/" title="https://blog.csdn.net/weixin_42068627/" rel="noopener" target="_blank">glx</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hydingsy.github.io/" title="https://hydingsy.github.io/" rel="noopener" target="_blank">siyuan</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/lrj124/" title="https://www.cnblogs.com/lrj124/" rel="noopener" target="_blank">lrj124</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://yizr-cnyali.ac.cn/" title="http://yizr-cnyali.ac.cn/" rel="noopener" target="_blank">yizr_cnyali</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/slrslr/" title="http://www.cnblogs.com/slrslr/" rel="noopener" target="_blank">slr</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#吐槽"><span class="nav-number">3.</span> <span class="nav-text">吐槽</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tiger0132</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.5.0</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '859336dd9768f326736e',
+      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
+      repo: 'hexo-blog-gitalk',
+      owner: 'tiger0132',
+      admin: ['tiger0132'],
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')           
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
