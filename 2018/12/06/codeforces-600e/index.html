@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="题意 传送门：Codeforces 600E - Lomsat gelral。 给你一棵树，每个点有点权。求每个子树中的所有众数的和。 如 1 2 1 3 2，答案为 \(1+2\)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-06T15:11:51.660Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「Codeforces 600E」Lomsat gelral - 线段树合并">
 <meta name="twitter:description" content="题意 传送门：Codeforces 600E - Lomsat gelral。 给你一棵树，每个点有点权。求每个子树中的所有众数的和。 如 1 2 1 3 2，答案为 \(1+2\)。">
@@ -437,12 +437,24 @@
                 
               
 
-              <time title="创建时间：2018-12-06 21:01:50 / 修改时间：23:11:51" itemprop="dateCreated datePublished" datetime="2018-12-06T21:01:50+08:00">2018-12-06</time>
+              <time title="创建时间：2018-12-06 21:01:50" itemprop="dateCreated datePublished" datetime="2018-12-06T21:01:50+08:00">2018-12-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -506,7 +518,7 @@
 <h2 id="维护标记">维护标记</h2>
 <p>考虑维护三个标记：<code>max, sum, ans</code>。分别代表指定值域的众数（任意一个）、出现次数和答案。</p>
 <p>那么 pushup 可以这么写：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>如果左儿子的 <code>sum</code> 更大，那么三个标记都从左儿子更新。</li>
 <li>如果右儿子的 <code>sum</code> 更大，那么从右儿子更新。</li>
 <li>如果相同，那么 <code>ans</code> 等于两个区间的 <code>ans</code> 的和，其它的从任意一个儿子更新。</li>
@@ -514,7 +526,7 @@
 <h2 id="合并">合并</h2>
 <p><code>node *z = x-&gt;merge(node *y)</code> 代表把 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 所在的子树合并到 <span class="math inline">\(z\)</span>。且保证 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的值域区间相同。</p>
 <p>合并的流程如下：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>如果 <span class="math inline">\(x\)</span> 为空，返回 <span class="math inline">\(y\)</span>。</li>
 <li>如果 <span class="math inline">\(y\)</span> 为空，返回 <span class="math inline">\(x\)</span>。</li>
 <li>如果值域里只有一个数，那么将 <span class="math inline">\(y\)</span> 合并到 <span class="math inline">\(x\)</span> 并返回 <span class="math inline">\(x\)</span>。</li>
@@ -523,7 +535,7 @@
 </ol>
 <p>具体实现如下：</p>
 <div class="spoiler collapsed"><div class="spoiler-title">代码</div><div class="spoiler-content">
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	...</span><br><span class="line">	<span class="function">node *<span class="title">merge</span><span class="params">(node *rhs)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == null) <span class="keyword">return</span> rhs;</span><br><span class="line">		<span class="keyword">if</span> (rhs == null) <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">		<span class="keyword">if</span> (l == r) &#123; max = ans = l; sum += rhs-&gt;sum; <span class="keyword">return</span> <span class="keyword">this</span>; &#125;</span><br><span class="line">		lc = lc-&gt;merge(rhs-&gt;lc);</span><br><span class="line">		rc = rc-&gt;merge(rhs-&gt;rc);</span><br><span class="line">		pushup();</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+undefined
 </div></div>
 <p><strong>合并 <span class="math inline">\(\mathbf{n}\)</span> 棵大小为 <span class="math inline">\(\mathbf{m}\)</span> 的线段树的时间复杂度是 <span class="math inline">\(\mathbf{O(n + m \log n)}\)</span>。</strong></p>
 <h1 id="代码">代码</h1>
@@ -627,8 +639,6 @@
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1010,7 +1020,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1154,22 +1164,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

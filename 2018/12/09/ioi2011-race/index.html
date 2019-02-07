@@ -111,14 +111,14 @@
 
 
   <meta name="description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
-<meta name="keywords" content="点分治,IOI">
+<meta name="keywords" content="IOI,点分治">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「IOI 2011」Race - 点分治">
 <meta property="og:url" content="https://inf.tiger0132.tk/2018/12/09/ioi2011-race/index.html">
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-09T06:44:49.448Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「IOI 2011」Race - 点分治">
 <meta name="twitter:description" content="题意 传送门：洛谷 P4149 - Race、DBZOJ 2599 - Race。 求给定带边权树上链长为 \(k\) 的最短链。 \(n \le 2 \times 10^5, k \le 10^6\)。">
@@ -437,12 +437,24 @@
                 
               
 
-              <time title="创建时间：2018-12-09 13:28:40 / 修改时间：14:44:49" itemprop="dateCreated datePublished" datetime="2018-12-09T13:28:40+08:00">2018-12-09</time>
+              <time title="创建时间：2018-12-09 13:28:40" itemprop="dateCreated datePublished" datetime="2018-12-09T13:28:40+08:00">2018-12-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -505,17 +517,17 @@
 <h1 id="吐槽">吐槽</h1>
 <p>调了三四个小时……出了这些 BUG：</p>
 <p>（以下为 BZOJ 数据）</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li><p>最开始交上去，<code>WA + RE</code>，<span class="math inline">\(68\text{pts}\)</span>。</p></li>
 <li><p>本地测发现 dfs1 爆炸了，然后加了一个 <code>vis2</code> 防止环（？？？），发现并没有什么软用，还是 <span class="math inline">\(68\text{pts}\)</span>。</p></li>
 <li><p>接下来发现我的 <code>_</code> 和 <code>cnt_</code> 开小了，调成了 <span class="math inline">\(10^6\)</span> 并且删除 dfs1 后（即不找重心暴力分治）提交，结果 <code>WA + TLE</code>，得到 <span class="math inline">\(73\text{pts}\)</span>。</p></li>
 <li><p>发现忘记在 solve 函数中初始化 <code>_[0] = 0</code>。改好 solve <strong>并且加上调试数据</strong>交上去得到 <code>WA + TLE</code>，<span class="math inline">\(0\text{pts}\)</span>。</p></li>
 <li><p>删掉调试数据，得到 <code>AC + TLE</code>，<span class="math inline">\(89\text{pts}\)</span>。</p></li>
 <li><p>加上找重心，得到 <code>AC + WA</code>，<span class="math inline">\(95\text{pts}\)</span>。</p></li>
-<li><p>我开了一个栈，用于清空 <code>cnt_[x]</code>。结果：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 压栈的时候：</span></span><br><span class="line">stx[++topx] = _;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹栈的时候：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[topx--] = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的操作：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[stx[topx--]] = <span class="number">0x3f3f3f3f</span>;</span><br></pre></td></tr></table></figure>
-<p>提交得到 <span class="math inline">\(100\text{pts}\)</span>。</p></li>
+<li><p>我开了一个栈，用于清空 <code>cnt_[x]</code>。结果：</p></li>
 </ol>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 压栈的时候：</span></span><br><span class="line">stx[++topx] = _;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹栈的时候：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[topx--] = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的操作：</span></span><br><span class="line"><span class="keyword">while</span> (topx) cnt_[stx[topx--]] = <span class="number">0x3f3f3f3f</span>;</span><br></pre></td></tr></table></figure></p>
+<p>提交得到 <span class="math inline">\(100\text{pts}\)</span>。</p>
 <!--
 | 提交编号 |                   数组开小                    |                  忘初始化                   |                  忘删调试                   |                  没找重心                   |                  弹栈出错                   |              最终得分              |    备注     |
 | :------: | :-------------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :-----------------------------------------: | :--------------------------------: | :---------: |
@@ -963,7 +975,7 @@
 <p><strong>mmp</strong>。</p>
 <h1 id="代码">代码</h1>
 <div class="spoiler collapsed"><div class="spoiler-title">代码</div><div class="spoiler-content">
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span>+<span class="number">52</span>, M = <span class="number">1e6</span>+<span class="number">61</span>, INF = <span class="number">0x01010101</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span> <span class="keyword">int</span> to, next, w; &#125; e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> head[N], cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	e[++cnt] = (edge)&#123;y, head[x], z&#125;; head[x] = cnt;</span><br><span class="line">	e[++cnt] = (edge)&#123;x, head[y], z&#125;; head[y] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k, ans;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> sz[N], mst[N], vis[N], ncnt, rt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> d=<span class="number">1</span>)</span> </span>&#123;</span><br><span class="line">	sz[x] = <span class="number">1</span>; mst[x] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (nx == p || vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		dfs1(nx, x, d+<span class="number">1</span>);</span><br><span class="line">		sz[x] += sz[nx];</span><br><span class="line">		mst[x] = <span class="built_in">std</span>::max(mst[x], sz[nx]);</span><br><span class="line">	&#125;</span><br><span class="line">	mst[x] = <span class="built_in">std</span>::max(mst[x], ncnt - sz[x]);</span><br><span class="line">	<span class="keyword">if</span> (mst[x] &lt; mst[rt]) rt = x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> cnt_[M], dep[N], dis[N], stx[N], topx, idx;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs2</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> p, <span class="keyword">int</span> d, <span class="keyword">int</span> _x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (_x &gt; k) <span class="keyword">return</span>;</span><br><span class="line">	cnt_[_x] = <span class="built_in">std</span>::min(cnt_[_x], d);</span><br><span class="line">	stx[++topx] = _x;</span><br><span class="line">	dis[++idx] = _x;</span><br><span class="line">	dep[idx] = d;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (nx == p || vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		dfs2(nx, x, d+<span class="number">1</span>, _x + e[i].w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> _[M], st[N], top;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		idx = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (topx) cnt_[stx[topx--]] = <span class="number">0x01010101</span>;</span><br><span class="line">		dfs2(nx, x, <span class="number">1</span>, e[i].w);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= idx; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (k &gt;= dis[j]) ans = <span class="built_in">std</span>::min(ans, _[k - dis[j]] + dep[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= idx; j++) &#123;</span><br><span class="line">			st[++top] = dis[j];</span><br><span class="line">			_[dis[j]] = <span class="built_in">std</span>::min(_[dis[j]], cnt_[dis[j]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (top) _[st[top--]] = <span class="number">0x01010101</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	vis[x] = <span class="number">1</span>; _[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	calc(x);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> nx = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (vis[nx]) <span class="keyword">continue</span>;</span><br><span class="line">		ncnt = sz[nx]; mst[rt = <span class="number">0</span>] = INF;</span><br><span class="line">		dfs1(nx, <span class="number">0</span>);</span><br><span class="line">		solve(rt);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x, y, z;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ans = INF;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;k);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;z); x++; y++;</span><br><span class="line">		addedge(x, y, z);</span><br><span class="line">	&#125;</span><br><span class="line">	ncnt = n; mst[rt] = INF;</span><br><span class="line">	<span class="built_in">memset</span>(cnt_, <span class="number">0x01</span>, <span class="keyword">sizeof</span> cnt_);</span><br><span class="line">	<span class="built_in">memset</span>(_, <span class="number">0x01</span>, <span class="keyword">sizeof</span> _);</span><br><span class="line">	dfs1(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	solve(rt);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, ans == INF ? <span class="number">-1</span> : ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+undefined
 </div></div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
@@ -1011,9 +1023,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/点分治/" rel="tag"># 点分治</a>
-          
             <a href="/tags/IOI/" rel="tag"># IOI</a>
+          
+            <a href="/tags/点分治/" rel="tag"># 点分治</a>
           
         </div>
       
@@ -1060,8 +1072,6 @@
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1443,7 +1453,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1587,22 +1597,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

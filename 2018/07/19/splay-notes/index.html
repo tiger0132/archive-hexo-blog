@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://inf.tiger0132.tk/2018/07/19/splay-notes/remove.svg">
 <meta property="og:image" content="https://inf.tiger0132.tk/2018/07/19/splay-notes/reverse.svg">
 <meta property="og:image" content="https://i.loli.net/2018/08/07/5b69203423c82.png">
-<meta property="og:updated_time" content="2018-11-20T05:12:04.463Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「数据结构」Splay">
 <meta name="twitter:description" content="简介 Splay是一种平衡树，即优化后的二叉查找树。 ⚠️多图预警 图片均为原创，协议为CC0，_尽量_保留原地址。 劼司机的图片风格太赞啦">
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -545,25 +545,46 @@
 <p>Splay使用旋转保持平衡。所以旋转是最重要的操作，也是最核心的操作。</p>
 <p><strong>Splay旋转后，中序遍历和Splay的合法性不变。</strong></p>
 <p>比如最开始的树是这样子的：</p>
-<p><img src="/2018/07/19/splay-notes/src.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/src.svg">
+
+</div>
 <p>现在我们想把<span class="math inline">\(2\)</span>号点搞到<span class="math inline">\(4\)</span>号点的位置。</p>
 <p>那么<span class="math inline">\(2\)</span>下面的子树就有<span class="math inline">\(1,3,4,5\)</span>。一种比较优秀的玩法是这样的：</p>
-<p><img src="/2018/07/19/splay-notes/subtree.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/subtree.svg">
+
+</div>
 <p>那么我们可以考虑这么操作：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>先把<span class="math inline">\(4\rightarrow2\)</span>的边改成<span class="math inline">\(4\rightarrow3\)</span>。</li>
 <li>再把<span class="math inline">\(6\rightarrow4\)</span>的边改成<span class="math inline">\(6\rightarrow2\)</span>。</li>
 <li>最后把<span class="math inline">\(2\rightarrow3\)</span>的边改成<span class="math inline">\(2\rightarrow4\)</span>。</li>
 </ol>
 <h3 id="第一次连边">第一次连边</h3>
-<p><img src="/2018/07/19/splay-notes/p1.svg"></p>
-<p><img src="/2018/07/19/splay-notes/p1x.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/p1.svg">
+
+</div>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/p1x.svg">
+
+</div>
 <h3 id="第二次连边">第二次连边</h3>
-<p><img src="/2018/07/19/splay-notes/p2.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/p2.svg">
+
+</div>
 <h3 id="第三次连边">第三次连边</h3>
-<p><img src="/2018/07/19/splay-notes/dest.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/dest.svg">
+
+</div>
 <h3 id="连边前原图">连边前(原图)</h3>
-<p><img src="/2018/07/19/splay-notes/src.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/src.svg">
+
+</div>
 <p>旋转操作有四种。自行模拟后发现：</p>
 <p>旋转后，父节点会将连向需旋转的该子节点的方向的边连向该子节点位于其父节点方向的反方向的节点。</p>
 <p>令<code>x = 该节点, y = par[x], k = chk(x), w = ch[x][k^1]</code>，则<code>ch[y][k] = w; par[w] = y;</code></p>
@@ -578,11 +599,20 @@
 <p>注意，如果该节点、该父节点和该爷爷节点「三点一线」，那么应该先旋转父节点。</p>
 <p>此处进行的操作是将<span class="math inline">\(3\)</span> splay到根节点。</p>
 <h3 id="原图">原图</h3>
-<p><img src="/2018/07/19/splay-notes/splay-src.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/splay-src.svg">
+
+</div>
 <h3 id="旋转父节点后">旋转父节点后</h3>
-<p><img src="/2018/07/19/splay-notes/splay-p1.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/splay-p1.svg">
+
+</div>
 <h3 id="旋转自身后">旋转自身后</h3>
-<p><img src="/2018/07/19/splay-notes/splay-p2.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/splay-p2.svg">
+
+</div>
 <p>剩下的情况<del>自行模拟</del>没图片了。</p>
 <p>并且注意处理爷爷节点已经是目标的情况。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> goal = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (par[x] != goal) &#123;</span><br><span class="line">        <span class="keyword">int</span> y = par[x], z = par[y];</span><br><span class="line">        <span class="keyword">if</span> (z != goal) &#123;</span><br><span class="line">            <span class="keyword">if</span> (chk(x) == chk(y)) rotate(y);</span><br><span class="line">            <span class="keyword">else</span> rotate(x);</span><br><span class="line">        &#125;</span><br><span class="line">        rotate(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!goal) root = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -609,7 +639,10 @@
 <p>显然，任何一个数的前驱和后继之间只有它自身。</p>
 <p>令该点的前驱为<span class="math inline">\(last\)</span>，后继为<span class="math inline">\(next\)</span>。</p>
 <p>那么可以考虑把前驱splay到根，后继splay到前驱的右儿子，那么后继的左儿子就是要删除的点。</p>
-<p><img src="/2018/07/19/splay-notes/remove.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/remove.svg">
+
+</div>
 <p>最后判特判权值数大于<span class="math inline">\(1\)</span>的情况即可。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> last = pre(x), next = succ(x);</span><br><span class="line">    splay(last); splay(next, last);</span><br><span class="line">    <span class="keyword">int</span> del = ch[next][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (cnt[del] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        cnt[del]--;</span><br><span class="line">        splay(del);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ch[next][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="区间反转">区间反转</h2>
@@ -619,7 +652,10 @@
 <blockquote>
 <p>// 这张图有点小</p>
 </blockquote>
-<p><img src="/2018/07/19/splay-notes/reverse.svg"></p>
+<div class="figure">
+<img src="/2018/07/19/splay-notes/reverse.svg">
+
+</div>
 <h2 id="区间打标记">区间打标记</h2>
 <p>平衡树像线段树一样，可以打标记。但是有一个不同点，就是<strong>平衡树的每个节点都有权值</strong>。所以更新标记时和线段树不一样，要考虑自身节点的权值。</p>
 <p>因为Splay可以直接提取指定区间，所以Splay的区间操作在某些意义上<del>比线段树还好写</del>。</p>
@@ -759,8 +795,6 @@
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1142,7 +1176,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1286,22 +1320,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

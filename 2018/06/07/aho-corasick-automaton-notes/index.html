@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="简介 AC自动机是一种用来进行多模式匹配的算法。 或者说，给你一个文本串和若干个模式串，问你每个模式串的出现位置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-20T05:12:04.455Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「算法」AC自动机">
 <meta name="twitter:description" content="简介 AC自动机是一种用来进行多模式匹配的算法。 或者说，给你一个文本串和若干个模式串，问你每个模式串的出现位置。">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -517,7 +517,7 @@
 <p>失配指针的定义参照KMP。</p>
 <h1 id="匹配">匹配</h1>
 <p>匹配时从根节点开始。</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>没有需要的子节点，那么就一直往失配指针跳，直到出现那个子节点或到根。</li>
 <li>如果匹配到完整的模式串，就匹配到了模式串和失配指针那一条链上的所有的字符串。</li>
 <li>其他情况就直接往子节点跳。</li>
@@ -528,7 +528,7 @@
 <p>从根到某个点的失配指针得到的字符串与该点的等长后缀相同且该字符串是最长的。</p>
 <p>一个点的失配指针取决于其父亲的失配指针。</p>
 <p>一个点失配指针的求法如下：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>首先跳到父亲的失配指针处。</li>
 <li>如果跳到根，那么失配指针指向根。</li>
 <li>如果当前位置包含源点包含的字符的子节点，那么失配指针指向该子节点。</li>
@@ -641,8 +641,6 @@
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1024,7 +1022,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1168,22 +1166,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

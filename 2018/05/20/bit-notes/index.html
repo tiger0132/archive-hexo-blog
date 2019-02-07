@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg">
 <meta property="og:image" content="https://inf.tiger0132.tk/2018/05/20/bit-notes/bit-bits.png">
 <meta property="og:image" content="https://inf.tiger0132.tk/2018/05/20/bit-notes/query.jpg">
-<meta property="og:updated_time" content="2018-11-20T05:12:04.455Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「数据结构」树状数组 (+6)">
 <meta name="twitter:description" content="树状数组，顾名思义望文生义，就是树状的数组。 树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树&amp;quot;堆式存储&amp;quot;后的数组。 (这里所有的操作全都是区间加，区间和) UPD：  2018-03-29 20:55:23：Initial Commit 2018-04-01 22:44:36：Add 支持区间查询 代码3 2018-04-05 18:39:15：Add 二维树">
@@ -458,7 +458,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -513,7 +513,7 @@
 <p>树状数组，就是压了一半空间的zkw线段树，就是没有右子树的线段树&quot;堆式存储&quot;后的数组。</p>
 <p>(这里所有的操作全都是区间加，区间和)</p>
 <p>UPD：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li><code>2018-03-29 20:55:23</code>：Initial Commit</li>
 <li><code>2018-04-01 22:44:36</code>：Add <code>支持区间查询</code> <code>代码3</code></li>
 <li><code>2018-04-05 18:39:15</code>：Add <code>二维树状数组</code>,Change<code>[Everything]</code>(更改排版、格式)</li>
@@ -522,11 +522,17 @@
 <a id="more"></a>
 <h1 id="概念">概念</h1>
 <p>树状数组长这样：</p>
-<p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg"></p>
+<div class="figure">
+<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=31480605d62a283443a6310d63b5c92e/caef76094b36acaf7fcc80e47ed98d1001e99cfd.jpg">
+
+</div>
 <p>观察数组下标的二进制和树，得</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1   1</span><br><span class="line">2   10</span><br><span class="line">3   11</span><br><span class="line">4   100</span><br><span class="line">5   101</span><br><span class="line">6   110</span><br><span class="line">7   111</span><br><span class="line">8   1000</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>注意到每一层最左边的点都是<span class="math inline">\(2^n\)</span>数列上的数。如果按照树形结构排列这些下标，得</p>
-<p><img src="/2018/05/20/bit-notes/bit-bits.png"></p>
+<div class="figure">
+<img src="/2018/05/20/bit-notes/bit-bits.png">
+
+</div>
 <p>其中同一个父节点的子节点，越靠左的在上上面的图中越浅。</p>
 <p>然后我们发现，每个点和它的父节点都有些微妙的联系。具体地，就是每一个点的下标加上该下标的<code>lowbit</code>等于它的父节点的下标。</p>
 <p>什么是<code>lowbit</code>呢？如<span class="math inline">\((100101001100)_2\)</span>的<code>lowbit</code>就是<span class="math inline">\((100)_2\)</span>。它可以通过<code>x&amp;-x</code>求出来。</p>
@@ -537,7 +543,10 @@
 <p><strong>注意到树状数组还有一个性质：一个点加上自身的lowbit，得到的点正好是高于该点的左边第一个节点。</strong></p>
 <p>听起来很绕，代个例子就知道了：</p>
 <p>如查询<span class="math inline">\(1\)</span>~<span class="math inline">\(7\)</span>时需要访问的点(显然是<span class="math inline">\(\log n\)</span>量级的)：</p>
-<p><img src="/2018/05/20/bit-notes/query.jpg"></p>
+<div class="figure">
+<img src="/2018/05/20/bit-notes/query.jpg">
+
+</div>
 <p>这些点的下标分别是<span class="math inline">\(7\)</span>，<span class="math inline">\(7-lowbit(7)=6\)</span>，<span class="math inline">\(6-lowbit(6)=4\)</span>……</p>
 <h3 id="单点修改">单点修改</h3>
 <p>修改一个点的值，只需要修改它到根沿路上所有的点即可。</p>
@@ -748,8 +757,6 @@ a_1+a_2+\cdots+a_i&amp;=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tr
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1131,7 +1138,7 @@ a_1+a_2+\cdots+a_i&amp;=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tr
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1275,22 +1282,6 @@ a_1+a_2+\cdots+a_i&amp;=(tree_1)+(tree_1+tree_2)+\cdots+(tree_1+tree_2+\cdots+tr
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

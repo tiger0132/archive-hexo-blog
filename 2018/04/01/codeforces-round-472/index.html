@@ -111,7 +111,7 @@
 
 
   <meta name="description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
-<meta name="keywords" content="Codeforces,前缀,模拟,枚举&#x2F;暴力,two-pointer">
+<meta name="keywords" content="Codeforces,模拟,two-pointer,前缀,枚举&#x2F;暴力">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
 <meta property="og:url" content="https://inf.tiger0132.tk/2018/04/01/codeforces-round-472/index.html">
@@ -119,7 +119,7 @@
 <meta property="og:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://inf.tiger0132.tk/2018/04/01/codeforces-round-472/B.png">
-<meta property="og:updated_time" content="2018-11-20T05:12:04.459Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「赛后总结」Codeforces Round #472 (Div. 2) (+2)">
 <meta name="twitter:description" content="传送门：Codeforces Round #472 (Div. 2) 这次本来可以做D，可惜只做出A和B。 可惜C我想到了思路但没去做:cry:。 UPD：  2018-03-26 19:25:24：Initial Commit 2018-04-01 00:09:39：Add C">
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -511,7 +511,7 @@
 <p>这次本来可以做<code>D</code>，可惜只做出<code>A</code>和<code>B</code>。</p>
 <p>可惜<code>C</code>我想到了思路但没去做:cry:。</p>
 <p>UPD：</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li><code>2018-03-26 19:25:24</code>：Initial Commit</li>
 <li><code>2018-04-01 00:09:39</code>：Add <code>C</code></li>
 </ol>
@@ -530,7 +530,10 @@
 <p>现在问你，给你一个黑白局面，问你能不能从白棋盘用<span class="math inline">\(n\)</span>次得到它，并且<strong>满足所有操作中的行和列全部不重复</strong>。</p>
 <h2 id="解法-1">解法</h2>
 <p>如图，</p>
-<p><img src="/2018/04/01/codeforces-round-472/B.png"></p>
+<div class="figure">
+<img src="/2018/04/01/codeforces-round-472/B.png">
+
+</div>
 <p>显然如果紫色点有任意三个被选了，那么另外一个肯定会也是黑的。 对于所有两两的行和列，如果这样的紫色点有<span class="math inline">\(1\)</span>个、<span class="math inline">\(2\)</span>个或者<span class="math inline">\(4\)</span>个，那么一定是<code>Yes</code>，否则是<span class="math inline">\(No\)</span>。</p>
 <h2 id="代码">代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> rec[<span class="number">233</span>][<span class="number">233</span>];</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d\n"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		gets(rec[i] + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i != j) <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">1</span>; p &lt;= m; p++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> q = <span class="number">1</span>; q &lt;= m; q++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (p == q) <span class="keyword">continue</span>;</span><br><span class="line">					<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">					<span class="keyword">if</span> (rec[i][p] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[i][q] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[j][p] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (rec[j][q] == <span class="string">'#'</span>) count++;</span><br><span class="line">					<span class="keyword">if</span> (count == <span class="number">3</span>) &#123;</span><br><span class="line">						<span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">						<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -611,13 +614,13 @@
           
             <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           
-            <a href="/tags/前缀/" rel="tag"># 前缀</a>
-          
             <a href="/tags/模拟/" rel="tag"># 模拟</a>
           
-            <a href="/tags/枚举-暴力/" rel="tag"># 枚举/暴力</a>
-          
             <a href="/tags/two-pointer/" rel="tag"># two-pointer</a>
+          
+            <a href="/tags/前缀/" rel="tag"># 前缀</a>
+          
+            <a href="/tags/枚举-暴力/" rel="tag"># 枚举/暴力</a>
           
         </div>
       
@@ -664,8 +667,6 @@
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1047,7 +1048,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1191,22 +1192,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 

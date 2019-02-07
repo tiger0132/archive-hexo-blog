@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Tiger0132 的小站">
 <meta property="og:description" content="简介 高斯消元，是一种一般用来解线性方程组的算法。 不就是个加减消元要说的这么先进么">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-20T05:12:04.459Z">
+<meta property="og:updated_time" content="2018-12-14T10:39:51.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「算法」高斯消元">
 <meta name="twitter:description" content="简介 高斯消元，是一种一般用来解线性方程组的算法。 不就是个加减消元要说的这么先进么">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-20 13:12:04" itemprop="dateModified" datetime="2018-11-20T13:12:04+08:00">2018-11-20</time>
+                <time title="修改时间：2018-12-14 18:39:51" itemprop="dateModified" datetime="2018-12-14T18:39:51+08:00">2018-12-14</time>
               
             
           </span>
@@ -552,68 +552,78 @@ z=c
 \right.
 \]</span></p>
 <p>那么可以考虑从<span class="math inline">\(x\)</span>开始，一元一元地消元。</p>
-<ol type="1">
-<li><p>首先把第<span class="math inline">\(1\)</span>行和<span class="math inline">\(x\)</span>系数绝对值最大的行进行交换，以便减小误差：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-4&amp;-3&amp;6&amp;2\\
--1&amp;1&amp;-2&amp;3\\
-1&amp;-6&amp;-3&amp;-1
-\end{array}
-\right)
-\]</span></p></li>
-<li><p>然后把第 <span class="math inline">\(1\)</span> 行全部 <span class="math inline">\(\div 4\)</span>：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-1&amp;-\frac34&amp;\frac32&amp;\frac12\\
--1&amp;1&amp;-2&amp;3\\
-1&amp;-6&amp;-3&amp;-1
-\end{array}
-\right)
-\]</span></p></li>
-<li><p>接下来加减消元把<span class="math inline">\(2\)</span>、<span class="math inline">\(3\)</span>行的<span class="math inline">\(x\)</span>系数变为<span class="math inline">\(0\)</span>：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-1&amp;-\frac34&amp;\frac23&amp;\frac12\\
-0&amp;\frac14&amp;-\frac12&amp;\frac72\\
-0&amp;-\frac{21}4&amp;-\frac92&amp;-\frac32
-\end{array}
-\right)
-\]</span></p></li>
-<li><p>然后再把<span class="math inline">\(y\)</span>的系数绝对值最大的与第<span class="math inline">\(2\)</span>行交换：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-1&amp;-\frac34&amp;\frac23&amp;\frac12\\
-0&amp;-\frac{21}4&amp;-\frac92&amp;-\frac32\\
-0&amp;\frac14&amp;-\frac12&amp;\frac72
-\end{array}
-\right)
-\]</span></p></li>
-<li><p>依此类推，消掉<span class="math inline">\(y\)</span>：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-1&amp;0&amp;\frac{15}7&amp;\frac57\\
-0&amp;1&amp;\frac67&amp;-\frac27\\
-0&amp;0&amp;-\frac57&amp;\frac{24}7
-\end{array}
-\right)
-\]</span></p></li>
-<li><p>最后消掉<span class="math inline">\(z\)</span>，流程结束：</p>
-<p><span class="math display">\[
-\left(
-\begin{array}c
-1&amp;0&amp;0&amp;11\\
-0&amp;1&amp;0&amp;\frac{22}5\\
-0&amp;0&amp;1&amp;-\frac{24}5
-\end{array}
-\right)
-\]</span></p></li>
+<ol style="list-style-type: decimal">
+<li>首先把第<span class="math inline">\(1\)</span>行和<span class="math inline">\(x\)</span>系数绝对值最大的行进行交换，以便减小误差：</li>
 </ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   4&amp;-3&amp;6&amp;2\\
+   -1&amp;1&amp;-2&amp;3\\
+   1&amp;-6&amp;-3&amp;-1
+   \end{array}
+   \right)
+   \]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>然后把第 <span class="math inline">\(1\)</span> 行全部 <span class="math inline">\(\div 4\)</span>：</li>
+</ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   1&amp;-\frac34&amp;\frac32&amp;\frac12\\
+   -1&amp;1&amp;-2&amp;3\\
+   1&amp;-6&amp;-3&amp;-1
+   \end{array}
+   \right)
+   \]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>接下来加减消元把<span class="math inline">\(2\)</span>、<span class="math inline">\(3\)</span>行的<span class="math inline">\(x\)</span>系数变为<span class="math inline">\(0\)</span>：</li>
+</ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   1&amp;-\frac34&amp;\frac23&amp;\frac12\\
+   0&amp;\frac14&amp;-\frac12&amp;\frac72\\
+   0&amp;-\frac{21}4&amp;-\frac92&amp;-\frac32
+   \end{array}
+   \right)
+   \]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li>然后再把<span class="math inline">\(y\)</span>的系数绝对值最大的与第<span class="math inline">\(2\)</span>行交换：</li>
+</ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   1&amp;-\frac34&amp;\frac23&amp;\frac12\\
+   0&amp;-\frac{21}4&amp;-\frac92&amp;-\frac32\\
+   0&amp;\frac14&amp;-\frac12&amp;\frac72
+   \end{array}
+   \right)
+   \]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li>依此类推，消掉<span class="math inline">\(y\)</span>：</li>
+</ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   1&amp;0&amp;\frac{15}7&amp;\frac57\\
+   0&amp;1&amp;\frac67&amp;-\frac27\\
+   0&amp;0&amp;-\frac57&amp;\frac{24}7
+   \end{array}
+   \right)
+   \]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li>最后消掉<span class="math inline">\(z\)</span>，流程结束：</li>
+</ol>
+<p><span class="math display">\[
+   \left(
+   \begin{array}c
+   1&amp;0&amp;0&amp;11\\
+   0&amp;1&amp;0&amp;\frac{22}5\\
+   0&amp;0&amp;1&amp;-\frac{24}5
+   \end{array}
+   \right)
+   \]</span></p>
 <h1 id="代码">代码</h1>
 <p>该代码用于<font color="#0a0"><b>Accepted</b></font><a href="https://www.luogu.org/problemnew/show/P3389" target="_blank" rel="noopener">洛谷 P3389 - 【模板】高斯消元法</a>。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> EPS = <span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">102</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> mat[N][N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gauss</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> piv = i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">fabs</span>(mat[j][i]) &gt; <span class="built_in">fabs</span>(mat[piv][i])) &#123;</span><br><span class="line">				piv = j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (piv != i) <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n + <span class="number">1</span>; j++) &#123;</span><br><span class="line">			swap(mat[i][j], mat[piv][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">fabs</span>(mat[i][i]) &lt;= EPS) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">"No Solution"</span>);</span><br><span class="line">			<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= n + <span class="number">1</span>; j++) &#123;</span><br><span class="line">			mat[i][j] /= mat[i][i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i != j) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> k = i + <span class="number">1</span>; k &lt;= n + <span class="number">1</span>; k++) &#123;</span><br><span class="line">					mat[j][k] -= mat[j][i] * mat[i][k];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> u = <span class="number">1</span>; u &lt;= n; u++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">1</span>; v &lt;= n+<span class="number">1</span>; v++) &#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%.6lf "</span>, mat[u][v]);</span><br><span class="line">			&#125; <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n + <span class="number">1</span>; j++) &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lf"</span>, mat[i] + j);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	gauss();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>, mat[i][n + <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -719,8 +729,6 @@ z=c
           </div>
           
 
-  
-    <div id="gitalk-container"></div>
   
 
 
@@ -1102,7 +1110,7 @@ z=c
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1246,22 +1254,6 @@ z=c
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '859336dd9768f326736e',
-      clientSecret: '4c0b6bbd32280b4637d602d0c6970437e77fd0b5',
-      repo: 'hexo-blog-gitalk',
-      owner: 'tiger0132',
-      admin: ['tiger0132'],
-      id: md5(location.pathname),
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')           
-  </script>
 
 
 
